@@ -3,7 +3,7 @@ var express     = require('express');
 var path        = require('path');
 
 var app         = express();
-var parentApp   = express();    //This is needed for ghost
+//var parentApp   = express();    //This is needed for ghost
 var ghost       = require('ghost');
 
 //Middleware Configs
@@ -15,8 +15,8 @@ ghost().then(function (ghostServer) {
 	console.log(ghostServer.config.paths);
 	console.log('');
 	console.log('');
-	
-    parentApp.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
+
+    app.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
     ghostServer.start(parentApp);
 });
 
