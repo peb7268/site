@@ -48,28 +48,17 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
-        url: 'http://localhost:2368',
-
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
-
+        url: 'http://localhost:5000/insights',
         database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
+            client: 'postgres',
+            connection: "postgres://zijhnjjcdzrrpk:4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9@ec2-107-22-244-62.compute-1.amazonaws.com:5432/d7bgonh2hrv7r7",
+            // connection: {
+            //     host: 'ec2-107-22-244-62.compute-1.amazonaws.com',
+            //     user: 'zijhnjjcdzrrpk',
+            //     password: '4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9',
+            //     database: 'd7bgonh2hrv7r7',
+            //     port: '5432'
+            // },
             debug: false
         },
         server: {

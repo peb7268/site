@@ -8,6 +8,15 @@ var ghost       = require('ghost');
 
 //Middleware Configs
 //app.use(express.static(__dirname + '/public'));
+/**
+ * 
+{
+	config: path.join(__dirname, 'insights/config.js')
+}
+ */
+console.log('ghost: ');
+console.log(ghost);
+
 ghost().then(function (ghostServer) {
 	console.log('');
 	console.log('');
@@ -16,7 +25,7 @@ ghost().then(function (ghostServer) {
 	console.log('');
 	console.log('');
 
-    app.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
+    app.use('/insights', ghostServer.rootApp);
     ghostServer.start(parentApp);
 });
 
