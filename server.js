@@ -1,9 +1,14 @@
 
-var express = require('express')
-var app = express()
+var express     = require('express');
+var path        = require('path');
+var app         = express();
+var ghost       = require(__dirname + '/public/insights/ghost-middleware');
 
-//Middleware
+//Middleware Configs
 app.use(express.static(__dirname + '/public'));
+app.use( '/insights', ghost({
+	config: path.join(__dirname, 'insights/config.js')
+}) );
 //If you want to use view engines
 //app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
