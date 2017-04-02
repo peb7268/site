@@ -9,8 +9,13 @@ var ghost       = require('ghost');
 //Middleware Configs
 //app.use(express.static(__dirname + '/public'));
 ghost().then(function (ghostServer) {
+	console.log('');
+	console.log('');
 	console.log('ghost paths: ');
 	console.log(ghostServer.config.paths);
+	console.log('');
+	console.log('');
+	
     parentApp.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
     ghostServer.start(parentApp);
 });
