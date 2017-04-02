@@ -33,7 +33,7 @@ config = {
                 database: process.env.POSTGRES_DATABASE,
                 port: '5432'
             },
-            debug: false
+            debug: true
         },
 
         server: {
@@ -51,15 +51,15 @@ config = {
         url: 'http://localhost:5000/insights',
         database: {
             client: 'postgres',
-            connection: "postgres://zijhnjjcdzrrpk:4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9@ec2-107-22-244-62.compute-1.amazonaws.com:5432/d7bgonh2hrv7r7",
-            // connection: {
-            //     host: 'ec2-107-22-244-62.compute-1.amazonaws.com',
-            //     user: 'zijhnjjcdzrrpk',
-            //     password: '4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9',
-            //     database: 'd7bgonh2hrv7r7',
-            //     port: '5432'
-            // },
-            debug: false
+            //connection: "postgres://zijhnjjcdzrrpk:4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9@ec2-107-22-244-62.compute-1.amazonaws.com:5432/d7bgonh2hrv7r7",
+            connection: {
+                host: 'ec2-107-22-244-62.compute-1.amazonaws.com',
+                user: 'zijhnjjcdzrrpk',
+                password: '4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9',
+                database: 'd7bgonh2hrv7r7',
+                port: '5432'
+            },
+            debug: true
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
