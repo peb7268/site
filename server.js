@@ -5,7 +5,7 @@ var app         = express();
 var ghost       = require(__dirname + '/public/insights/ghost-middleware');
 
 //Middleware Configs
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 app.use( '/insights', ghost({
 	config: path.join(__dirname, 'insights/config.js')
 }) );
@@ -13,11 +13,10 @@ app.use( '/insights', ghost({
 //app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
+//app.get('/', (req, res) => res.render('pages/index'));
 
 //Routes
+app.get('/', (req, res) => res.send('Great and nerdy things coming... stay tuned.'));
 app.get('/test', (req, res) => res.send('rendered with express'));
 
 //Port Configs
