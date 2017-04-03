@@ -3,6 +3,10 @@
 // Documentation can be found at http://support.ghost.org/config/
 //serving ghost via express as middleware : https://rogerstringer.com/2015/09/07/ghost-express-middleware/
 
+console.log('++++++++++++++++++++++++++++++++++++++++++++');
+console.log('im in the config file');
+console.log(`contentPath: ${path.join(__dirname, '/content/')}`);
+console.log('++++++++++++++++++++++++++++++++++++++++++++');
 
 var path = require('path'),
     config;
@@ -12,7 +16,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://imperative2017.herokuapp.com',
+        url: 'https://imperative2017.herokuapp.com/insights',
         fileStorage: false,
         mail: {
           transport: 'SMTP',
@@ -37,12 +41,14 @@ config = {
             },
             debug: true
         },
-
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT
+        },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
         }
     },
 
