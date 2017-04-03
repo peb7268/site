@@ -8,7 +8,8 @@
   "main": "server.js",
   "scripts": {
     "start": "clear; NODE_ENV=production node server",
-    "dev": "clear; nodemon server",
+    "dev": "node-sass -w public/styles/sass -o public/styles/css/",
+    "serve": "clear; nodemon server",
     "deploy": "clear; git push && git push heroku",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
