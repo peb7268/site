@@ -2,6 +2,7 @@
 // Setup your Ghost install for various environments
 // Documentation can be found at http://support.ghost.org/config/
 //serving ghost via express as middleware : https://rogerstringer.com/2015/09/07/ghost-express-middleware/
+var path = require('path');
 
 console.log('++++++++++++++++++++++++++++++++++++++++++++');
 console.log('im in the config file');
