@@ -7,14 +7,15 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "dev": "clear; nodemon server",
+    "start": "clear; NODE_ENV=production node server",
+    "dev": "clear; NODE_ENV=production nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
-    "ghost": "^1.0.0-alpha.17"
+    "ghost": "^0.11.7",
+    "knex": "^0.12.9"
   }
 }
