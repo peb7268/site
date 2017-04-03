@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400, 300" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+    {{navigation}}
+    
+        <div class="site-wrapper">
+            <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+            
+            <nav class="main-nav overlay clearfix">
+                {{#if @blog.navigation}}
+                    <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+                {{/if}}
+            </nav>
+
+            
+            <div class="site-head-content inner">
+                <a href="http://imperativedesign.net">
+                    <h1 class="blog-title"><span>ID</span>{{@blog.title}}</h1>
+                    <h2 class="blog-description">{{@blog.description}} <span>By Paul Barrick</span></h2>
+                </a>
+            </div>
+    
+            <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+        </header>
+
+        {{! Everything else gets inserted here }}
+        
+        <div id="tag-meta">
+            <div class="main-header-content inner">
+                <h1 class="page-title">
+                    {{#if tag.name}} 
+                        { 
+                            {{tag.name}} 
+                        } >
+                        <span class="count">
+                            {{#if tag.description}}
+                                {{ tag.description }}
+                            {{else}}
+                                {{pagination.total}} posts
+                            {{/if}}
+                        </span>
+                    {{/if}}
+                </h1>
+            </div>
+        </div>
+
+        {{{body}}}
+        
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/ga.js"}}"></script>
+</body>
+</html>
