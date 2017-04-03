@@ -1,4 +1,5 @@
-var ghost = require( 'ghost' )
+
+var ghost = require( 'ghost' );
 
 function processBuffer( buffer, app ){
 	while( buffer.length ){
@@ -12,6 +13,9 @@ function makeGhostMiddleware( options ){
 	var app = false
 
 	ghost( options ).then( function( ghost ){
+		console.log('ghost middleware: ');
+		console.log(ghost);
+
 		app = ghost.rootApp
 		processBuffer( requestBuffer, app )
 	})

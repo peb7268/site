@@ -3,6 +3,7 @@
 // Documentation can be found at http://support.ghost.org/config/
 //serving ghost via express as middleware : https://rogerstringer.com/2015/09/07/ghost-express-middleware/
 
+
 var path = require('path'),
     config;
 
@@ -11,7 +12,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://imperative2017.herokuapp.com/insights',
+        url: 'https://imperative2017.herokuapp.com',
         fileStorage: false,
         mail: {
           transport: 'SMTP',
@@ -45,8 +46,43 @@ config = {
         }
     },
 
-    // ### Development **(default)**
     development: {
+        url: 'https://imperative2017.herokuapp.com/insights',
+        fileStorage: false,
+        mail: {
+          transport: 'SMTP',
+          host: 'smtp.mandrillapp.com',
+          options: {
+            service: 'Mandrill',
+            auth: {
+              user: process.env.MANDRILL_USERNAME,
+              pass: process.env.MANDRILL_APIKEY
+            }
+          }
+        },
+        database: {
+            client: 'postgres',
+            //connection: "postgres://zijhnjjcdzrrpk:4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9@ec2-107-22-244-62.compute-1.amazonaws.com:5432/d7bgonh2hrv7r7",
+            connection: {
+                host: 'ec2-54-235-125-38.compute-1.amazonaws.com',
+                user: 'wjkxdpvrqzjqyy',
+                password: 'kL-TN1m3HNzakbYzdFHMNI5vU7',
+                database: 'd9idtjjl8otpog',
+                port: '5432'
+            },
+            debug: true
+        },
+
+        server: {
+            // Host to be passed to node's `net.Server#listen()`
+            host: 'ec2-54-235-125-38.compute-1.amazonaws.com',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            port: process.env.PORT
+        }
+    },
+
+    // ### Development **(default)**
+    development2: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
         url: 'http://localhost:5000/insights',
