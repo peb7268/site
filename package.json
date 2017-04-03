@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Imperative Design | A full stop web shop",
   "engines": {
-    "node": "5.9.1"
+    "node": "^6.9.0"
   },
   "main": "server.js",
   "scripts": {
