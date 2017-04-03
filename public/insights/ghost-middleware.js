@@ -13,9 +13,6 @@ function makeGhostMiddleware( options ){
 	var app = false
 
 	ghost( options ).then( function( ghost ){
-		console.log('ghost middleware: ');
-		console.log(ghost);
-
 		app = ghost.rootApp
 		processBuffer( requestBuffer, app )
 	})

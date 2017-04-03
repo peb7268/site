@@ -48,7 +48,7 @@ config = {
     },
 
     development: {
-        url: 'https://imperative2017.herokuapp.com/insights',
+        url: 'http://localhost:5000/insights',
         fileStorage: false,
         mail: {
           transport: 'SMTP',
@@ -62,23 +62,19 @@ config = {
           }
         },
         database: {
-            client: 'postgres',
-            //connection: "postgres://zijhnjjcdzrrpk:4e48c98a0f822e42e5c131b71eb6c44538880f21820694372e2ea68a2f64c8a9@ec2-107-22-244-62.compute-1.amazonaws.com:5432/d7bgonh2hrv7r7",
+            client: 'sqlite3',
             connection: {
-                host: 'ec2-54-235-125-38.compute-1.amazonaws.com',
-                user: 'wjkxdpvrqzjqyy',
-                password: 'kL-TN1m3HNzakbYzdFHMNI5vU7',
-                database: 'd9idtjjl8otpog',
-                port: '5432'
-            },
-            debug: true
+                filename: path.join(__dirname, '/content/data/ghost-test.db')
+            }
         },
-
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: 'ec2-54-235-125-38.compute-1.amazonaws.com',
+            host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: process.env.PORT
+            port: '5000'
+        },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
         }
     },
 

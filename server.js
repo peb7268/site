@@ -1,4 +1,12 @@
 
+/**
+ * Integrating ghost into express.
+ * used this guide on ghost 0.11.7 https://rogerstringer.com/2015/09/07/ghost-express-middleware/
+ * - make sure to set the right node version engine
+ * - make sure to copy the ghost content and config over from the node_modules folder.
+ * - set the content directory path in the config or it wont be able to find your theme or login.
+ */
+
 var express     = require('express');
 var path        = require('path');
 
