@@ -9,13 +9,14 @@ app.use(express.static(__dirname + '/public'));
 
 //Ghost configs
 var config_path = path.join(__dirname, '/public/insights/config.js');
+var content_dir = path.join(__dirname, '/content/');
 
 console.log('===========================');
 console.log('Ghost diagnostics: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 console.log(`config_path: ${config_path}`);
-console.log(`content_path: ${path.join(__dirname, '/content/')}`);
+console.log(`content_path: ${content_dir}`);
 console.log('===========================');
 
 
