@@ -97,7 +97,8 @@ header {
       text-decoration: none;
       color: #000;
       font-size: 20pt;
-      margin: 0 1% 0 0; }
+      margin: 0 1% 0 0;
+      font-weight: 100; }
       header nav a:last-child {
         margin-right: 0; }
 
