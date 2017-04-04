@@ -49,7 +49,8 @@ table {
 p, a, span, body, html, h1, h2, h3, h4, li {
   -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.2; }
 
 /**
 Fonts - 
@@ -69,6 +70,11 @@ font-family: 'Permanent Marker', cursive;
   width: 90%;
   margin: 0 auto; }
 
+.graphic.placeholder {
+  width: 40%;
+  background: #787878;
+  min-height: 250px; }
+
 header {
   margin: 40px 0; }
   header .wrapper {
@@ -84,11 +90,13 @@ header {
     line-height: 0.9; }
     header h1 span:first-child {
       font-family: 'Fjalla One', sans-serif;
-      color: #0036bf; }
+      color: #0036bf;
+      line-height: 0.9; }
     header h1 span.tagline {
       display: block;
       font-family: 'Permanent Marker', cursive;
-      font-size: 23pt; }
+      font-size: 23pt;
+      line-height: 0.9; }
   header nav {
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -106,6 +114,31 @@ header {
   background: #787878;
   height: 625px; }
 
+.band .wrapper {
+  width: 80%;
+  margin: 40px auto;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between; }
+  .band .wrapper .message {
+    width: 40%;
+    font-size: 18pt; }
+    .band .wrapper .message p {
+      font-weight: 100; }
+    .band .wrapper .message h2, .band .wrapper .message h2 p {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 29pt; }
+    .band .wrapper .message h2 {
+      margin: 0 0 20px 0;
+      font-size: 38pt; }
+    .band .wrapper .message h2 p {
+      margin-top: 2px;
+      padding: 5px 0 5px 0px;
+      text-align: center; }
+
 .band.blue {
   color: #fff;
   background: #0036bf; }
+  .band.blue .message h2 p {
+    background: #fff;
+    color: #0036bf; }

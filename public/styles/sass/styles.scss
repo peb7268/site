@@ -16,6 +16,12 @@
     margin: 0 auto;
 }
 
+ .graphic.placeholder {
+    width: 40%;
+    background: #787878;
+    min-height: 250px;
+}
+
 header {
     margin: 40px 0;
     .wrapper {
@@ -31,11 +37,12 @@ header {
         width: 345px;
         letter-spacing: -4px;
         line-height: 0.9;
-        span:first-child {font-family: 'Fjalla One', sans-serif; color: $blue; }
+        span:first-child {font-family: 'Fjalla One', sans-serif; color: $blue; line-height: 0.9; }
         span.tagline {
             display: block;
             font-family: 'Permanent Marker', cursive;
             font-size: 23pt;
+            line-height: 0.9;
         }
     }
 
@@ -61,6 +68,27 @@ header {
 }
 
 .band {
-    &.blue { color: #fff; background: $blue; }
+    .wrapper {
+        width: 80%;
+        margin: 40px auto;
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        
+        .message { 
+            width: 40%;
+            font-size: 18pt;
+            p { font-weight: 100; }
+            & h2, h2 p { font-family: 'Permanent Marker', cursive; font-size: 29pt; }
+            & h2 { margin: 0 0 20px 0; font-size: 38pt; }
+            h2 p { margin-top: 2px; padding: 5px 0 5px 0px; text-align: center; }
+        }
+    }
+    &.blue { 
+        color: #fff; background: $blue;
+        .message {
+            h2 p { background: #fff; color: $blue; }
+        }
+    }
 } 
 
