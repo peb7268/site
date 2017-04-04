@@ -1,7 +1,0 @@
-/** 
- * npm run serve
- * npm run dev
- * add browsersync for live reload
- * browsersync should run npm run serve
- * imperative2017.herokuapp.com
-*/
