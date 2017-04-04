@@ -113,6 +113,17 @@ header {
 .ctas {
   background: #787878;
   height: 625px; }
+  .ctas .ad1 {
+    position: absolute;
+    z-index: 10;
+    background: url(../../img/ctas/test1.png) no-repeat 0 bottom;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-color: transparent; }
+  .ctas #flare {
+    position: absolute;
+    z-index: 5; }
 
 .band .wrapper {
   width: 80%;
