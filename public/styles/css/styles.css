@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:300,400,900");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,6 +46,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+p, a, span, body, html, h1, h2, h3, h4, li {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
 /**
 Fonts - 
 Roboto | Permanant Market | Fjalla One
@@ -53,5 +58,53 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Fjalla One', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
-body {
-  background: red; }
+.container {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+header {
+  margin: 40px 0; }
+  header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  header h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42pt;
+    text-transform: uppercase;
+    width: 345px;
+    letter-spacing: -4px;
+    line-height: 0.9; }
+    header h1 span:first-child {
+      font-family: 'Fjalla One', sans-serif;
+      color: #0036bf; }
+    header h1 span.tagline {
+      display: block;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 23pt; }
+  header nav {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; }
+    header nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 20pt;
+      margin: 0 1% 0 0; }
+      header nav a:last-child {
+        margin-right: 0; }
+
+.ctas {
+  background: #787878;
+  height: 625px; }
+
+.band.blue {
+  color: #fff;
+  background: #0036bf; }

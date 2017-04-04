@@ -3,4 +3,63 @@
 @import 'globals/fonts';
 @import 'globals/colors';
 
-body { background: red; }  
+.container {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 40px 0;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 42pt;
+        text-transform: uppercase;
+        width: 345px;
+        letter-spacing: -4px;
+        line-height: 0.9;
+        span:first-child {font-family: 'Fjalla One', sans-serif; color: $blue; }
+        span.tagline {
+            display: block;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 23pt;
+        }
+    }
+
+    nav {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        a { 
+            text-decoration: none; 
+            color: #000; 
+            font-size: 20pt;
+            margin: 0 1% 0 0;
+            &:last-child { margin-right: 0; }
+        }
+    }
+}
+
+.ctas {
+    background: #787878;
+    height: 625px;
+    .cta {}
+}
+
+.band {
+    &.blue { color: #fff; background: $blue; }
+} 
+

@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+p, a, span, body, html, h1, h2, h3, h4, li { 
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
