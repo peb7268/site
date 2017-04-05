@@ -28,7 +28,7 @@ function init() {
     // scene
     scene = new THREE.Scene();
     scene.fog = new THREE.Fog( 0x000000, 3500, 15000 );
-    scene.fog.color.setHSL( 0.51, 0.4, 0.01 );
+    scene.fog.color.setHSL( 0.51, 0.1, 0.01 );
 
     // world   
     // var s = 250;
@@ -62,7 +62,7 @@ function init() {
     //Add a flare to the scence
     //addLight( 0.55, 0.9, 0.5, 5000, 0, -1000 );
     //addLight( 0.08, 0.8, 0.5,    0, 0, -1000 );
-    addLight( 0.995, 0.5, 0.9, -500, 270, -1000 );
+    addLight( 0.995, 0.1, 0.9, -500, 270, -1000 );
 
     function addLight( h, s, l, x, y, z ) {
         var light = new THREE.PointLight( 0xffffff, 1.5, 2000 );
@@ -137,4 +137,4 @@ function render() {
     renderer.render( scene, camera );
 }
 
-//start();
+start();

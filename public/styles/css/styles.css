@@ -125,7 +125,7 @@ header {
     background: url(../../img/ctas/test1.png) no-repeat 0 bottom;
     height: 100%;
     width: 100%;
-    background-size: 100%;
+    background-size: 120%;
     background-color: transparent; }
   .ctas #flare {
     position: absolute;
