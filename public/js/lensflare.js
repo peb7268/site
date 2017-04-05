@@ -137,4 +137,4 @@ function render() {
     renderer.render( scene, camera );
 }
 
-start();
+//start();
