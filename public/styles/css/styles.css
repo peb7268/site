@@ -103,16 +103,22 @@ header {
     font-weight: 100; }
     header nav a {
       text-decoration: none;
-      color: #000;
+      color: #333;
       font-size: 20pt;
-      margin: 0 1% 0 0;
-      font-weight: 100; }
+      margin: 0 2% 0 0;
+      font-weight: 100;
+      border-bottom: 1px solid transparent; }
       header nav a:last-child {
         margin-right: 0; }
+      header nav a:hover {
+        color: #000;
+        border-color: #0036bf; }
 
 .ctas {
   background: #787878;
-  height: 625px; }
+  height: 625px;
+  position: relative;
+  overflow: hidden; }
   .ctas .ad1 {
     position: absolute;
     z-index: 10;
@@ -153,3 +159,20 @@ header {
   .band.blue .message h2 p {
     background: #fff;
     color: #0036bf; }
+
+.band.white .message h2 p {
+  background: #0036bf;
+  color: #fff; }
+
+.band.band1 .message {
+  width: 40%;
+  font-size: 18pt; }
+  .band.band1 .message p {
+    font-weight: 100; }
+  .band.band1 .message h2 {
+    margin: 0 0 20px 0;
+    font-size: 37pt; }
+  .band.band1 .message h2 p {
+    margin-top: 2px;
+    padding: 5px 0 5px 0px;
+    text-align: center; }

@@ -50,13 +50,16 @@ header {
         display: flex;
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
+
         a { 
             text-decoration: none; 
-            color: #000; 
+            color: #333; 
             font-size: 20pt;
-            margin: 0 1% 0 0;
+            margin: 0 2% 0 0;
             font-weight: 100;
+            border-bottom: 1px solid transparent;
             &:last-child { margin-right: 0; }
+            &:hover { color: #000; border-color: $blue; }
         }
     }
 }
@@ -64,6 +67,8 @@ header {
 .ctas {
     background: #787878;
     height: 625px;
+    position: relative;
+    overflow: hidden;
     .cta {}
     .ad1 {
         position: absolute;
@@ -103,5 +108,20 @@ header {
             h2 p { background: #fff; color: $blue; }
         }
     }
+    &.white { 
+        .message {
+            h2 p { background: $blue; color: #fff; }
+        }
+    }
+    &.band1{
+        .message { 
+            width: 40%;
+            font-size: 18pt;
+            p { font-weight: 100; }
+            & h2 { margin: 0 0 20px 0; font-size: 37pt; }
+            h2 p { margin-top: 2px; padding: 5px 0 5px 0px; text-align: center; }
+        }
+    }
+    &.band2{}
 } 
 

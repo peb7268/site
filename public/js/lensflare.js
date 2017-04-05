@@ -3,8 +3,10 @@ var container, stats;
 var camera, scene, renderer;
 var clock = new THREE.Clock();
 
-init();
-animate();
+function start(){
+    init();
+    animate();
+}
 
 function init() {
     container = document.querySelector( '#flare' );
@@ -134,3 +136,5 @@ function render() {
     controls.update( delta );
     renderer.render( scene, camera );
 }
+
+//start();
