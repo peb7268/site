@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "start": "clear; NODE_ENV=production node server",
-    "startdev": "clear; NODE_ENV=development node server",
+    "startdev": "clear; NODE_ENV=development nodemon server",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'wip' && git push && git push heroku",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,10 @@
     "express": "^4.15.2",
     "ghost": "^0.11.7",
     "knex": "^0.12.9",
-    "node-sass": "^4.5.2"
+    "node-sass": "^4.5.2",
+    "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

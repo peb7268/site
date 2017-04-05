@@ -33,13 +33,14 @@ app.use( '/insights', ghost({
 }) );
 
 //If you want to use view engines
-//app.set('views', __dirname + '/views');
-//app.set('view engine', 'ejs');
+app.set('views', __dirname + '/public/views');
+app.set('view engine', 'pug');
 
 //app.get('/', (req, res) => res.render('pages/index'));
 
 //Routes
-app.get('/about', (req, res) => res.send('Great and nerdy things coming... stay tuned.'));
+app.get('/', (req, res) => res.render('index'));
+app.get('/about', (req, res) => res.render('about', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.'}));
 
 //Port Configs
 app.set('port', (process.env.PORT || 5000));
