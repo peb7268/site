@@ -6,7 +6,7 @@ html
         script(src='js/global.js')
     block styles
         link(rel="stylesheet", href="styles/css/styles.css")
-    body
+    body.page(class=active_page)
     div.container
         header
             .wrapper
@@ -15,8 +15,8 @@ html
                         != '<span>Imperative</span> Design'
                         span.tagline Elevate your messaging
                 ul.nav
-                    li: a(href="/about") About
-                    li.dropdown
+                    li.about: a(href="/about") About
+                    li.services.dropdown
                         a(href="/services") Services
                         ul
                             li: a(href='/services/website-development') Web Development
@@ -27,7 +27,7 @@ html
                             li: a(href='/services/copywriting') Copywriting
                             li: a(href='/services/brand-creation') Brand Creation
                             li: a(href='/services/website-rennovation') Website Rennovation
-                    li: a(href="/insights") Insights
+                    li.insights: a(href="/insights") Insights
                 
         
         block content

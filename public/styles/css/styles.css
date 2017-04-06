@@ -84,6 +84,8 @@ header {
   header .logo {
     text-decoration: none;
     color: #000; }
+    header .logo:hover {
+      color: #000; }
   header h1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 42pt;
@@ -113,7 +115,8 @@ header {
         color: #333;
         font-size: 20pt;
         font-weight: 100;
-        border-bottom: 1px solid transparent; }
+        border-bottom: 1px solid transparent;
+        display: block; }
         header ul.nav li a:last-child {
           margin-right: 0; }
         header ul.nav li a:hover {
@@ -143,6 +146,12 @@ header {
             font-weight: 400; }
       header ul.nav li.dropdown:hover ul {
         display: block; }
+
+.services-page .nav li.services > a,
+.about-page .nav li.about > a,
+.insights-page .nav li.insights > a {
+  color: #000;
+  border-color: #0036bf; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */

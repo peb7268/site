@@ -40,7 +40,8 @@ app.set('view engine', 'pug');
 
 //Routes
 app.get('/', (req, res) => res.render('index'));
-app.get('/about', (req, res) => res.render('about', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.'}));
+app.get('/about', (req, res) => res.render('about', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'about-page'}));
+app.get('/services', (req, res) => res.render('services', {active_page: 'services-page'}));
 
 //Port Configs
 app.set('port', (process.env.PORT || 5000));
