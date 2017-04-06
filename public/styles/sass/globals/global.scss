@@ -1,4 +1,9 @@
 
+//Tag styles
+p { margin: 0 0 15px; }
+em { font-style: italic; color: #343434; }
+strong { font-weight: 500; }
+
 .container {
     max-width: 1700px;
     width: 100%;
@@ -12,8 +17,82 @@
     margin: 0 auto;
 }
 
+.page.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 50px;
+
+    h1, h2, h3, h4 { 
+        font-weight: bold;
+        text-transform: capitalize;
+        letter-spacing: -1px;
+        color: #333;
+        margin: 0 0 3px 0;
+    }
+    h1{ font-size: 18pt; margin: 0 0 20px; }
+    h1 span { font-weight: 100; }
+}
+
  .graphic.placeholder {
     width: 40%;
     background: #787878;
     min-height: 250px;
+}
+
+.ctas {
+    //background: #787878;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
+    background: #787878; /* Old browsers */
+    background: -moz-linear-gradient(left, #787878 0%, #333333 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #787878 0%,#333333 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #787878 0%,#333333 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787878', endColorstr='#333333',GradientType=1 ); /* IE6-9 */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    .cta {
+        .message {
+            position: absolute;
+            right: 1%;
+            bottom: 30%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 21pt;
+
+            .highlight {
+                font-family: 'Fjalla One', sans-serif;
+                text-transform: uppercase;
+                background: #333;
+                color: #fff;
+                padding: 5px 10px;
+            }
+
+            .action {
+                margin: 5px 5px 0 0;
+                a { 
+                    float: right; 
+                    color: #eee; 
+                    text-decoration: none; 
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+    .ad1 {
+        position: absolute;
+        z-index: 10;
+        background: url(../../img/ctas/test1.png) no-repeat 0 bottom;
+        height: 100%;
+        width: 100%;
+        background-size: 120%;
+        background-color: transparent;
+    }
+    #flare {
+        position: absolute;
+        z-index: 5;
+    }
 }

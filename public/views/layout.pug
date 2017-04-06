@@ -3,11 +3,11 @@ html
   head
     title Imperative Design | A Full Stop Web Shop
     block scripts
-        script(src='js/global.js')
+        script(src='/js/global.js')
     block styles
-        link(rel="stylesheet", href="styles/css/styles.css")
+        link(rel="stylesheet", href="/styles/css/styles.css")
     body.page(class=active_page)
-    div.container
+        div.container
         header
             .wrapper
                 a(href="/").logo
@@ -19,17 +19,15 @@ html
                     li.services.dropdown
                         a(href="/services") Services
                         ul
-                            li: a(href='/services/website-development') Web Development
-                            li: a(href='/services/app-development') Application Development
-                            li: a(href='/services/seo') Search Engine Optimization ( SEO )
-                            li: a(href='/services/social-media-marketing') Social Media Marketing
-                            li: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
-                            li: a(href='/services/copywriting') Copywriting
-                            li: a(href='/services/brand-creation') Brand Creation
-                            li: a(href='/services/website-rennovation') Website Rennovation
-                    li.insights: a(href="/insights") Insights
-                
-        
+                            li.web-dev: a(href='/services/website-development') Web Development
+                            li.appdev: a(href='/services/application-development') Application Development
+                            li.seo: a(href='/services/search-engine-optimization') Search Engine Optimization ( SEO )
+                            li.smm: a(href='/services/social-media-marketing') Social Media Marketing
+                            li.strategy: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
+                            li.copywriting: a(href='/services/copywriting') Copywriting
+                            li.branding: a(href='/services/branding') Brand Creation
+                            li.rennovation: a(href='/services/website-rennovation') Website Rennovation
+                            li.mentoring: a(href='/services/mentoring') Mentoring
+                    li.insights: a(href="/insights") Insights        
         block content
-
     block body-scripts
