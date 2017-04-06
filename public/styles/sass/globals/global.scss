@@ -1,0 +1,19 @@
+
+.container {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+ .graphic.placeholder {
+    width: 40%;
+    background: #787878;
+    min-height: 250px;
+}

@@ -59,15 +59,6 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Fjalla One', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
-a {
-  transition: all 250ms;
-  font-size: 11pt;
-  text-decoration: none; }
-
-a:hover {
-  transform: scale(1.1);
-  color: #fff; }
-
 .container {
   max-width: 1700px;
   width: 100%;
@@ -109,22 +100,49 @@ header {
       font-family: 'Permanent Marker', cursive;
       font-size: 23pt;
       line-height: 0.9; }
-  header nav {
+  header ul.nav {
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-weight: 100; }
-    header nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 20pt;
-      margin: 0 2% 0 0;
-      font-weight: 100;
-      border-bottom: 1px solid transparent; }
-      header nav a:last-child {
-        margin-right: 0; }
-      header nav a:hover {
-        color: #000;
-        border-color: #0036bf; }
+    font-weight: 100;
+    z-index: 50; }
+    header ul.nav li {
+      position: relative;
+      margin: 0 5% 0 0; }
+      header ul.nav li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20pt;
+        font-weight: 100;
+        border-bottom: 1px solid transparent; }
+        header ul.nav li a:last-child {
+          margin-right: 0; }
+        header ul.nav li a:hover {
+          color: #000;
+          border-color: #0036bf; }
+      header ul.nav li.dropdown ul {
+        position: absolute;
+        width: 325px;
+        left: -110px;
+        display: none; }
+        header ul.nav li.dropdown ul li:first-child {
+          padding-top: 10px; }
+        header ul.nav li.dropdown ul li:last-child a {
+          padding-bottom: 15px; }
+        header ul.nav li.dropdown ul li a {
+          font-size: 14pt;
+          background: rgba(255, 255, 255, 0.95);
+          display: block;
+          text-align: center;
+          padding: 7px;
+          box-sizing: border-box; }
+          header ul.nav li.dropdown ul li a:hover {
+            border-color: transparent;
+            transform: none;
+            background: #0036bf;
+            color: #fff;
+            font-weight: 400; }
+      header ul.nav li.dropdown:hover ul {
+        display: block; }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
@@ -242,3 +260,12 @@ ul.connect li {
     display: block;
     font-size: 27pt;
     text-align: center; }
+
+a {
+  transition: all 250ms;
+  font-size: 11pt;
+  text-decoration: none; }
+
+a:hover {
+  transform: scale(1.1);
+  color: #fff; }

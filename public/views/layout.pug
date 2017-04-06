@@ -14,10 +14,20 @@ html
                     h1
                         != '<span>Imperative</span> Design'
                         span.tagline Elevate your messaging
-                nav
-                    a(href="/about") About
-                    a(href="/services") Services
-                    a(href="/insights") Insights
+                ul.nav
+                    li: a(href="/about") About
+                    li.dropdown
+                        a(href="/services") Services
+                        ul
+                            li: a(href='/services/website-development') Web Development
+                            li: a(href='/services/app-development') Application Development
+                            li: a(href='/services/seo') Search Engine Optimization ( SEO )
+                            li: a(href='/services/social-media-marketing') Social Media Marketing
+                            li: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
+                            li: a(href='/services/copywriting') Copywriting
+                            li: a(href='/services/brand-creation') Brand Creation
+                            li: a(href='/services/website-rennovation') Website Rennovation
+                    li: a(href="/insights") Insights
                 
         
         block content
