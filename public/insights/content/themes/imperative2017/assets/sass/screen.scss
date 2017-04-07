@@ -969,7 +969,7 @@ header .site-head-content.inner {
 .post {
   position: relative;
   width:80%;
-  max-width: 700px;
+//   max-width: 700px;
   margin: 4rem auto;
   padding-bottom: 4rem;
   border-bottom: #EBF2F6 1px solid;
@@ -1039,8 +1039,7 @@ body:not(.post-template) {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 80%;
-    max-width: 710px;
+    width: 94%;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
