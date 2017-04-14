@@ -28,19 +28,51 @@
     </article>
 {{else}}
     <article class="{{post_class}}">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        </header>
-        
-        <section class="post-excerpt">
-            <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-            {{author}}
-            {{tags prefix=" on "}}
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-        </footer>
+        <div class="flex-box-wrapper custom-post-content">
+            <section class="post-image">
+
+            </section>
+            <section class="tag-cloud">
+                <script type="text/javascript">
+                    $(function() {
+                    //get tag feed
+                        $.getJSON("http://localhost/insights/content/themes/imperative2017/assets/js/tagcloud.js?callback=?", function(data) {
+                            //create list for tag links
+                            $("<ul>").attr("id", "tagList").appendTo("#tagCloud");
+                                                
+                            //create tags
+                            $.each(data.tags, function(i, val) {
+                                                    
+                            //create item
+                            var li = $("<li>");
+                                                    
+                            //create link
+                            $("<a>").text(val.tag).attr({title:"See all pages tagged with " + val.tag, href:"http://localhost/tags/" + val.tag + ".html"}).appendTo(li);
+                                                    
+                            //add to list
+                            li.appendTo("#tagList");
+                            }); 
+                        });
+                    });
+                </script>
+                javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo 
+                javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo 
+            </section>
+        </div>
+        <div class="flex-box-wrapper custom-post-footer">        
+            <div class="custom-post-header">
+                <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
+            </div>
+            {{!--<section class="post-excerpt">
+                <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </section>--}}
+            <div class="custom-footer-meta">
+                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
+                {{author}}
+                {{tags prefix=" on "}}
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </div>
+        </div>
     </article>
 {{/has}}
 {{/foreach}}

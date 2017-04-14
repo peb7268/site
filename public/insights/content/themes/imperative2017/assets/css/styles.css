@@ -1,2 +1,53 @@
 .post-template .blog-title {
   padding: 5px; }
+
+.test {
+  color: red; }
+
+.flex-box-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.custom-post-content {
+  justify-content: space-between;
+  align-items: stretch; }
+
+.custom-post-footer {
+  justify-content: flex-start; }
+  .custom-post-footer div {
+    margin: 5px 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    height: auto; }
+    .custom-post-footer div p {
+      margin: 0; }
+    .custom-post-footer div a {
+      text-decoration: none; }
+  .custom-post-footer .custom-footer-meta {
+    text-transform: uppercase;
+    font-size: 14pt;
+    background-color: black;
+    color: #dddddd; }
+    .custom-post-footer .custom-footer-meta a:first-child {
+      padding: 0px 0px 0 10px; }
+    .custom-post-footer .custom-footer-meta a {
+      color: #dddddd; }
+    .custom-post-footer .custom-footer-meta time {
+      padding: 0 10px;
+      font-size: 14pt; }
+
+.post-image, .tag-cloud {
+  height: auto; }
+
+.post-image {
+  background-color: gray;
+  width: 65%; }
+
+.tag-cloud {
+  width: 35%;
+  font-family: 'Fjalla One';
+  text-transform: uppercase;
+  font-size: 24pt;
+  color: black;
+  margin-left: 10px; }
