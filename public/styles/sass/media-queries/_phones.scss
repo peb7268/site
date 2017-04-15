@@ -1,0 +1,52 @@
+
+//Larger Phones
+@media only screen 
+and (max-device-width : 415px){
+    header {
+        margin-top: 0;
+        display: inline-block;
+        
+        .wrapper {
+            width: 98%;
+            display: block;
+        }
+
+        .logo {
+            display: block;
+            text-align: center;
+            margin: 65px auto 20px;
+            h1 {
+                font-size: 36pt;
+                letter-spacing: -2px;
+                span.tagline { font-size: 20pt; }
+            }
+        }
+
+        .nav-toggle { 
+            visibility: visible;
+            position: absolute;
+            top: 25px;
+            right: 7%;
+            font-size: 17pt;
+            &:hover { color: $blue; transform: scale(1); }
+        }
+
+        ul.nav {
+            display: block;
+            visibility: hidden;
+            
+            li {
+                margin: 0;
+                a {
+                    display: block;
+                    background: $blue;
+                    color: #fff;
+                    padding: 15px 20px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+  

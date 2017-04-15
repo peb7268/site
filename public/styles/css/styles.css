@@ -59,6 +59,11 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Fjalla One', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 p {
   margin: 0 0 15px; }
 
@@ -152,7 +157,10 @@ strong {
     z-index: 5; }
 
 header {
+  position: relative;
   margin: 40px 0; }
+  header .nav-toggle {
+    visibility: hidden; }
   header .wrapper {
     display: flex;
     align-items: center;
@@ -232,6 +240,7 @@ header {
 .band .wrapper {
   width: 80%;
   margin: 40px auto;
+  padding: 25px 0;
   align-items: flex-start;
   display: flex;
   justify-content: space-between; }
@@ -341,3 +350,40 @@ a {
 a:hover {
   transform: scale(1.1);
   color: #fff; }
+
+@media only screen and (max-device-width: 415px) {
+  header {
+    margin-top: 0;
+    display: inline-block; }
+    header .wrapper {
+      width: 98%;
+      display: block; }
+    header .logo {
+      display: block;
+      text-align: center;
+      margin: 65px auto 20px; }
+      header .logo h1 {
+        font-size: 36pt;
+        letter-spacing: -2px; }
+        header .logo h1 span.tagline {
+          font-size: 20pt; }
+    header .nav-toggle {
+      visibility: visible;
+      position: absolute;
+      top: 25px;
+      right: 7%;
+      font-size: 17pt; }
+      header .nav-toggle:hover {
+        color: #0036bf;
+        transform: scale(1); }
+    header ul.nav {
+      display: block;
+      visibility: hidden; }
+      header ul.nav li {
+        margin: 0; }
+        header ul.nav li a {
+          display: block;
+          background: #0036bf;
+          color: #fff;
+          padding: 15px 20px;
+          box-sizing: border-box; } }
