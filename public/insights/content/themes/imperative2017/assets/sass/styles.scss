@@ -57,3 +57,95 @@
 	color: black;
 	margin-left: 10px;
 }
+$blue: #0036bf; 
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
+header {
+    margin: 40px 0 -23px 0;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+		width: 90%;
+		margin: 0 auto;
+		line-height: normal;
+    }
+
+    .logo { 
+        text-decoration: none; 
+        color: #000;
+        &:hover { color: #000; }
+    }
+    h1 {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 42pt;
+        text-transform: uppercase;
+        width: 345px;
+        letter-spacing: -4px;
+        line-height: 0.9;
+		-webkit-font-smoothing: antialiased;
+		font-weight: 300;
+        span:first-child {font-family: 'Fjalla One', sans-serif; color: $blue; line-height: 0.9; }
+        span.tagline {
+            display: block;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 23pt;
+            line-height: 0.9;
+        }
+    }
+
+    ul.insights-nav {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        z-index: 50;
+		list-style: none;
+
+        li {
+            position: relative;
+            margin: 0 5% 0 0;
+			font-size: 20pt;
+
+            a { 
+                text-decoration: none; 
+                color: #333; 
+                font-size: 20pt;
+                font-weight: 100;
+                border-bottom: 1px solid transparent;
+                display: block;
+                &:last-child { margin-right: 0; }
+                &:hover { color: #000; border-color: $blue; }
+            }
+            
+            &.insights-dropdown ul {
+                position: absolute;
+				padding: 0;
+                width: 325px;
+                left: -110px;
+                display: none;
+				list-style: none;
+
+                li {
+					// height: 37px;
+                    &:first-child { padding-top: 10px; }
+                    &:last-child a { padding-bottom: 15px; }
+                    a { 
+                        font-size: 14pt;
+                        background: rgba(255, 255, 255, .95);
+                        display: block;
+                        text-align: center;
+                        padding: 7px;
+                        box-sizing: border-box;
+                        &:hover { 
+                            border-color: transparent; 
+                            transform: none;
+                            background: $blue;
+                            color: #fff;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            &.insights-dropdown:hover ul { display: block; }
+        }
+    }
+}
