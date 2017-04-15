@@ -237,55 +237,53 @@ header {
   color: #000;
   border-color: #0036bf; }
 
-.band .wrapper {
-  width: 80%;
-  margin: 40px auto;
-  padding: 25px 0;
-  align-items: flex-start;
-  display: flex;
-  justify-content: space-between; }
-  .band .wrapper .message {
+.band {
+  overflow: hidden; }
+  .band .wrapper {
+    width: 80%;
+    margin: 40px auto;
+    padding: 0;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between; }
+    .band .wrapper .message {
+      width: 40%;
+      font-size: 18pt; }
+      .band .wrapper .message p {
+        font-weight: 100; }
+      .band .wrapper .message h2, .band .wrapper .message h2 p {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 29pt; }
+      .band .wrapper .message h2 {
+        margin: 0 0 20px 0;
+        font-size: 38pt; }
+      .band .wrapper .message h2 p {
+        margin-top: 2px;
+        padding: 5px 0 5px 0px;
+        text-align: center; }
+  .band.blue {
+    color: #fff;
+    background: #0036bf; }
+    .band.blue .message h2 p {
+      background: #fff;
+      color: #0036bf; }
+  .band.white .message h2 p {
+    background: #0036bf;
+    color: #fff; }
+  .band.band1 .message {
     width: 40%;
     font-size: 18pt; }
-    .band .wrapper .message p {
+    .band.band1 .message p {
       font-weight: 100; }
-    .band .wrapper .message h2, .band .wrapper .message h2 p {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 29pt; }
-    .band .wrapper .message h2 {
+    .band.band1 .message h2 {
       margin: 0 0 20px 0;
-      font-size: 38pt; }
-    .band .wrapper .message h2 p {
+      font-size: 37pt; }
+    .band.band1 .message h2 p {
       margin-top: 2px;
       padding: 5px 0 5px 0px;
       text-align: center; }
-
-.band.blue {
-  color: #fff;
-  background: #0036bf; }
-  .band.blue .message h2 p {
-    background: #fff;
-    color: #0036bf; }
-
-.band.white .message h2 p {
-  background: #0036bf;
-  color: #fff; }
-
-.band.band1 .message {
-  width: 40%;
-  font-size: 18pt; }
-  .band.band1 .message p {
-    font-weight: 100; }
-  .band.band1 .message h2 {
-    margin: 0 0 20px 0;
-    font-size: 37pt; }
-  .band.band1 .message h2 p {
-    margin-top: 2px;
-    padding: 5px 0 5px 0px;
-    text-align: center; }
-
-.band.band3 .message h2 {
-  font-size: 34pt; }
+  .band.band3 .message h2 {
+    font-size: 34pt; }
 
 .home .ctas {
   height: 625px;
@@ -353,10 +351,15 @@ a:hover {
 
 @media only screen and (max-device-width: 415px) {
   header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
     margin-top: 0;
-    display: inline-block; }
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0px 1px 1px #bbb; }
     header .wrapper {
-      width: 98%;
+      width: 100%;
       display: block; }
     header .logo {
       display: block;
@@ -377,6 +380,8 @@ a:hover {
         color: #0036bf;
         transform: scale(1); }
     header ul.nav {
+      position: absolute;
+      width: 100%;
       display: block;
       visibility: hidden; }
       header ul.nav li {
@@ -386,4 +391,54 @@ a:hover {
           background: #0036bf;
           color: #fff;
           padding: 15px 20px;
-          box-sizing: border-box; } }
+          box-sizing: border-box; }
+  .home .ctas {
+    margin-top: 150px;
+    height: auto;
+    height: 170px; }
+  .home .ctas .ad1 {
+    background-position: 0 top;
+    background-size: 100%; }
+  .ctas .cta .message {
+    font-size: 15pt;
+    bottom: 1%; }
+  .band .wrapper {
+    width: 98%;
+    display: block;
+    margin: 30px auto 40px; }
+    .band .wrapper .message, .band .wrapper .graphic {
+      width: 98%;
+      display: block;
+      margin: 0 auto; }
+    .band .wrapper .graphic {
+      margin: 10px auto; }
+    .band .wrapper .message h2 {
+      text-align: center;
+      font-size: 26pt; }
+    .band .wrapper .message h2 p {
+      font-size: 23pt;
+      margin-top: 4px; }
+  .band.band2 .wrapper .message h2 {
+    font-size: 27pt; }
+  .band.band2 .wrapper .message h2 p {
+    font-size: 22pt; }
+  .band.band3 .wrapper .message {
+    margin-bottom: 20px; }
+  .band.band3 .wrapper .message h2 {
+    font-size: 25pt; }
+  .services-page .ctas {
+    margin-bottom: 25px; }
+  .services-page .content {
+    width: 98%;
+    border-left: none;
+    padding: 0 15px;
+    box-sizing: border-box; }
+  .services-page .page.wrapper {
+    display: block;
+    width: 98%;
+    margin: 0 auto; }
+  .services-page .in-page-nav {
+    width: 100%;
+    margin-bottom: 25px; }
+  .page.wrapper h1 {
+    font-size: 15pt; } }
