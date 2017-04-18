@@ -1,6 +1,8 @@
 
 header {
+    position: relative;
     margin: 40px 0;
+    .nav-toggle { visibility: hidden; }
     .wrapper {
         display: flex;
         align-items: center;

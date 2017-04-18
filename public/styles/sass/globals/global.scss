@@ -1,4 +1,11 @@
 
+//clearfix
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 //Tag styles
 p { margin: 0 0 15px; }
 em { font-style: italic; color: #343434; }
