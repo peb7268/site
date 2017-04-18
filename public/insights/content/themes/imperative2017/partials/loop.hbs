@@ -32,32 +32,7 @@
             <section class="post-image">
 
             </section>
-            <section class="tag-cloud">
-                <script type="text/javascript">
-                    $(function() {
-                    //get tag feed
-                        $.getJSON("http://localhost/insights/content/themes/imperative2017/assets/js/tagcloud.js?callback=?", function(data) {
-                            //create list for tag links
-                            $("<ul>").attr("id", "tagList").appendTo("#tagCloud");
-                                                
-                            //create tags
-                            $.each(data.tags, function(i, val) {
-                                                    
-                            //create item
-                            var li = $("<li>");
-                                                    
-                            //create link
-                            $("<a>").text(val.tag).attr({title:"See all pages tagged with " + val.tag, href:"http://localhost/tags/" + val.tag + ".html"}).appendTo(li);
-                                                    
-                            //add to list
-                            li.appendTo("#tagList");
-                            }); 
-                        });
-                    });
-                </script>
-                javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo 
-                javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo javascript angular MEAN Node Mongo 
-            </section>
+            <span class="hidden-post-tag-cloud">{{tags}}</span>
         </div>
         <div class="flex-box-wrapper custom-post-footer">        
             <div class="custom-post-header">
@@ -69,7 +44,7 @@
             <div class="custom-footer-meta">
                 {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
                 {{author}}
-                {{tags prefix=" on "}}
+                {{tags prefix=" on | " limit="3" separator="|"}}
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
             </div>
         </div>

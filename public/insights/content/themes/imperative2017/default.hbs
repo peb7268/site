@@ -73,27 +73,6 @@
                     </ul>
                 </div>
             </header>
-            {{!--header
-                .wrapper
-                    a(href="/").logo
-                        h1
-                            != '<span>Imperative</span> Design'
-                            span.tagline Elevate your messaging
-                    ul.nav
-                        li.about: a(href="/about") About
-                        li.services.dropdown
-                            a(href="/services") Services
-                            ul
-                                li.web-dev: a(href='/services/website-development') Web Development
-                                li.appdev: a(href='/services/application-development') Application Development
-                                li.seo: a(href='/services/search-engine-optimization') Search Engine Optimization ( SEO )
-                                li.smm: a(href='/services/social-media-marketing') Social Media Marketing
-                                li.strategy: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
-                                li.copywriting: a(href='/services/copywriting') Copywriting
-                                li.branding: a(href='/services/branding') Brand Creation
-                                li.rennovation: a(href='/services/website-rennovation') Website Rennovation
-                                li.mentoring: a(href='/services/mentoring') Mentoring
-                        li.insights: a(href="/insights") Insights--}}
 
         {{! Everything else gets inserted here }}
         
@@ -130,6 +109,7 @@
     {{!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {{ghost_foot}}
+    <script src="./assets/js/tagcloud.js"></script>
 
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>

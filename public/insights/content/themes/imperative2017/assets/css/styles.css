@@ -12,6 +12,8 @@
 .custom-post-content {
   justify-content: space-between;
   align-items: stretch; }
+  .custom-post-content .hidden-post-tag-cloud {
+    display: none; }
 
 .custom-post-footer {
   justify-content: flex-start; }

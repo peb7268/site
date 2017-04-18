@@ -12,6 +12,9 @@
 .custom-post-content {
 	justify-content: space-between;
 	align-items: stretch; // set height of child elements to auto
+    .hidden-post-tag-cloud{
+        display: none;
+    }
 }
 
 .custom-post-footer {
