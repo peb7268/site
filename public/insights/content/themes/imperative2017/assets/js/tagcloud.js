@@ -1,26 +1,10 @@
 
-// console.log('tagcloud.js here');
-// window.onload = function() {
-//     if (window.jQuery) {  
-//         // jQuery is loaded  
-//         alert("Yeah!");
-//     } else {
-//         // jQuery is not loaded
-//         alert("Doesn't Work");
-//     }
-// }
-// set font size cap
-// divide number of tags used
-// smooth out with a factor
-// get font for tag
+// var Handlebars = require('handlebars');
+// find data express sends to handlebars (route)
 
-// get all tags from ghost
-// count frequency
-// map them
-// tags: {
-//  tagName: {frequency: x}
-//  url: http://url.com  
-// } 
+// window.test = 'test';
+// console.log(test)
+
 let createTagArray = function(posts){
     let tagsArray = [];    
     let post;
@@ -41,8 +25,7 @@ let calculateFontSize = function(tagCount, tagsArray){
     for(var key in tagCount) {
         if(tagCount.hasOwnProperty(key)) {
             element = tagCount[key]
-            tagCount[key] = (element/totalTags) * fontFactor;
-            console.log(tagCount[key])
+            tagCount[key] = Math.round((element/totalTags) * fontFactor);
         }
     }
     let fonts = tagCount;
@@ -61,8 +44,20 @@ let createTagCloud = function(){
             });
 
             let fonts = calculateFontSize(tagCount, tags);
-            console.log(fonts);
-
+            let tagNames = Object.keys(fonts);
+            for( var tag in tagNames){
+                element = tagNames[tag];
+                // $("#elem").css({
+                //     fontSize: 20
+                // });
+                var $tag = $(`<li class='tagCloudTag'>${element}</li>`);
+                $("#tag-cloud").append($tag)
+                $("li.tagCloudTag").each(function(){
+                    console.log(fonts[element])                    
+                    var element = $( this ).text();
+                    $(this).css("fontSize", fonts[element]);
+                })
+            }
         })
         .fail(function (err){
             console.log(err);

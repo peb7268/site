@@ -36,6 +36,7 @@
         </div>
         <div class="flex-box-wrapper custom-post-footer">        
             <div class="custom-post-header">
+                <span id="test"> {{test}} </span>                
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
             {{!--<section class="post-excerpt">
@@ -51,6 +52,8 @@
     </article>
 {{/has}}
 {{/foreach}}
+
+<ul id="tag-cloud">hello</ul>
 
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}
