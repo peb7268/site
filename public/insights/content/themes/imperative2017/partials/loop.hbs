@@ -4,6 +4,7 @@
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
+<ul id="tag-cloud"></ul>
 {{#foreach posts}}
 {{#has tag="Quick Tip"}}
     <article class="{{post_class}} quick-tip">
@@ -52,8 +53,6 @@
     </article>
 {{/has}}
 {{/foreach}}
-
-<ul id="tag-cloud">hello</ul>
 
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}

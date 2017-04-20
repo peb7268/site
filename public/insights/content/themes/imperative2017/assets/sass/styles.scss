@@ -52,13 +52,32 @@
 	background-color: gray;
 	width: 65%;	
 }
-.tag-cloud{
+.content {
+    article:firstchild{
+        margin: 4rem 0 0 3%;
+        display: inline-block;
+        width: 55%;
+    }
+    .post{
+        border: none;
+    }
+    .post:after{
+        display: none;
+    }
+
+}
+#tag-cloud{
 	width: 35%;
 	font-family: 'Fjalla One';
 	text-transform: uppercase;
 	font-size: 24pt;
 	color: black;
-	margin-left: 10px;
+    margin: 0 8% 0 0;
+    float: right;
+    li.tagCloudTag {
+        display: inline-block;
+        padding: 1.5px;
+    }
 }
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');

@@ -21,7 +21,7 @@ let createTagArray = function(posts){
 
 let calculateFontSize = function(tagCount, tagsArray){
     let totalTags = tagsArray.length;
-    let fontFactor = 50;
+    let fontFactor = 6 * totalTags;
     for(var key in tagCount) {
         if(tagCount.hasOwnProperty(key)) {
             element = tagCount[key]
