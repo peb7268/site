@@ -7,35 +7,15 @@
 <ul id="tag-cloud"></ul>
 {{#foreach posts}}
 {{#has tag="Quick Tip"}}
-    {{!--<article class="{{post_class}} quick-tip">
-        <header class="post-header">
-            <h2 class="post-title">{{{title}}}</h2>
-            <span class="quicktip">
-                <i class="fa fa-tag" aria-hidden="true"></i>
-                quick tip
-            </span>
-        </header>
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-        <footer class="post-meta">
-            {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-                {{author}}
-            {{tags prefix=" on "}}
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-        </footer>
-    </article>--}}
     <article class="{{post_class}}">
         <div class="flex-box-wrapper custom-post-content">
             <section class="post-image">
-
+                {{!--{{image}}                --}}
+                {{content words="0"}}                
             </section>
-            <span class="hidden-post-tag-cloud">{{tags}}</span>
         </div>
         <div class="flex-box-wrapper custom-post-footer">        
-            <div class="custom-post-header">         
+            <div class="custom-post-header">           
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
             {{!--<section class="post-excerpt">
@@ -43,9 +23,9 @@
             </section>--}}
             <div class="custom-footer-meta">
                 {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
-                {{author}}
+                {{!--{{author}}--}}
                 {{tags prefix=" on | " limit="3" separator="|"}}
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
             </div>
         </div>
     </article>
@@ -53,9 +33,9 @@
     <article class="{{post_class}}">
         <div class="flex-box-wrapper custom-post-content">
             <section class="post-image">
-
+                {{!--{{image}}--}}
+                {{content words="0"}}
             </section>
-            <span class="hidden-post-tag-cloud">{{tags}}</span>
         </div>
         <div class="flex-box-wrapper custom-post-footer">        
             <div class="custom-post-header">
@@ -67,9 +47,9 @@
             </section>--}}
             <div class="custom-footer-meta">
                 {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
-                {{author}}
-                {{tags prefix=" on | " limit="3" separator="|"}}
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                {{!--{{author}}--}}
+                {{tags limit="3" separator="|"}}
+                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
             </div>
         </div>
     </article>

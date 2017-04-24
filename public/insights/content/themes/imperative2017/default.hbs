@@ -54,9 +54,11 @@
                         </h1>
                     </a>
                     <ul class="insights-nav">
-                        <li class="about"> About</li>
+                        <li class="about"> 
+                            <a href="/about"> About </a>                            
+                        </li>
                         <li class="services insights-dropdown">
-                            <a href="/services"> Services </a> 
+                            <a href="/services"> Services </a>
                             <ul>
                                 <li class="webdev"> <a href="/services/website-development"> Web Development </a></li>
                                 <li class="appdev"> <a href="/services/application-development"> Application Development </a></li>
@@ -78,7 +80,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
         <script type="text/javascript" src="{{asset "js/tagcloud.js"}}"></script>
         
-        <div id="tag-meta">
+        {{!--<div id="custom-tag-meta">
             <div class="main-header-content inner">
                 <h1 class="page-title">
                     {{#if tag.name}} 
@@ -95,7 +97,7 @@
                     {{/if}}
                 </h1>
             </div>
-        </div>
+        </div>--}}
 
         {{{body}}}
         
