@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900");
+.post-template .blog-title {
+  padding: 5px; }
+
+.test {
+  color: red; }
+
+.flex-box-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.custom-post-content {
+  justify-content: space-between;
+  align-items: stretch; }
+  .custom-post-content .hidden-post-tag-cloud {
+    display: none; }
+
+.custom-post-footer {
+  justify-content: flex-start; }
+  .custom-post-footer div {
+    margin: 5px 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    height: auto; }
+    .custom-post-footer div p {
+      margin: 0; }
+    .custom-post-footer div a {
+      text-decoration: none; }
+  .custom-post-footer .custom-footer-meta {
+    text-transform: uppercase;
+    font-size: 14pt;
+    background-color: black;
+    color: #dddddd; }
+    .custom-post-footer .custom-footer-meta a:first-child {
+      padding: 0px 0px 0 10px; }
+    .custom-post-footer .custom-footer-meta a {
+      color: #dddddd; }
+    .custom-post-footer .custom-footer-meta time {
+      padding: 0 10px;
+      font-size: 14pt; }
+
+.post-image, .tag-cloud {
+  height: auto; }
+
+.post-image {
+  background-color: gray;
+  width: 65%; }
+
+.content .post:firstchild {
+  margin: 4rem 0 0 3%;
+  display: inline-block;
+  width: 55%; }
+
+.content .post {
+  border: none; }
+
+.content .post:after {
+  display: none; }
+
+#tag-cloud {
+  width: 35%;
+  font-family: 'Fjalla One';
+  text-transform: uppercase;
+  font-size: 24pt;
+  color: black;
+  margin: 0 8% 0 0;
+  float: right; }
+  #tag-cloud li.tagCloudTag {
+    display: inline-block;
+    padding: 1.5px; }
+
+header {
+  margin: 40px 0 -23px 0; }
+  header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    line-height: normal; }
+  header .logo {
+    text-decoration: none;
+    color: #000; }
+    header .logo:hover {
+      color: #000; }
+  header h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42pt;
+    text-transform: uppercase;
+    width: 345px;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300; }
+    header h1 span:first-child {
+      font-family: 'Fjalla One', sans-serif;
+      color: #0036bf;
+      line-height: 0.9; }
+    header h1 span.tagline {
+      display: block;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 23pt;
+      line-height: 0.9; }
+  header ul.insights-nav {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    z-index: 50;
+    list-style: none; }
+    header ul.insights-nav li {
+      position: relative;
+      margin: 0 5% 0 0;
+      font-size: 20pt; }
+      header ul.insights-nav li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20pt;
+        font-weight: 100;
+        border-bottom: 1px solid transparent;
+        display: block; }
+        header ul.insights-nav li a:last-child {
+          margin-right: 0; }
+        header ul.insights-nav li a:hover {
+          color: #000;
+          border-color: #0036bf; }
+      header ul.insights-nav li.insights-dropdown ul {
+        position: absolute;
+        padding: 0;
+        width: 325px;
+        left: -110px;
+        display: none;
+        list-style: none; }
+        header ul.insights-nav li.insights-dropdown ul li:first-child {
+          padding-top: 10px; }
+        header ul.insights-nav li.insights-dropdown ul li:last-child a {
+          padding-bottom: 15px; }
+        header ul.insights-nav li.insights-dropdown ul li a {
+          font-size: 14pt;
+          background: rgba(255, 255, 255, 0.95);
+          display: block;
+          text-align: center;
+          padding: 7px;
+          box-sizing: border-box; }
+          header ul.insights-nav li.insights-dropdown ul li a:hover {
+            border-color: transparent;
+            transform: none;
+            background: #0036bf;
+            color: #fff;
+            font-weight: 400; }
+      header ul.insights-nav li.insights-dropdown:hover ul {
+        display: block; }
