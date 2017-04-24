@@ -81,7 +81,14 @@
     padding: 1.5px;
     text-decoration: none;
     color: black;
-    line-height: 1; }
+    line-height: 1;
+    transition: all 250ms;
+    margin: 0 2px; }
+  #tag-cloud a:hover {
+    transform: scale(1.1);
+    border-color: #0036bf; }
+  #tag-cloud a.active {
+    color: #0036bf; }
 
 #custom-tag-meta {
   background: black; }

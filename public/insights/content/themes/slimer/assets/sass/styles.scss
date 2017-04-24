@@ -88,6 +88,15 @@
         text-decoration: none;
         color: black;
         line-height: 1;
+        transition: all 250ms;
+        margin: 0 2px;
+    }
+    a:hover { 
+        transform: scale(1.1); 
+        border-color: #0036bf;
+    }
+    a.active{
+        color: #0036bf;
     }
 }
 #custom-tag-meta{

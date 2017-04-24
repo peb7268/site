@@ -1,10 +1,4 @@
 
-// var Handlebars = require('handlebars');
-// find data express sends to handlebars (route)
-
-// window.test = 'test';
-// console.log(test)
-
 let createTagArray = function(posts){
     let tagsArray = [];    
     let post;
@@ -27,7 +21,6 @@ let calculateFontSize = function(tagCount, tagsArray){
         if(tagCount.hasOwnProperty(key)) {
             element = tagCount[key]
             tagCount[key] = Math.round((((element/totalTags) * 10 ) * fontFactor) + 10);
-            console.log(tagCount[key])
         }
     }
     let fonts = tagCount;
@@ -37,6 +30,8 @@ let calculateFontSize = function(tagCount, tagsArray){
 let createTagCloud = function(){
     $.get(ghost.url.api('posts', {include: 'tags'}))
         .done(function (data){
+            let host = $(location).attr('host');
+
             let posts = data.posts;
             let tags = createTagArray(posts);
             let tagCount = {};
@@ -49,17 +44,26 @@ let createTagCloud = function(){
             let tagNames = Object.keys(fonts);
             for( var tag in tagNames){
                 element = tagNames[tag];
-                var $tag = $(`<a class='tagCloudTag'>${element}</a>`);
+                tagClassName = element.toLowerCase().replace(' ', '-');                    
+                var $tag = $(`<a class='tagCloudTag ${tagClassName}'>${element}</a>`);
                 $("#tag-cloud").append($tag)
                 $("a.tagCloudTag").each(function(){               
                     var element = $( this ).text();
+                    tagClassName = element.toLowerCase().replace(' ', '-');                    
                     $(this).css("fontSize", fonts[element] + 'pt');
-                    $(this).attr("href", `tag/${element}`)
+                    $(this).attr("href", 'http://' + host + '/insights/tag/' + tagClassName + '/')
                 })
             }
         })
+        .then(function(){
+            var path = $(location).attr('pathname');
+            activeTag = path.split('/')[3];
+            console.log(activeTag);
+            // activeTag.replace('-', ' ')
+            $('.' + activeTag).addClass("active");
+        })
         .fail(function (err){
-            console.log(err);
+            console.error(err);
         });
 }
 
