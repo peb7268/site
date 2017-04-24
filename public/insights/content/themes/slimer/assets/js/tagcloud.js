@@ -21,12 +21,13 @@ let createTagArray = function(posts){
 
 let calculateFontSize = function(tagCount, tagsArray){
     let totalTags = tagsArray.length;
-    let fontFactor = 6 * totalTags;
+    let fontFactor = 20;
     // (rate/tagCount * smooth) * 10 + base_font
     for(var key in tagCount) {
         if(tagCount.hasOwnProperty(key)) {
             element = tagCount[key]
-            tagCount[key] = Math.round((element/totalTags) * fontFactor);
+            tagCount[key] = Math.round((((element/totalTags) * 10 ) * fontFactor) + 7);
+            console.log(tagCount[key])
         }
     }
     let fonts = tagCount;
@@ -48,15 +49,12 @@ let createTagCloud = function(){
             let tagNames = Object.keys(fonts);
             for( var tag in tagNames){
                 element = tagNames[tag];
-                // $("#elem").css({
-                //     fontSize: 20
-                // });
-                var $tag = $(`<li class='tagCloudTag'>${element}</li>`);
+                var $tag = $(`<a class='tagCloudTag'>${element}</a>`);
                 $("#tag-cloud").append($tag)
-                $("li.tagCloudTag").each(function(){
-                    console.log(fonts[element])                    
+                $("a.tagCloudTag").each(function(){               
                     var element = $( this ).text();
-                    $(this).css("fontSize", fonts[element]);
+                    $(this).css("fontSize", fonts[element] + 'pt');
+                    $(this).attr("href", `tag/${element}`)
                 })
             }
         })

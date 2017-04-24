@@ -81,17 +81,19 @@
 	text-transform: uppercase;
 	font-size: 24pt;
 	color: black;
-    margin: -1.5rem 2% 0 0;
-    li.tagCloudTag {
+    margin: 0.1rem 2% 0 0;
+    a.tagCloudTag {
         display: inline-block;
         padding: 1.5px;
+        text-decoration: none;
+        color: black;
     }
 }
 #custom-tag-meta{
     background: black;
 }
-#content{
-    width: 70%;
+.content{
+    width: 100%;
     margin: 0 0 0 4rem;
 }
 $blue: #0036bf; 
