@@ -80,7 +80,8 @@
     display: inline-block;
     padding: 1.5px;
     text-decoration: none;
-    color: black; }
+    color: black;
+    line-height: 1; }
 
 #custom-tag-meta {
   background: black; }
