@@ -93,9 +93,12 @@
 #custom-tag-meta{
     background: black;
 }
+h1.post-title {
+    width: 100%;
+}
 .content{
     width: 100%;
-    margin: 0 0 0 4rem;
+    margin: 0 0 0 4rem !important;
 }
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
