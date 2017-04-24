@@ -7,7 +7,7 @@
 <ul id="tag-cloud"></ul>
 {{#foreach posts}}
 {{#has tag="Quick Tip"}}
-    <article class="{{post_class}} quick-tip">
+    {{!--<article class="{{post_class}} quick-tip">
         <header class="post-header">
             <h2 class="post-title">{{{title}}}</h2>
             <span class="quicktip">
@@ -26,6 +26,32 @@
             {{tags prefix=" on "}}
             <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
         </footer>
+    </article>--}}
+    <article class="{{post_class}}">
+        <div class="flex-box-wrapper custom-post-content">
+            <section class="post-image">
+
+            </section>
+            <span class="hidden-post-tag-cloud">{{tags}}</span>
+        </div>
+        <div class="flex-box-wrapper custom-post-footer">        
+            <div class="custom-post-header">
+                <span class="quicktip">
+                    <i class="fa fa-tag" aria-hidden="true"></i>
+                    quick tip
+                </span>              
+                <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
+            </div>
+            {{!--<section class="post-excerpt">
+                <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </section>--}}
+            <div class="custom-footer-meta">
+                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
+                {{author}}
+                {{tags prefix=" on | " limit="3" separator="|"}}
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </div>
+        </div>
     </article>
 {{else}}
     <article class="{{post_class}}">
