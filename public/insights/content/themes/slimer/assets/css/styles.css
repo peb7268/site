@@ -55,25 +55,27 @@
   .post-image img {
     width: 100%; }
 
-.content .post:firstchild {
-  margin: 4rem 0 0 3%;
-  display: inline-block;
-  width: 55%; }
+.content article {
+  margin: 4rem auto; }
 
 .content .post {
-  border: none; }
+  border: none;
+  margin: 0 auto; }
 
 .content .post:after {
   display: none; }
 
+.site-wrapper {
+  display: flex;
+  justify-content: space-between; }
+
 #tag-cloud {
-  width: 35%;
+  width: 25%;
   font-family: 'Fjalla One';
   text-transform: uppercase;
   font-size: 24pt;
   color: black;
-  margin: 0 8% 0 0;
-  float: right; }
+  margin: -1.5rem 2% 0 0; }
   #tag-cloud li.tagCloudTag {
     display: inline-block;
     padding: 1.5px; }
@@ -81,8 +83,12 @@
 #custom-tag-meta {
   background: black; }
 
+#content {
+  width: 70%;
+  margin: 0 0 0 4rem; }
+
 header {
-  margin: 40px 0 -23px 0; }
+  margin: 40px 0 0 0; }
   header .wrapper {
     display: flex;
     align-items: center;

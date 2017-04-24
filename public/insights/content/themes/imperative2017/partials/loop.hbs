@@ -4,17 +4,16 @@
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
-<ul id="tag-cloud"></ul>
 {{#foreach posts}}
 {{#has tag="Quick Tip"}}
     <article class="{{post_class}}">
-        <div class="flex-box-wrapper custom-post-content">
+        <div class="custom-post-content">
             <section class="post-image">
                 {{!--{{image}}                --}}
                 {{content words="0"}}                
             </section>
         </div>
-        <div class="flex-box-wrapper custom-post-footer">        
+        <div class="custom-post-footer">        
             <div class="custom-post-header">           
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
@@ -24,20 +23,20 @@
             <div class="custom-footer-meta">
                 {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
                 {{!--{{author}}--}}
-                {{tags limit="3" separator="|"}}
+                {{tags Zlimit="3" separator="|"}}
                 {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
             </div>
         </div>
     </article>
 {{else}}
     <article class="{{post_class}}">
-        <div class="flex-box-wrapper custom-post-content">
+        <div class="custom-post-content">
             <section class="post-image">
                 {{!--{{image}}--}}
                 {{content words="0"}}
             </section>
         </div>
-        <div class="flex-box-wrapper custom-post-footer">        
+        <div class="custom-post-footer">        
             <div class="custom-post-header">
                 <span id="test"> {{test}} </span>                
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
