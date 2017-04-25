@@ -5,6 +5,7 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src='/js/global.js')
+
     block scripts
 
     block styles
@@ -22,6 +23,7 @@ html
                     i.fa.fa-bars
                 ul.nav
                     li.about: a(href="/about") About
+                    //- li.clients: a(href="/clients") Clients //- disabled for now
                     li.services.dropdown
                         a(href="/services") Services
                         ul
@@ -34,6 +36,7 @@ html
                             li.branding: a(href='/services/branding') Brand Creation
                             li.rennovation: a(href='/services/website-rennovation') Website Rennovation
                             li.mentoring: a(href='/services/mentoring') Mentoring
-                    li.insights: a(href="/insights") Insights        
+                    li.insights: a(href="/insights") Insights      
         block content
     block body-scripts
+    block footer

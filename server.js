@@ -39,6 +39,7 @@ app.set('view engine', 'pug');
 //Routes
 app.get('/', (req, res) => res.render('index', {active_page: 'home'}));
 app.get('/about', (req, res) => res.render('about', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'about-page'}));
+app.get('/clients', (req, res) => res.render('clients', {message: 'Great and nerdy things coming... stay tuned.', title: 'this is how you pass data from express to your views.', active_page: 'clients-page'}));
 app.get('/services', (req, res) => res.render('services', {active_page: 'services-page'}));
 app.get('/services/website-development', (req, res) => res.render('web-development', {active_page: 'services-page', sub_page: 'website-development' }));
 app.get('/services/application-development', (req, res) => res.render('appdev', {active_page: 'services-page', sub_page: 'appdev' }));

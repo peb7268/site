@@ -90,7 +90,12 @@ strong {
     height: 100%;
     width: 100%;
     background-size: 120%;
-    background-color: transparent; }
+    background-color: transparent;
+    margin: 7% 0 0 0; }
   .ctas #flare {
     position: absolute;
     z-index: 5; }
+
+#footer {
+  background: #787878;
+  height: 150px; }

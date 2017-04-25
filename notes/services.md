@@ -1,3 +1,5 @@
+
+
 #Branding-
 
 https://lambesis.com/capabilities/
@@ -11,7 +13,7 @@ Move to Webdevelopment Under Rennovation (its still webdevelopment and i dont th
 
 #Mentoring
 
-#Team training
+##Team training
 - like classes?
 
 ##Personal Training ...

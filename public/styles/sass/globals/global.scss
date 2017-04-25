@@ -97,9 +97,15 @@ strong { font-weight: 500; }
         width: 100%;
         background-size: 120%;
         background-color: transparent;
+        margin: 7% 0 0 0;
     }
     #flare {
         position: absolute;
         z-index: 5;
     }
+}
+
+#footer {
+    background: #787878;
+    height: 150px;
 }
