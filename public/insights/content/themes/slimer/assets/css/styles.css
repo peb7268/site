@@ -55,15 +55,16 @@
   .post-image img {
     width: 100%; }
 
-.content article {
-  margin: 4rem auto; }
-
-.content .post {
-  border: none;
-  margin: 0 auto; }
-
-.content .post:after {
-  display: none; }
+.content {
+  width: 100%;
+  margin: 12rem 0 0 4rem !important; }
+  .content article {
+    margin: 4rem auto; }
+  .content .post {
+    border: none;
+    margin: 0 auto; }
+  .content .post:after {
+    display: none; }
 
 .site-wrapper {
   display: flex;
@@ -75,7 +76,7 @@
   text-transform: uppercase;
   font-size: 24pt;
   color: black;
-  margin: 0.1rem 2% 0 0; }
+  margin: 17rem 2% 0 0; }
   #tag-cloud a.tagCloudTag {
     display: inline-block;
     padding: 1.5px;
@@ -96,12 +97,14 @@
 h1.post-title {
   width: 100%; }
 
-.content {
-  width: 100%;
-  margin: 0 0 0 4rem !important; }
-
 header {
-  margin: 40px 0 0 0; }
+  position: fixed;
+  background: white;
+  padding: 2% 0 0 0;
+  margin: 0px;
+  z-index: 11;
+  width: 100%;
+  opacity: 1; }
   header .wrapper {
     display: flex;
     align-items: center;
@@ -137,7 +140,8 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     z-index: 50;
-    list-style: none; }
+    list-style: none;
+    justify-content: space-around; }
     header ul.insights-nav li {
       position: relative;
       margin: 0 5% 0 0;

@@ -59,6 +59,8 @@
     }
 }
 .content {
+    width: 100%;
+    margin: 12rem 0 0 4rem !important;
     article{
         margin: 4rem auto;
     }
@@ -81,7 +83,7 @@
 	text-transform: uppercase;
 	font-size: 24pt;
 	color: black;
-    margin: 0.1rem 2% 0 0;
+    margin: 17rem 2% 0 0;
     a.tagCloudTag {
         display: inline-block;
         padding: 1.5px;
@@ -106,13 +108,18 @@ h1.post-title {
     width: 100%;
 }
 .content{
-    width: 100%;
-    margin: 0 0 0 4rem !important;
+    
 }
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
 header {
-    margin: 40px 0 0 0;
+    position: fixed;
+    background: white;
+    padding: 2% 0 0 0;
+    margin: 0px;
+    z-index: 11;
+    width: 100%;
+    opacity: 1;
     .wrapper {
         display: flex;
         align-items: center;

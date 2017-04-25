@@ -164,7 +164,7 @@ strong {
 header {
   position: fixed;
   background: white;
-  padding: 2% 0;
+  padding: 2% 0 1% 0;
   margin: 0px;
   z-index: 11;
   width: 100%;
