@@ -498,6 +498,17 @@ a:hover {
   ul.connect li a {
     font-size: 14pt;
   }
+  .in-page-nav li {
+    display: inline-block;
+    width: 50%;
+  }
+  .in-page-nav li:last-child {
+    display: inline-block;
+    width: 100%;
+  }
+  .in-page-nav li a{
+    font-size: 9pt;
+  }
 
 @media only screen and (max-device-width: 321px) {
   
