@@ -45,6 +45,11 @@ strong { font-weight: 500; }
     background: #787878;
     min-height: 250px;
 }
+.graphic.image {
+    width: 40%;
+    max-height: 250px;
+    filter: grayscale(1);
+}
 
 .ctas {
     //background: #787878;

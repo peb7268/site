@@ -45,6 +45,11 @@ strong {
   background: #787878;
   min-height: 250px; }
 
+.graphic.image {
+  width: 40%;
+  max-height: 250px;
+  filter: grayscale(1); }
+
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
   background: #787878;
