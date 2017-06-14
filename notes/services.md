@@ -25,7 +25,7 @@ Move to Webdevelopment Under Rennovation (its still webdevelopment and i dont th
 ##BeatBootcamps | Learn the vital skills that bootcamps skip!
 While coding bootcamps are very popular among upcoming developers they dont prepare you for working in an agency. 
 - they skip over important info
-- they "teach the test"
+- they "teach the test" (what recruiters will ask you)
 - low job retention
 - they make you memorize not understand the code
 

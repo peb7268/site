@@ -184,3 +184,44 @@ header {
             font-weight: 400; }
       header ul.insights-nav li.insights-dropdown:hover ul {
         display: block; }
+
+@media only screen and (max-device-width: 415px) {
+  .wrapper ul.insights-nav {
+    position: absolute;
+    width: 100%;
+    display: block;
+    visibility: hidden;
+    top: 110px;
+    left: -34px; }
+    .wrapper ul.insights-nav li {
+      margin: 0; }
+      .wrapper ul.insights-nav li a {
+        display: block;
+        background: #0036bf;
+        color: #fff;
+        padding: 15px 20px;
+        box-sizing: border-box; }
+  #tag-cloud {
+    margin: 11rem 2% 0 0;
+    padding: 0 0 0 15px; }
+    #tag-cloud .tagCloudTag {
+      font-size: 12pt !important; }
+  .custom-post-footer .custom-footer-meta {
+    font-size: 11pt; } }
+
+@media only screen and (max-device-width: 321px) {
+  header h1 {
+    font-size: 32pt;
+    width: 265px; }
+    header h1 span.tagline {
+      font-size: 18pt; }
+  #content.content {
+    margin-left: 2rem !important; }
+  #tag-cloud {
+    padding: 0 0 0 10px; }
+    #tag-cloud .tagCloudTag {
+      font-size: 10pt !important; }
+  .custom-post-footer .custom-footer-meta {
+    font-size: 7pt; }
+  .custom-post-footer div {
+    font-size: 10pt; } }

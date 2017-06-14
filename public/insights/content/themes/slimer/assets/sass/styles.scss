@@ -209,3 +209,63 @@ header {
         }
     }
 }
+
+@media only screen 
+and (max-device-width : 415px){
+    .wrapper{
+    ul.insights-nav {
+        position: absolute;
+        width: 100%;
+        display: block;
+        visibility: hidden;
+        top: 110px;
+        left: -34px;
+        li {
+            margin: 0;
+            a {
+                display: block;
+                background: $blue;
+                color: #fff;
+                padding: 15px 20px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    }
+    #tag-cloud{
+        margin: 11rem 2% 0 0;
+        padding: 0 0 0 15px;        
+        .tagCloudTag{
+            font-size: 12pt !important;
+        }
+    }
+    .custom-post-footer .custom-footer-meta {
+        font-size: 11pt;
+    }
+}
+
+@media only screen 
+and (max-device-width : 321px){
+    header h1{
+        font-size: 32pt;
+        width: 265px;
+        span.tagline{
+            font-size: 18pt;
+        }
+    }
+    #content.content{
+        margin-left: 2rem !important;
+    }
+    #tag-cloud{
+        padding: 0 0 0 10px;
+        .tagCloudTag{
+            font-size: 10pt !important;
+        }
+    }
+    .custom-post-footer .custom-footer-meta {
+        font-size: 7pt;
+    }
+    .custom-post-footer div {
+        font-size: 10pt;
+    }
+}

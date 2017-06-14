@@ -135,7 +135,7 @@ strong {
     padding: 20px;
     box-sizing: border-box;
     color: #fff;
-    font-size: 1.94vw; }
+    font-size: 21pt; }
     .ctas .cta .message .highlight {
       font-family: 'Fjalla One', sans-serif;
       text-transform: uppercase;
@@ -153,7 +153,7 @@ strong {
     position: absolute;
     z-index: 10;
     background: url(../../img/ctas/test1.png) no-repeat 0 bottom;
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-size: 120%;
     background-color: transparent;
@@ -187,7 +187,7 @@ header {
       color: #000; }
   header h1 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 3.88vw;
+    font-size: 42pt;
     text-transform: uppercase;
     width: 345px;
     letter-spacing: -4px;
@@ -199,7 +199,7 @@ header {
     header h1 span.tagline {
       display: block;
       font-family: 'Permanent Marker', cursive;
-      font-size: 2.14vw;
+      font-size: 23pt;
       line-height: 0.9; }
   header ul.nav {
     display: flex;
@@ -214,7 +214,6 @@ header {
         text-decoration: none;
         color: #333;
         font-size: 20pt;
-        font-size: 1.85vw;
         font-weight: 100;
         border-bottom: 1px solid transparent;
         display: block; }
@@ -265,15 +264,15 @@ header {
     justify-content: space-between; }
     .band .wrapper .message {
       width: 40%;
-      font-size: 1.67vw; }
+      font-size: 18pt; }
       .band .wrapper .message p {
         font-weight: 100; }
       .band .wrapper .message h2, .band .wrapper .message h2 p {
         font-family: 'Permanent Marker', cursive;
-        font-size: 2.7vw; }
+        font-size: 29pt; }
       .band .wrapper .message h2 {
         margin: 0 0 20px 0;
-        font-size: 3.4vw; }
+        font-size: 38pt; }
       .band .wrapper .message h2 p {
         margin-top: 2px;
         padding: 5px 0 5px 0px;
@@ -289,38 +288,26 @@ header {
     color: #fff; }
   .band.band1 .message {
     width: 40%;
-    font-size: 1.67vw; }
+    font-size: 18pt; }
     .band.band1 .message p {
       font-weight: 100; }
     .band.band1 .message h2 {
       margin: 0 0 20px 0;
-      font-size: 3.4vw; }
+      font-size: 37pt; }
     .band.band1 .message h2 p {
       margin-top: 2px;
       padding: 5px 0 5px 0px;
       text-align: center; }
   .band.band3 .message h2 {
-    font-size: 3.1vw; }
+    font-size: 34pt; }
 
 .home .ctas {
   height: 625px;
   margin-bottom: 0; }
 
-@media (max-width:1100px){
-  .home .ctas {
-  height: 515px;
-  margin-bottom: 0; }
-}
-
-@media (max-width:800px){
-  .home .ctas {
-  height: 345px;
-  margin-bottom: 0; }
-}
-
 .next-steps li a {
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 15pt;
   display: block; }
 
 ul.connect li {
@@ -333,7 +320,7 @@ ul.connect li {
     color: #0036bf; }
   ul.connect li a {
     display: block;
-    font-size: 2.5vw;
+    font-size: 27pt;
     text-align: center; }
 
 .services-page.website-development .web-dev a,
@@ -387,7 +374,6 @@ a:hover {
   color: #fff; }
 
 @media only screen and (max-device-width: 415px) {
-
   header {
     position: fixed;
     width: 100%;
@@ -404,139 +390,14 @@ a:hover {
       text-align: center;
       margin: 35px auto 20px; }
       header .logo h1 {
-        font-size: 32pt;
+        font-size: 36pt;
         letter-spacing: -2px; }
         header .logo h1 span.tagline {
-          font-size: 18pt; }
+          font-size: 20pt; }
     header .nav-toggle {
       visibility: visible;
       position: absolute;
-      top: 40px;
-      right: 7%;
-      font-size: 17pt; }
-      header .nav-toggle:hover {
-        color: #0036bf;
-        transform: scale(1); }
-    header ul.nav {
-      position: absolute;
-      width: 100%;
-      display: block;
-      visibility: hidden;
-    }
-      header ul.nav li {
-        margin: 0; }
-        header ul.nav li a {
-          display: block;
-          background: #0036bf;
-          color: #fff;
-          padding: 15px 20px;
-          box-sizing: border-box;
-          font-size: 14pt;           
-        }
-  .home .ctas {
-    margin-top: 130px;
-    height: auto;
-    height: 170px; }
-  .home .ctas .ad1 {
-    background-position: 0 top;
-    background-size: 100%; }
-  .ctas .cta .message {
-    font-size: 13.5pt;
-    bottom: 1%; }
-  .ctas .cta .message .highlight {
-      padding: 3px 6px; 
-  }
-  .band .wrapper {
-    width: 98%;
-    display: block;
-    margin: 30px auto 40px; }
-    .band .wrapper .message, .band .wrapper .graphic {
-      width: 98%;
-      display: block;
-      margin: 0 auto; }
-    .band .wrapper .graphic {
-      margin: 10px auto; }
-    .band .wrapper .message h2 {
-      text-align: center;
-      font-size: 26pt; }
-    .band .wrapper .message h2 p {
-      font-size: 23pt;
-      margin-top: 4px; }
-  .band .wrapper .message p {
-    font-weight: 100;
-    font-size: 11pt;
-    padding: 0 10px;
-  }
-  .band.band2 .wrapper .message h2 {
-    font-size: 27pt; }
-  .band.band2 .wrapper .message h2 p {
-    font-size: 22pt; }
-  .band.band3 .wrapper .message {
-    margin-bottom: 20px; }
-  .band.band3 .wrapper .message h2 {
-    font-size: 25pt; }
-  .services-page .ctas {
-    margin-bottom: 25px; }
-  .services-page .content {
-    width: 98%;
-    border-left: none;
-    padding: 0 15px;
-    box-sizing: border-box; }
-  .services-page .page.wrapper {
-    display: block;
-    width: 98%;
-    margin: 0 auto; }
-  .services-page .in-page-nav {
-    width: 100%;
-    margin-bottom: 25px; }
-  .page.wrapper h1 {
-    font-size: 15pt; } }
-  .next-steps li a {
-    font-size: 13pt;
-    padding: 0 10px;
-  }
-  ul.connect li a {
-    font-size: 14pt;
-  }
-  .in-page-nav li {
-    display: inline-block;
-    width: 50%;
-  }
-  .in-page-nav li:last-child {
-    display: inline-block;
-    width: 100%;
-  }
-  .in-page-nav li a{
-    font-size: 9pt;
-  }
-
-@media only screen and (max-device-width: 321px) {
-  
-  header {
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    margin-top: 0;
-    display: inline-block;
-    background: #fff;
-    box-shadow: 0px 1px 1px #bbb; }
-    header .wrapper {
-      width: 100%;
-      display: block; }
-    header .logo {
-      display: block;
-      text-align: left;
-      text-indent: 20px;
-      margin: 35px auto 20px; }
-      header .logo h1 {
-        font-size: 27pt;
-        letter-spacing: -2px; }
-        header .logo h1 span.tagline {
-          font-size: 15pt; }
-    header .nav-toggle {
-      visibility: visible;
-      position: absolute;
-      top: 40px;
+      top: 45px;
       right: 7%;
       font-size: 17pt; }
       header .nav-toggle:hover {
@@ -553,17 +414,17 @@ a:hover {
           display: block;
           background: #0036bf;
           color: #fff;
-          padding: 2px 4px;
+          padding: 15px 20px;
           box-sizing: border-box; }
   .home .ctas {
     margin-top: 130px;
     height: auto;
-    height: 140px; }
+    height: 170px; }
   .home .ctas .ad1 {
     background-position: 0 top;
     background-size: 100%; }
   .ctas .cta .message {
-    font-size: 10pt;
+    font-size: 15pt;
     bottom: 1%; }
   .band .wrapper {
     width: 98%;
@@ -605,8 +466,111 @@ a:hover {
     margin-bottom: 25px; }
   .page.wrapper h1 {
     font-size: 15pt; }
+  .ctas .cta .message .highlight {
+    padding: 2px 6px; } }
+
+@media only screen and (max-device-width: 321px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    margin-top: 0;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0px 1px 1px #bbb; }
+  header .wrapper {
+    width: 100%;
+    display: block; }
+  header .logo {
+    display: block;
+    text-align: left;
+    text-indent: 20px;
+    margin: 35px auto 20px; }
+  header .logo h1 {
+    font-size: 27pt;
+    letter-spacing: -2px; }
+  header .logo h1 span.tagline {
+    font-size: 15pt; }
+  header .nav-toggle {
+    visibility: visible;
+    position: absolute;
+    top: 40px;
+    right: 7%;
+    font-size: 17pt; }
+  header .nav-toggle:hover {
+    color: #0036bf;
+    transform: scale(1); }
+  header ul.nav {
+    position: absolute;
+    width: 100%;
+    display: block;
+    visibility: hidden; }
+  header ul.nav li {
+    margin: 0; }
+  header ul.nav li a {
+    display: block;
+    background: #0036bf;
+    color: #fff;
+    padding: 2px 4px;
+    box-sizing: border-box; }
+  .home .ctas {
+    margin-top: 110px;
+    height: auto;
+    height: 140px; }
+  .home .ctas .ad1 {
+    background-position: 0 top;
+    background-size: 100%; }
+  .ctas .cta .message {
+    font-size: 10pt;
+    bottom: 1%; }
+  .band .wrapper {
+    width: 98%;
+    display: block;
+    margin: 30px auto 40px; }
+  .band .wrapper .message {
+    width: 40%;
+    font-size: 12pt; }
+  .band .wrapper .message, .band .wrapper .graphic {
+    width: 98%;
+    display: block;
+    margin: 0 auto; }
+  .band .wrapper .graphic {
+    margin: 10px auto; }
+  .band .wrapper .message h2 {
+    text-align: center;
+    font-size: 24pt; }
+  .band .wrapper .message h2 p {
+    font-size: 21pt;
+    margin-top: 4px; }
+  .band.band2 .wrapper .message h2 {
+    font-size: 24pt; }
+  .band.band2 .wrapper .message h2 p {
+    font-size: 20pt; }
+  .band.band3 .wrapper .message {
+    margin-bottom: 20px; }
+  .band.band3 .wrapper .message h2 {
+    font-size: 22pt; }
+  .services-page .ctas {
+    margin-bottom: 25px; }
+  .services-page .content {
+    width: 98%;
+    border-left: none;
+    padding: 0 15px;
+    box-sizing: border-box; }
+  .services-page .page.wrapper {
+    display: block;
+    width: 98%;
+    margin: 0 auto; }
+  .services-page .in-page-nav {
+    width: 100%;
+    margin-bottom: 25px; }
+  .page.wrapper h1 {
+    font-size: 15pt; }
   .ctas .ad1 {
     height: 100%;
-    margin-top: 4%;
-  } 
-}
+    margin-top: 4%; }
+  .next-steps li a {
+    font-size: 11pt;
+    margin-bottom: 5px; }
+  ul.connect li a {
+    font-size: 22pt; } }
