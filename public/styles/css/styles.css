@@ -125,7 +125,7 @@ strong {
   /* IE6-9 */
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px; }
+  margin: 115px auto 50px; }
   .ctas .cta .message {
     position: absolute;
     right: 1%;
@@ -336,10 +336,13 @@ ul.connect li {
   color: #fff; }
 
 .services-page .ctas {
-  height: 300px; }
+  min-height: 200px;
+  max-height: 300px; }
+  .services-page .ctas .cta img {
+    width: 100%; }
 
 .services-page .in-page-nav {
-  width: 19%;
+  width: 20%;
   margin-right: 1%; }
   .services-page .in-page-nav li {
     margin: 0; }

@@ -12,9 +12,17 @@
  
 
 .services-page{
-    .ctas { height: 300px; }
+    .ctas {
+        min-height: 200px;
+        max-height: 300px;
+        .cta {
+            img {
+                width: 100%;
+            }
+        }
+    }
     .in-page-nav {
-        width: 19%;
+        width: 20%;
         margin-right: 1%;
         li {
             margin: 0;

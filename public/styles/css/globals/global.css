@@ -64,7 +64,7 @@ strong {
   /* IE6-9 */
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px; }
+  margin: 115px auto 50px; }
   .ctas .cta .message {
     position: absolute;
     right: 1%;
