@@ -374,48 +374,52 @@ a:hover {
   color: #fff; }
 
 @media only screen and (max-device-width: 415px) {
-  header {
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    margin-top: 0;
-    display: inline-block;
-    background: #fff;
-    box-shadow: 0px 1px 1px #bbb; }
-    header .wrapper {
+  .container {
+    overflow: hidden; }
+    .container header {
+      display: flex;
+      position: fixed;
       width: 100%;
-      display: block; }
-    header .logo {
-      display: block;
-      text-align: center;
-      margin: 35px auto 20px; }
-      header .logo h1 {
-        font-size: 36pt;
-        letter-spacing: -2px; }
-        header .logo h1 span.tagline {
-          font-size: 20pt; }
-    header .nav-toggle {
-      visibility: visible;
-      position: absolute;
-      top: 45px;
-      right: 7%;
-      font-size: 17pt; }
-      header .nav-toggle:hover {
-        color: #0036bf;
-        transform: scale(1); }
-    header ul.nav {
-      position: absolute;
-      width: 100%;
-      display: block;
-      visibility: hidden; }
-      header ul.nav li {
-        margin: 0; }
-        header ul.nav li a {
-          display: block;
-          background: #0036bf;
-          color: #fff;
-          padding: 15px 20px;
-          box-sizing: border-box; }
+      z-index: 20;
+      margin-top: 0;
+      background: #fff;
+      box-shadow: 0px 1px 1px #bbb;
+      box-sizing: border-box; }
+      .container header .wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .container header .logo {
+        display: block;
+        text-align: left;
+        margin: 35px auto 20px; }
+        .container header .logo h1 {
+          font-size: 36pt;
+          letter-spacing: -2px; }
+          .container header .logo h1 span.tagline {
+            font-size: 20pt; }
+      .container header .nav-toggle {
+        visibility: visible;
+        font-size: 17pt; }
+        .container header .nav-toggle:hover {
+          color: #0036bf;
+          transform: scale(1); }
+      .container header ul.nav {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0; }
+        .container header ul.nav li {
+          margin: 0; }
+          .container header ul.nav li a {
+            display: block;
+            background: #0036bf;
+            color: #fff;
+            padding: 15px 20px;
+            box-sizing: border-box; }
   .home .ctas {
     margin-top: 130px;
     height: auto;
@@ -463,7 +467,11 @@ a:hover {
     margin: 0 auto; }
   .services-page .in-page-nav {
     width: 100%;
-    margin-bottom: 25px; }
+    margin: 0 auto 25px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px dotted #333;
+    padding: 0 0 20px; }
   .page.wrapper h1 {
     font-size: 15pt; }
   .ctas .cta .message .highlight {

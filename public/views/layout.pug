@@ -13,30 +13,30 @@ html
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     body.page(class=active_page)
         div.container
-        header.group
-            .wrapper
-                a(href="/").logo
-                    h1
-                        != '<span>Imperative</span> Design'
-                        span.tagline Elevate your messaging
-                a.nav-toggle(href="#")
-                    i.fa.fa-bars
-                ul.nav
-                    li.about: a(href="/about") About
-                    //- li.clients: a(href="/clients") Clients //- disabled for now
-                    li.services.dropdown
-                        a(href="/services") Services
-                        ul
-                            li.web-dev: a(href='/services/website-development') Web Development
-                            li.appdev: a(href='/services/application-development') Application Development
-                            li.seo: a(href='/services/search-engine-optimization') Search Engine Optimization ( SEO )
-                            li.smm: a(href='/services/social-media-marketing') Social Media Marketing
-                            li.strategy: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
-                            li.copywriting: a(href='/services/copywriting') Copywriting
-                            li.branding: a(href='/services/branding') Brand Creation
-                            li.rennovation: a(href='/services/website-rennovation') Website Rennovation
-                            li.mentoring: a(href='/services/mentoring') Mentoring
-                    li.insights: a(href="/insights") Insights      
+            header.group
+                .wrapper
+                    a(href="/").logo
+                        h1
+                            != '<span>Imperative</span> Design'
+                            span.tagline Elevate your messaging
+                    a.nav-toggle(href="#")
+                        i.fa.fa-bars
+                    ul.nav
+                        li.about: a(href="/about") About
+                        //- li.clients: a(href="/clients") Clients //- disabled for now
+                        li.services.dropdown
+                            a(href="/services") Services
+                            ul
+                                li.web-dev: a(href='/services/website-development') Web Development
+                                li.appdev: a(href='/services/application-development') Application Development
+                                li.seo: a(href='/services/search-engine-optimization') Search Engine Optimization ( SEO )
+                                li.smm: a(href='/services/social-media-marketing') Social Media Marketing
+                                li.strategy: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
+                                li.copywriting: a(href='/services/copywriting') Copywriting
+                                li.branding: a(href='/services/branding') Brand Creation
+                                li.rennovation: a(href='/services/website-rennovation') Website Rennovation
+                                li.mentoring: a(href='/services/mentoring') Mentoring
+                        li.insights: a(href="/insights") Insights      
         block content
     block body-scripts
     block footer
