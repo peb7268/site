@@ -48,7 +48,10 @@ strong {
 .graphic.image {
   width: 40%;
   max-height: 250px;
-  filter: grayscale(1); }
+  filter: grayscale(1);
+  transition: all 500ms ease-in-out; }
+  .graphic.image.active {
+    filter: grayscale(0); }
 
 .ctas {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#787878+0,333333+100 */
@@ -67,14 +70,15 @@ strong {
   margin: 115px auto 50px; }
   .ctas .cta .message {
     position: absolute;
-    right: 1%;
+    right: -110%;
     bottom: 30%;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
     color: #fff;
-    font-size: 21pt; }
+    font-size: 21pt;
+    transition: right 500ms ease-in-out; }
     .ctas .cta .message .highlight {
       font-family: 'Fjalla One', sans-serif;
       text-transform: uppercase;
@@ -88,6 +92,8 @@ strong {
         color: #eee;
         text-decoration: none;
         font-size: 11pt; }
+  .ctas .cta.active .message {
+    right: 1%; }
   .ctas .ad1 {
     position: absolute;
     z-index: 10;
@@ -96,7 +102,7 @@ strong {
     width: 100%;
     background-size: 120%;
     background-color: transparent;
-    margin: 7% 0 0 0; }
+    margin: 0; }
   .ctas #flare {
     position: absolute;
     z-index: 5; }

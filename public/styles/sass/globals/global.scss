@@ -49,6 +49,10 @@ strong { font-weight: 500; }
     width: 40%;
     max-height: 250px;
     filter: grayscale(1);
+    transition: all 500ms ease-in-out;
+    &.active {
+        filter: grayscale(0);
+    }
 }
 
 .ctas {
@@ -66,7 +70,7 @@ strong { font-weight: 500; }
     .cta {
         .message {
             position: absolute;
-            right: 1%;
+            right: -110%;
             bottom: 30%;
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(0, 0, 0, 0.1);
@@ -74,6 +78,7 @@ strong { font-weight: 500; }
             box-sizing: border-box;
             color: #fff;
             font-size: 21pt;
+            transition: right 500ms ease-in-out;
 
             .highlight {
                 font-family: 'Fjalla One', sans-serif;
@@ -93,6 +98,7 @@ strong { font-weight: 500; }
                 }
             }
         }
+        &.active .message { right: 1%; }
     }
     .ad1 {
         position: absolute;
@@ -102,7 +108,7 @@ strong { font-weight: 500; }
         width: 100%;
         background-size: 120%;
         background-color: transparent;
-        margin: 7% 0 0 0;
+        margin: 0;
     }
     #flare {
         position: absolute;

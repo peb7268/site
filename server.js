@@ -16,6 +16,7 @@ var ghost 		= require(__dirname + '/public/insights/ghost-middleware');
 
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
+app.use('/scripts', express.static(__dirname + '/node_modules'));
 
 //Ghost configs
 var config_path = path.join(__dirname, '/public/insights/config.js');
