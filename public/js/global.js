@@ -34,10 +34,12 @@ function bindCtaAnimations(sel){
     IdAnimations.count      = 0;
 
     //Rx Pipeline
-    var mouseMoves$ = Rx.Observable.fromEvent(document, 'mousemove');
-    mouseMoves$
-    .map(mv => mv.clientY)
-    .subscribe(cursor_pos => {
+    var windowMovement$ = Rx.Observable.fromEvent(document, 'scroll');
+    windowMovement$
+    .takeWhile((evt, i) => i % 100 == 0).repeat()   //sample the event stream less frequently ( every 100 events )
+    .map(doc => window.pageYOffset)
+    .subscribe(scroll_pos => {
+        console.log(`scroll_pos: ${scroll_pos}`);
         window.IdAnimations.screen_height = screen.height;
         let $current_cta      = $(IdAnimations.$ctas[IdAnimations.count]);
         
@@ -59,7 +61,7 @@ function bindCtaAnimations(sel){
          *      - is the (element position - 100) or the (element position + 100) >= half of the screen height
          */
 
-        if(IdAnimations.count == 0 && elem_is_on_screen){
+        if(IdAnimations.count == 0 && screen_top > 20){
             console.log(`first elem element is on screen and mouse moved`);
             $current_cta.addClass('active');
             IdAnimations.count++;
