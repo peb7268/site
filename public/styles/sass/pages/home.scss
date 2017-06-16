@@ -46,7 +46,16 @@
     }
 } 
 
-.home .ctas { height: 625px; margin-bottom: 0; }
+.home .ctas { 
+    margin: 135px 0 0 0;
+    .ad1 {
+        img { 
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
 
 .next-steps {
     li a { color: #fff; font-size: 15pt; display: block; }

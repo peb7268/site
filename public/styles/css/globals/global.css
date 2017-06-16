@@ -14,14 +14,14 @@ strong {
   font-weight: 500; }
 
 .container {
-  max-width: 1700px;
-  width: 100%;
+  max-width: 1500px;
+  width: 98%;
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
 
 .wrapper {
-  width: 90%;
+  width: 100%;
   margin: 0 auto; }
 
 .page.wrapper {
@@ -70,6 +70,7 @@ strong {
   margin: 115px auto 50px; }
   .ctas .cta .message {
     position: absolute;
+    z-index: 10;
     right: -110%;
     bottom: 30%;
     background: rgba(0, 0, 0, 0.4);
@@ -94,15 +95,6 @@ strong {
         font-size: 11pt; }
   .ctas .cta.active .message {
     right: 1%; }
-  .ctas .ad1 {
-    position: absolute;
-    z-index: 10;
-    background: url(../../img/ctas/test1.png) no-repeat 0 bottom;
-    height: 100%;
-    width: 100%;
-    background-size: 120%;
-    background-color: transparent;
-    margin: 0; }
   .ctas #flare {
     position: absolute;
     z-index: 5; }
