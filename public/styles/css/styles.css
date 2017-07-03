@@ -166,8 +166,9 @@ strong {
 
 header {
   position: fixed;
+  left: 0;
   background: white;
-  padding: 2% 3% 1% 0;
+  padding: 20px 3% 10px 1%;
   margin: 0px;
   z-index: 11;
   width: 100%;
@@ -350,7 +351,7 @@ ul.connect li {
 
 .services-page .in-page-nav {
   width: 20%;
-  margin-right: 1%; }
+  margin-left: 1%; }
   .services-page .in-page-nav li {
     margin: 0; }
     .services-page .in-page-nav li a {
