@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "clear; NODE_ENV=production node server",
+    "start": "clear; NODE_ENV=development node server",
     "startdev": "clear; NODE_ENV=development nodemon server",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'wip' && git push && git push heroku",

@@ -1,0 +1,46 @@
+//- page.pug
+html
+  head
+    title Imperative Design | A Full Stop Web Shop
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src='/js/global.js')
+
+    block scripts
+    
+    block styles
+        link(rel="stylesheet", href="/styles/css/styles.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    body.page.services-page(class=sub_page)
+        div.container
+            header
+                .wrapper
+                    a(href="/").logo
+                        h1
+                            != '<span>Imperative</span> Design'
+                            span.tagline Elevate your messaging
+                    a.nav-toggle(href="#")
+                        i.fa.fa-bars
+                        
+                    ul.nav
+                        li.about: a(href="/about") About
+                        li.services.dropdown
+                            a(href="/services") Services
+                            ul
+                                li: a(href='/services/website-development') Web Development
+                                li: a(href='/services/app-development') Application Development
+                                li: a(href='/services/seo') Search Engine Optimization ( SEO )
+                                li: a(href='/services/social-media-marketing') Social Media Marketing
+                                li: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
+                                li: a(href='/services/copywriting') Copywriting
+                                li: a(href='/services/brand-creation') Brand Creation
+                                li: a(href='/services/website-rennovation') Website Rennovation
+                        li.insights: a(href="/insights") Insights
+            
+        section.ctas
+            .cta
+                block main-cta
+        .page.wrapper 
+            section.content
+                block page_content
+    block body-scripts
