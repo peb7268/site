@@ -22,20 +22,7 @@ html
                     a.nav-toggle(href="#")
                         i.fa.fa-bars
                         
-                    ul.nav
-                        li.about: a(href="/about") About
-                        li.services.dropdown
-                            a(href="/services") Services
-                            ul
-                                li: a(href='/services/website-development') Web Development
-                                li: a(href='/services/application-development') Application Development
-                                li: a(href='/services/seo') Search Engine Optimization ( SEO )
-                                li: a(href='/services/social-media-marketing') Social Media Marketing
-                                li: a(href='/services/digital-marketing-strategy') Digital Marketing Strategy
-                                li: a(href='/services/copywriting') Copywriting
-                                li: a(href='/services/brand-creation') Brand Creation
-                                li: a(href='/services/website-rennovation') Website Rennovation
-                        li.insights: a(href="/insights") Insights
+                    include nav.pug
             
         section.ctas
             .cta

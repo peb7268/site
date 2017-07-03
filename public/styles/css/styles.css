@@ -367,6 +367,11 @@ ul.connect li {
 .about-page .ctas {
   height: 300px; }
 
+.about-page .content {
+  width: 80%;
+  border-left: 1px dotted #333;
+  padding: 0 0 0 30px; }
+
 .clients-page .page.wrapper {
   margin: 0;
   width: 100%;
