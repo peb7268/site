@@ -1,7 +1,30 @@
 
 function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
-    bindCtaAnimations('.cta, .graphic.image');
+    $('.show-contact').on('click', toggleQuickContact);
+    $('.quick-contact .close').on('click', retractQuickContact);
+
+    if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
+}
+
+function toggleQuickContact(evt){
+    evt.preventDefault();
+    if($('form.quick-contact').hasClass('active')) return retractQuickContact();
+    showQuickContact();
+}
+
+function showQuickContact(){
+    $('.shade').addClass('active');
+    window.setTimeout(function(){
+        $('.quick-contact').addClass('active');
+    }, 700);
+}
+
+function retractQuickContact(){
+    $('.quick-contact').removeClass('active');
+    window.setTimeout(function(){
+        $('.shade').removeClass('active');
+    }, 700);
 }
 
 function toggleNav(evt){
@@ -39,7 +62,7 @@ function bindCtaAnimations(sel){
     .takeWhile((evt, i) => i % 100 == 0).repeat()   //sample the event stream less frequently ( every 100 events )
     .map(doc => window.pageYOffset)
     .subscribe(scroll_pos => {
-        console.log(`scroll_pos: ${scroll_pos}`);
+        // console.log(`scroll_pos: ${scroll_pos}`);
         window.IdAnimations.screen_height = screen.height;
         let $current_cta      = $(IdAnimations.$ctas[IdAnimations.count]);
         
@@ -49,7 +72,7 @@ function bindCtaAnimations(sel){
         let distance_from_top = $current_cta.offset().top;
         let elem_current_position = (distance_from_top - header_height) - window.pageYOffset;   //current distance from top of viewable area
         
-        console.log(`elem_current_position: ${elem_current_position}`);
+        // console.log(`elem_current_position: ${elem_current_position}`);
 
         let elem_is_on_screen = screen.height > (distance_from_top - header_height); 
         let elem_is_near_middle_of_screen = (elem_current_position - 100 >= (screen.height / 2) || elem_current_position + 100 >= (screen.height / 2));

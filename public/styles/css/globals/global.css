@@ -102,3 +102,27 @@ strong {
 #footer {
   background: #787878;
   height: 150px; }
+
+form.quick-contact {
+  position: fixed;
+  left: 40%;
+  top: 30%;
+  background: #fff;
+  width: 30%;
+  box-shadow: 0px 0px 2px #333;
+  border-radius: 2px;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 110; }
+  form.quick-contact input {
+    width: 100%;
+    margin: 0 0 7px; }
+
+.shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 100; }

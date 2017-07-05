@@ -1,8 +1,5 @@
+//- index.pug
 extends layout.pug
-
-block scripts
-    script(src='/scripts/rxjs/bundles/Rx.js')
-    
 
 block content
         section.ctas
@@ -50,9 +47,5 @@ block content
 
                 ul.connect
                     li: a(href="/get-started"): h2 Get Started
-                    li: a(href="/request-a-quote"): h2 Request A Quote
+                    li: a.show-contact(href="/request-a-quote"): h2 Request A Quote
                     li.social-icons
-
-        
-block body-scripts
-
