@@ -36,6 +36,9 @@ and (max-device-width : 415px){
           .nav-toggle { 
               visibility: visible;
               font-size: 17pt;
+              position: absolute;
+              top: 15px;
+              right: 20px;
               &:hover { color: $blue; transform: scale(1); }
           }
 
@@ -60,12 +63,18 @@ and (max-device-width : 415px){
           }
       }
     }
-    .home .ctas { margin-top: 130px; height: auto; height: 170px;}
+
+    .home .ctas { 
+        margin-top: 150px; 
+        height: auto;
+    }
+
     .home .ctas .ad1 { 
         background-position: 0 top;
         background-size: 100%;
     }
-    .ctas .cta .message { font-size: 15pt; bottom: 1%; }
+
+    .ctas .cta .message { font-size: 15pt; bottom: 1%; right: -220%; }
     .band {
         .wrapper {
             width: 98%;
@@ -109,6 +118,20 @@ and (max-device-width : 415px){
     .page.wrapper h1 { font-size: 15pt; }
     .ctas .cta .message .highlight {
         padding: 2px 6px;
+    }
+
+    form.quick-contact {
+      width: 98%;
+      left: 1%;
+      &.active { bottom: 30%; }
+    }
+
+    .about-page, .services-page {
+      .ctas { 
+        height: 200px;
+        margin-top: 150px; 
+        .cta img { height: 100%; width: initial; margin-left: -500px; }
+      }
     }
 }
 @media only screen and (max-device-width: 321px) {
