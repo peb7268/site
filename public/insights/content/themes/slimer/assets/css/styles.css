@@ -122,7 +122,7 @@ body > header {
   display: flex;
   position: fixed;
   background: white;
-  padding: 20px 3% 10px 1%;
+  padding: 20px 3% 0px 1%;
   margin: 0px;
   z-index: 11;
   width: 100%;
@@ -166,7 +166,8 @@ body > header {
     z-index: 50;
     justify-content: space-between;
     min-width: 285px;
-    list-style: none; }
+    list-style: none;
+    margin-top: 10px; }
     body > header ul.insights-nav li {
       position: relative;
       margin: 0 5% 0 0;
@@ -209,6 +210,20 @@ body > header {
             font-weight: 400; }
       body > header ul.insights-nav li.insights-dropdown:hover ul {
         display: block; }
+
+@media only screen and (max-device-width: 1025px) {
+  .content .post {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0; }
+  .custom-post-footer {
+    position: initial; }
+  .custom-post-content {
+    width: initial; }
+  #tagcloud {
+    padding: 0; } }
 
 @media only screen and (max-device-width: 415px) {
   .content .post {

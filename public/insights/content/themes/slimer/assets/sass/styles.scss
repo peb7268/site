@@ -141,7 +141,7 @@ body > header {
     display: flex;
     position: fixed;
     background: white;
-    padding: 20px 3% 10px 1%;
+    padding: 20px 3% 0px 1%;
     margin: 0px;
     z-index: 11;
     width: 100%;
@@ -189,6 +189,7 @@ body > header {
         justify-content: space-between;
         min-width: 285px;
         list-style: none;
+        margin-top: 10px;
 
         li {
             position: relative;
@@ -237,6 +238,27 @@ body > header {
             }
             &.insights-dropdown:hover ul { display: block; }
         }
+    }
+}
+
+@media only screen
+and (max-device-width: 1025px){
+    .content .post{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .custom-post-footer{
+        position: initial;
+    }
+    .custom-post-content{
+        width: initial;
+    }
+
+    #tagcloud{
+        padding: 0
     }
 }
 
