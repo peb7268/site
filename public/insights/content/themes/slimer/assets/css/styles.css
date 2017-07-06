@@ -31,7 +31,8 @@
     .custom-post-footer div p {
       margin: 0 10px; }
     .custom-post-footer div a {
-      text-decoration: none; }
+      text-decoration: none;
+      text-transform: capitalize; }
   .custom-post-footer .custom-post-header {
     margin: -10px 5px; }
   .custom-post-footer .custom-footer-meta {
