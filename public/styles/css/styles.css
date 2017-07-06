@@ -160,8 +160,8 @@ strong {
     z-index: 5; }
 
 #footer {
-  background: #787878;
-  height: 150px; }
+  background: #333;
+  height: 35px; }
 
 form.quick-contact {
   position: fixed;
@@ -356,10 +356,22 @@ header {
     margin-top: 2px;
     padding: 5px 0 5px 0px;
     text-align: center; }
-  .band.band3 .wrapper {
-    width: 70%; }
-  .band.band3 .message h2 {
-    font-size: 34pt; }
+  .band.band3 {
+    margin: 0; }
+    .band.band3 .wrapper {
+      width: 70%;
+      justify-content: space-around; }
+    .band.band3 .message {
+      margin-right: 0;
+      width: 45%; }
+      .band.band3 .message h2 {
+        font-size: 33pt;
+        margin: 0 0 15px 0; }
+      .band.band3 .message p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        border-bottom: 1px dotted;
+        padding-bottom: 4px; }
 
 .client-cases {
   display: flex;
@@ -401,18 +413,17 @@ header {
   font-size: 15pt;
   display: block; }
 
-ul.connect li {
-  margin: 0 0 20px; }
-  ul.connect li h2 {
-    padding: 15px; }
-  ul.connect li h2, ul.connect li a {
+ul.connect li.btn {
+  margin: 0 0 15px; }
+  ul.connect li.btn h2, ul.connect li.btn a {
     font-family: 'Permanent Marker', cursive;
     background: #fff;
     color: #0036bf; }
-  ul.connect li a {
+  ul.connect li.btn a {
     display: block;
-    font-size: 27pt;
-    text-align: center; }
+    font-size: 22pt;
+    text-align: center;
+    padding: 15px 20px; }
 
 .services-page.website-development .web-dev a,
 .services-page.appdev .appdev a,
