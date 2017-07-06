@@ -90,7 +90,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 0 0 20px;
+    margin: 0 0 25px;
     li {
         display: flex;
         width: 32%;
@@ -117,6 +117,11 @@
                 z-index: 1;
                 position: relative;
             }
+            &:hover {
+                cursor: pointer;
+                img { filter: none; }
+                .vignette { background: radial-gradient(ellipse at center, transparent 100%, black 85%); }
+            }
         }
 
         .vignette {
@@ -132,12 +137,6 @@
             //background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 67%,rgba(0,0,0,1) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             background: radial-gradient(ellipse at center, transparent 0%, black 85%);
             //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-        }
-
-        &:hover {
-            cursor: pointer;
-            .client-img img { filter: none; }
-            .vignette { background: radial-gradient(ellipse at center, transparent 100%, black 85%); }
         }
     }
 }
