@@ -25,7 +25,7 @@
     position: absolute;
     top: 0px;
 	div {
-        margin: 5px 5px;
+        margin: -5px 5px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         font-size: 22pt;
@@ -39,7 +39,7 @@
 		}
 	}
     .custom-post-header{
-        margin: -10px 5px
+        margin: 0px 5px
     }
 	.custom-footer-meta{
 		text-transform: uppercase;
@@ -68,7 +68,7 @@
 }
 .content {
     width: 100%;
-    margin: 12rem 0 0 -2rem !important;
+    margin: 2rem 0 0 -2rem !important;
     article{
         margin: 4rem auto;
     }
@@ -91,7 +91,7 @@
 	text-transform: uppercase;
 	font-size: 24pt;
 	color: black;
-    margin: 13rem 2% 0 0;
+    margin: 2rem 2% 0 0;
     a.tagCloudTag {
         display: inline-block;
         padding: 1.5px;
