@@ -247,6 +247,19 @@ and (max-device-width : 415px){
 //   color: #0f0 !important;
 //   outline: solid #f00 1px !important;
 // }
+    .content .post{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .custom-post-footer{
+        position: initial;
+    }
+    .custom-post-content{
+        width: initial;
+    }
     .logo{
         display: block;
         text-align: left;
@@ -284,7 +297,7 @@ and (max-device-width : 415px){
     }
     #content {
         width: 100%;
-        margin: 2rem 0 0 1rem !important;
+        margin: 2rem 0 0 0rem !important;
     }
     .banner{
         margin-top: 20%;
@@ -347,7 +360,7 @@ and (max-device-width : 415px){
         font-size: 12pt
     }
     .custom-post-footer .custom-footer-meta {
-        font-size: 10pt;
+        font-size: 8pt;
     }
     .custom-post-footer div.custom-post-excerpt{
         font-size: 8pt;
