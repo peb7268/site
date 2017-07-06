@@ -73,7 +73,6 @@ function bindCtaAnimations(sel){
         
         //Calculations based on scroll direction of down
         let elem_current_pos  = activation_point - window.pageYOffset;
-        debugger;
 
         /**
          *  Elem is on the screen

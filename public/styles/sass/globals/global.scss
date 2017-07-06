@@ -46,9 +46,9 @@ strong { font-weight: 500; }
     min-height: 250px;
 }
 .graphic.image {
-    width: 40%;
+    max-width: 40%;
     max-height: 250px;
-    filter: grayscale(1);
+    //filter: grayscale(1);
     transition: all 500ms ease-in-out;
     &.active {
         filter: grayscale(0);
@@ -111,8 +111,8 @@ strong { font-weight: 500; }
 }
 
 #footer {
-    background: #787878;
-    height: 150px;
+    background: #333;
+    height: 35px;
 }
 
 form.quick-contact {

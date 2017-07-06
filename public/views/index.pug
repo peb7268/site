@@ -13,39 +13,56 @@ block content
         
         section.band.blue.band1
             div.wrapper
-                div.message
-                    h2 Reach New Heights 
-                        p Learn new strategies
-                    p
-                        | The way we connect with customers has
-                        | fundamentally shifted over the last few years
-                        | and so have the strategies needed.
-                //- div.graphic.placeholder
-                img.graphic.image(src="../img/ctas/new_heights_117147764.jpg")
-
+                h2 Client Case Studies
+                ul.client-cases
+                    li 
+                        img(src="../img/clients/duluth_diner.png")
+                        .desc
+                            | Duluth Diner
+                            p Design, Integrated Marketing Strategy
+                    li 
+                        img(src="../img/clients/active_care_atlanta.png")
+                        .desc
+                            | Active Care Atlanta
+                            p Design, SEO, Content Strategy
+                    li 
+                        img(src="../img/clients/atlas_designs.png")
+                        .desc
+                            | Atlas Designs
+                            p Design, Digital Strategy
         section.band.white.band2
             div.wrapper
                 //- div.graphic.placeholder
                 img.graphic.image(src="../img/ctas/roi_611086620.jpg")                
                 div.message
                     h2 Follow the money 
-                        p Is your plan working?
+                        span | Is your plan working?
                     p
                         | Learn if your marketing dollars are working 
                         | for you as hard as they can. Are you missing 
                         | out on valuable marketing verticals that can 
                         | connect you with a whole new audience?
+            div.wrapper
+                img.graphic.image(src="../img/ctas/new_heights_117147764.jpg")
+                div.message
+                    h2 Reach New Heights 
+                        span | Learn new strategies
+                    p
+                        | The way we connect with customers has
+                        | fundamentally shifted over the last few years
+                        | and so have the strategies needed.
+                //- div.graphic.placeholder
         section.band.blue.band3
             div.wrapper
                 div.message
                     h2 You had me at hello
-                        p Now what's next?
+                    p Now what's next?
                     ul.next-steps
-                        li: a(href='/how-to-go-online') How do I put my business on the web?
-                        li: a(href='/how-to-go-online') I've got an idea, how do I turn it into an app?
-                        li: a(href='/how-to-go-online') What does a search engine expect from me?
+                        li: a(href='/how-to-go-online') <i class="fa fa-angle-right" aria-hidden="true"></i> How do I put my business on the web?
+                        li: a(href='/how-to-go-online') <i class="fa fa-angle-right" aria-hidden="true"></i> I've got an idea, how do I turn it into an app?
+                        li: a(href='/how-to-go-online') <i class="fa fa-angle-right" aria-hidden="true"></i> What does a search engine expect from me?
 
                 ul.connect
-                    li: a(href="/get-started"): h2 Get Started
-                    li: a.show-contact(href="/request-a-quote"): h2 Request A Quote
+                    li.btn: a(href="/get-started"): h2 Get Started
+                    li.btn: a.show-contact(href="/request-a-quote"): h2 Request A Quote
                     li.social-icons

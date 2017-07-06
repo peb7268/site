@@ -2,49 +2,113 @@
 .band {
     overflow: hidden;
     .wrapper {
-        width: 80%;
-        margin: 40px auto;
-        padding: 0;
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 10px;
         align-items: flex-start;
         display: flex;
         justify-content: space-between;
-        
+
         .message { 
-            width: 40%;
+            width: 60%;
             font-size: 18pt;
+            margin-right: 10%;
             p { font-weight: 100; }
             & h2, h2 p { font-family: 'Permanent Marker', cursive; font-size: 29pt; }
-            & h2 { margin: 0 0 20px 0; font-size: 38pt; }
-            h2 p { margin-top: 2px; padding: 5px 0 5px 0px; text-align: center; }
+            & h2 { 
+                color: $blue;
+                margin: 0 0 20px 0; 
+                font-size: 27pt; 
+            }
+            h2 span { 
+                color: #333; 
+                font-weight: 100;
+                font-size: 24pt;
+            }
         }
     }
+
     &.blue { 
         color: #fff; background: $blue;
         .message {
-            h2 p { background: #fff; color: $blue; }
+            h2 { color: #fff; }
         }
     }
+
     &.white { 
         .message {
             h2 p { background: $blue; color: #fff; }
         }
     }
-    &.band1{
+
+    &.band1 {
+        .wrapper {
+            margin: 10px auto 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+            h2 { 
+                font-family: 'Permanent Marker', cursive; 
+                font-size: 22pt;
+                margin: 0 0 7px;
+            }
+        }
         .message { 
-            width: 40%;
-            font-size: 18pt;
             p { font-weight: 100; }
-            & h2 { margin: 0 0 20px 0; font-size: 37pt; }
             h2 p { margin-top: 2px; padding: 5px 0 5px 0px; text-align: center; }
         }
     }
+
     &.band2 {}
+
     &.band3 {
+        margin: 0;
+        .wrapper { 
+            width: 70%;
+            justify-content: space-around;
+        }
         .message {
-            h2 { font-size: 34pt; }
+            margin-right: 0;
+            width: 45%;
+            h2 {
+                font-size: 33pt;
+                margin: 0 0 15px 0;
+            }
+            
+            p { 
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+                border-bottom: 1px dotted;
+                padding-bottom: 4px;
+            }
         }
     }
 } 
+
+.client-cases {
+    display: flex;
+    width: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 0 0 20px;
+    li {
+        display: flex;
+        width: 32%;
+        .desc {
+            font-weight: bold;
+            font-size: 16pt;
+            p { font-weight: 100; font-size: 14pt; }
+        }
+        img { 
+            background: #333;
+            border: 1px solid #111;
+            outline: none;
+            min-width: 225px;
+            height: 175px;
+            margin: 0 15px 0 0;
+        }
+    }
+}
 
 .home .ctas { 
     margin: 110px 0 0 0;
@@ -66,15 +130,20 @@
 }
 
 ul.connect {
-    li {
-        margin: 0 0 20px;
-        h2 { padding: 15px; }
+    li.btn {
+        margin: 0 0 15px;
         h2, a {
             font-family: 'Permanent Marker', cursive; 
             background: #fff;
             color: $blue;
         }
-        a { display: block; font-size: 27pt; text-align: center; }
+
+        a { 
+            display: block; 
+            font-size: 22pt; 
+            text-align: center; 
+            padding: 15px 20px;
+        }
     }
 
 }
