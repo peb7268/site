@@ -87,6 +87,7 @@
 .site-wrapper{
     display: flex;
     justify-content: space-between;
+    min-height: 60%;
 }
 #tag-cloud{
 	width: 25%;
@@ -227,9 +228,33 @@ header {
 
 @media only screen 
 and (max-device-width : 415px){
+    footer{
+        // display: none;
+        width: 80%;
+    }
+    html{
+        width: 374px;
+    }
+    body{
+        // width: 374px;
+    }
+    .site-wrapper{
+        // width: 374px;
+    }
     #content {
-        width: 100%;
-        margin: 8rem 0 0 1rem !important;
+        width: 80%;
+        margin: 2rem 0 0 1rem !important;
+    }
+    .banner{
+        max-width: 400px;
+        img{
+            width: 90%;
+            margin: 80px 0 0 0;
+        }
+    }
+    
+    header{
+        width: 90%;
     }
     header h1{
         font-size: 22pt;
@@ -246,7 +271,7 @@ and (max-device-width : 415px){
         width: 100%;
         display: block;
         visibility: hidden;
-        top: 110px;
+        top: 80px;
         left: -34px;
         li {
             margin: 0;
@@ -261,14 +286,21 @@ and (max-device-width : 415px){
     }
     }
     #tag-cloud{
-        margin: 11rem 2% 0 0;
-        padding: 0 0 0 15px;        
+        display: none;
+        margin: 2rem 2% 0 0;
+        padding: 0;        
         .tagCloudTag{
             font-size: 12pt !important;
         }
     }
+    .custom-post-footer .custom-post-header{
+        font-size: 12pt
+    }
     .custom-post-footer .custom-footer-meta {
-        font-size: 11pt;
+        font-size: 10pt;
+    }
+    div.custom-post-excerpt{
+        font-size: 9pt;
     }
 }
 
@@ -280,6 +312,9 @@ and (max-device-width : 321px){
         span.tagline{
             font-size: 18pt;
         }
+    }
+    .banner{
+        max-width: 320px;
     }
     #content.content{
         margin-left: 2rem !important;
