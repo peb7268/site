@@ -1,8 +1,17 @@
+body{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .post-template .blog-title {
 	padding: 5px;
 }
-.test{
-	color: red;
+.active{
+    border-bottom: solid 1px;
+    border-color: #0036bf;
 }
 .flex-box-wrapper{
 	display: flex;
@@ -17,6 +26,10 @@
     .hidden-post-tag-cloud{
         display: none;
     }
+}
+
+.custom-post-footer div.custom-post-excerpt{
+    font-size: 15pt;
 }
 
 .custom-post-footer {
@@ -124,7 +137,7 @@ h1.post-title {
 }
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
-header {
+body > header {
     position: fixed;
     background: white;
     padding: 20px 3% 10px 1%;
@@ -240,7 +253,6 @@ and (max-device-width : 415px){
     html,body
 {
     width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
