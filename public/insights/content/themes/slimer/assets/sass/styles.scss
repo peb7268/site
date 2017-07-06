@@ -6,6 +6,16 @@ body{
     flex-direction: column;
 }
 
+.banner{
+    margin-top: 110px;
+}
+
+//     * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }
+
 .post-template .blog-title {
 	padding: 5px;
 }
@@ -141,7 +151,7 @@ body > header {
     display: flex;
     position: fixed;
     background: white;
-    padding: 20px 3% 0px 1%;
+    padding: 20px 3% 10px 1%;
     margin: 0px;
     z-index: 11;
     width: 100%;
@@ -172,12 +182,17 @@ body > header {
         line-height: 0.9;
 		-webkit-font-smoothing: antialiased;
 		font-weight: 300;
+        margin: 0;
+        text-indent: 0px;       
+        color: #000;         
         span:first-child {font-family: 'Fjalla One', sans-serif; color: $blue; line-height: 0.9; }
         span.tagline {
+            color: #000;
             display: block;
             font-family: 'Permanent Marker', cursive;
             font-size: 23pt;
             line-height: 0.9;
+            text-indent: 0px;
         }
     }
 
@@ -189,7 +204,9 @@ body > header {
         justify-content: space-between;
         min-width: 285px;
         list-style: none;
-        margin-top: 10px;
+        margin: 0;
+        line-height: 32px;;
+        letter-spacing: normal;
 
         li {
             position: relative;
@@ -243,6 +260,9 @@ body > header {
 
 @media only screen
 and (max-device-width: 1025px){
+    .site-wrapper{
+        margin-left: 1%;
+    }
     .content .post{
         border: none;
         display: flex;
@@ -264,11 +284,6 @@ and (max-device-width: 1025px){
 
 @media only screen 
 and (max-device-width : 415px){
-//     * {
-//   background: #000 !important;
-//   color: #0f0 !important;
-//   outline: solid #f00 1px !important;
-// }
     .content .post{
         border: none;
         display: flex;
