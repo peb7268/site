@@ -119,6 +119,7 @@ h1.post-title {
   width: 100%; }
 
 body > header {
+  display: flex;
   position: fixed;
   background: white;
   padding: 20px 3% 10px 1%;
@@ -210,6 +211,20 @@ body > header {
         display: block; }
 
 @media only screen and (max-device-width: 415px) {
+  .logo {
+    display: block;
+    text-align: left;
+    margin: 35px auto 20px; }
+    .logo h1 {
+      font-size: 36pt; }
+    .logo .tagline {
+      font-size: 20pt; }
+  .container header .nav-toggle {
+    visibility: visible;
+    font-size: 17pt;
+    position: absolute;
+    top: 15px;
+    right: 20px; }
   footer {
     width: 80%; }
   html, body {
@@ -221,7 +236,7 @@ body > header {
     width: 100%;
     margin: 2rem 0 0 1rem !important; }
   .banner {
-    max-width: 372px; }
+    margin-top: 20%; }
     .banner img {
       width: 100%;
       margin: 80px 0 0 0; }
@@ -235,7 +250,13 @@ body > header {
   div.wrapper {
     width: 100%; }
     div.wrapper a.nav-toggle {
-      display: initial; }
+      display: initial;
+      visibility: visible;
+      font-size: 17pt;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #0036bf; }
     div.wrapper ul.insights-nav {
       position: absolute;
       width: 100%;
@@ -261,8 +282,9 @@ body > header {
     font-size: 12pt; }
   .custom-post-footer .custom-footer-meta {
     font-size: 10pt; }
-  div.custom-post-excerpt {
-    font-size: 9pt; } }
+  .custom-post-footer div.custom-post-excerpt {
+    font-size: 8pt;
+    margin: 0px 15px; } }
 
 @media only screen and (max-device-width: 321px) {
   header h1 {
