@@ -377,7 +377,7 @@ header {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 0 0 20px; }
+  margin: 0 0 25px; }
   .client-cases li {
     display: flex;
     width: 32%;
@@ -404,6 +404,12 @@ header {
         filter: grayscale(1);
         z-index: 1;
         position: relative; }
+      .client-cases li .client-img:hover {
+        cursor: pointer; }
+        .client-cases li .client-img:hover img {
+          filter: none; }
+        .client-cases li .client-img:hover .vignette {
+          background: radial-gradient(ellipse at center, transparent 100%, black 85%); }
     .client-cases li .vignette {
       position: absolute;
       z-index: 10;
@@ -413,12 +419,6 @@ header {
       height: 100%;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
       background: radial-gradient(ellipse at center, transparent 0%, black 85%); }
-    .client-cases li:hover {
-      cursor: pointer; }
-      .client-cases li:hover .client-img img {
-        filter: none; }
-      .client-cases li:hover .vignette {
-        background: radial-gradient(ellipse at center, transparent 100%, black 85%); }
 
 .home .ctas {
   margin: 110px 0 0 0;
@@ -469,6 +469,7 @@ ul.connect li.btn {
 
 .services-page .in-page-nav {
   width: 20%;
+  max-width: 250px;
   margin-left: 1%; }
   .services-page .in-page-nav li {
     margin: 0; }
