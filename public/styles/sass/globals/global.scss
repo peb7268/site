@@ -46,9 +46,9 @@ strong { font-weight: 500; }
     min-height: 250px;
 }
 .graphic.image {
-    width: 40%;
+    max-width: 40%;
     max-height: 250px;
-    filter: grayscale(1);
+    //filter: grayscale(1);
     transition: all 500ms ease-in-out;
     &.active {
         filter: grayscale(0);

@@ -107,9 +107,8 @@ strong {
   min-height: 250px; }
 
 .graphic.image {
-  width: 40%;
+  max-width: 40%;
   max-height: 250px;
-  filter: grayscale(1);
   transition: all 500ms ease-in-out; }
   .graphic.image.active {
     filter: grayscale(0); }
@@ -311,50 +310,79 @@ header {
 .band {
   overflow: hidden; }
   .band .wrapper {
-    width: 80%;
-    margin: 40px auto;
-    padding: 0;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
     align-items: flex-start;
     display: flex;
     justify-content: space-between; }
     .band .wrapper .message {
-      width: 40%;
-      font-size: 18pt; }
+      width: 60%;
+      font-size: 18pt;
+      margin-right: 10%; }
       .band .wrapper .message p {
         font-weight: 100; }
       .band .wrapper .message h2, .band .wrapper .message h2 p {
         font-family: 'Permanent Marker', cursive;
         font-size: 29pt; }
       .band .wrapper .message h2 {
+        color: #0036bf;
         margin: 0 0 20px 0;
-        font-size: 38pt; }
-      .band .wrapper .message h2 p {
-        margin-top: 2px;
-        padding: 5px 0 5px 0px;
-        text-align: center; }
+        font-size: 27pt; }
+      .band .wrapper .message h2 span {
+        color: #333;
+        font-weight: 100;
+        font-size: 24pt; }
   .band.blue {
     color: #fff;
     background: #0036bf; }
-    .band.blue .message h2 p {
-      background: #fff;
-      color: #0036bf; }
+    .band.blue .message h2 {
+      color: #fff; }
   .band.white .message h2 p {
     background: #0036bf;
     color: #fff; }
-  .band.band1 .message {
-    width: 40%;
-    font-size: 18pt; }
-    .band.band1 .message p {
-      font-weight: 100; }
-    .band.band1 .message h2 {
-      margin: 0 0 20px 0;
-      font-size: 37pt; }
-    .band.band1 .message h2 p {
-      margin-top: 2px;
-      padding: 5px 0 5px 0px;
-      text-align: center; }
+  .band.band1 .wrapper {
+    margin: 10px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-direction: column; }
+    .band.band1 .wrapper h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 22pt;
+      margin: 0 0 7px; }
+  .band.band1 .message p {
+    font-weight: 100; }
+  .band.band1 .message h2 p {
+    margin-top: 2px;
+    padding: 5px 0 5px 0px;
+    text-align: center; }
+  .band.band3 .wrapper {
+    width: 70%; }
   .band.band3 .message h2 {
     font-size: 34pt; }
+
+.client-cases {
+  display: flex;
+  width: 100%;
+  align-content: space-between;
+  justify-content: space-between;
+  margin: 0 0 20px; }
+  .client-cases li {
+    display: flex;
+    width: 32%; }
+    .client-cases li .desc {
+      font-weight: bold;
+      font-size: 16pt; }
+      .client-cases li .desc p {
+        font-weight: 100;
+        font-size: 14pt; }
+    .client-cases li img {
+      background: #333;
+      border: 1px solid #111;
+      outline: none;
+      min-width: 225px;
+      height: 175px;
+      margin: 0 15px 0 0; }
 
 .home .ctas {
   margin: 110px 0 0 0;
