@@ -127,6 +127,9 @@ header {
 		width: 90%;
 		margin: 0 auto;
 		line-height: normal;
+        .nav-toggle{
+            display: none;
+        }
     }
 
     .logo { 
@@ -212,7 +215,20 @@ header {
 
 @media only screen 
 and (max-device-width : 415px){
-    .wrapper{
+    #content {
+        width: 100%;
+        margin: 8rem 0 0 1rem !important;
+    }
+    header h1{
+        font-size: 22pt;
+        width: 155px;
+        span.tagline{
+            font-size: 13pt;
+        }
+    }
+    div.wrapper{
+        width: 92%;
+    a.nav-toggle{display: initial;}
     ul.insights-nav {
         position: absolute;
         width: 100%;
