@@ -11,28 +11,35 @@
 
 .custom-post-content {
   justify-content: space-between;
-  align-items: stretch; }
+  align-items: stretch;
+  display: inline-block;
+  width: 40%; }
   .custom-post-content .hidden-post-tag-cloud {
     display: none; }
 
 .custom-post-footer {
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  display: inline-block;
+  position: absolute;
+  top: 0px; }
   .custom-post-footer div {
     margin: 5px 5px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16pt;
+    font-weight: 600;
+    font-size: 22pt;
     height: auto; }
     .custom-post-footer div p {
-      margin: 0; }
+      margin: 0 10px; }
     .custom-post-footer div a {
       text-decoration: none; }
+  .custom-post-footer .custom-post-header {
+    margin: -10px 5px; }
   .custom-post-footer .custom-footer-meta {
     text-transform: uppercase;
     font-size: 14pt;
-    background-color: black;
-    color: #dddddd;
-    flex-grow: 1; }
+    color: #0036bf;
+    flex-grow: 1;
+    font-weight: 600; }
     .custom-post-footer .custom-footer-meta a:only-child {
       padding: 0 10px !important; }
     .custom-post-footer .custom-footer-meta a:first-child {
@@ -40,7 +47,7 @@
     .custom-post-footer .custom-footer-meta a:last-child {
       padding: 0px 10px 0 0px; }
     .custom-post-footer .custom-footer-meta a {
-      color: #dddddd; }
+      color: #0036bf; }
     .custom-post-footer .custom-footer-meta time {
       padding: 0 10px;
       font-size: 14pt; }
@@ -48,16 +55,15 @@
 .post-image, .tag-cloud {
   height: auto; }
 
-.post-image {
+.post-image p {
+  margin: 0; }
+
+.post-image img {
   width: 100%; }
-  .post-image p {
-    margin: 0; }
-  .post-image img {
-    width: 100%; }
 
 .content {
   width: 100%;
-  margin: 12rem 0 0 4rem !important; }
+  margin: 12rem 0 0 -2rem !important; }
   .content article {
     margin: 4rem auto; }
   .content .post {
@@ -76,7 +82,7 @@
   text-transform: uppercase;
   font-size: 24pt;
   color: black;
-  margin: 17rem 2% 0 0; }
+  margin: 13rem 2% 0 0; }
   #tag-cloud a.tagCloudTag {
     display: inline-block;
     padding: 1.5px;
@@ -100,18 +106,18 @@ h1.post-title {
 header {
   position: fixed;
   background: white;
-  padding: 2% 0 0 0;
+  padding: 20px 3% 10px 1%;
   margin: 0px;
   z-index: 11;
   width: 100%;
+  max-width: 1500px;
+  box-sizing: border-box;
   opacity: 1; }
   header .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    line-height: normal; }
+    width: 100%; }
     header .wrapper .nav-toggle {
       display: none; }
   header .logo {

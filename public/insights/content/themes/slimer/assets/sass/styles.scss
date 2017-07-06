@@ -12,6 +12,8 @@
 .custom-post-content {
 	justify-content: space-between;
 	align-items: stretch; // set height of child elements to auto
+    display: inline-block;
+    width: 40%;
     .hidden-post-tag-cloud{
         display: none;
     }
@@ -19,29 +21,35 @@
 
 .custom-post-footer {
 	justify-content: flex-start;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
 	div {
-		margin: 5px 5px;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 16pt;
-		height: auto;
+        margin: 5px 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 22pt;
+        height: auto;
 		p{
-			margin: 0;
+			margin: 0 10px;
 		}
 		a {
 			text-decoration: none;		
 		}
 	}
+    .custom-post-header{
+        margin: -10px 5px
+    }
 	.custom-footer-meta{
 		text-transform: uppercase;
 		font-size: 14pt;
-		background-color: black;
-		color: #dddddd;
+		color: #0036bf;
         flex-grow: 1;
+        font-weight: 600;
         a:only-child{padding: 0 10px !important}
 		a:first-child{padding: 0px 0px 0 10px;}
 		a:last-child{padding: 0px 10px 0 0px;}
-		a{color: #dddddd;}
+		a{color: #0036bf;}
 		time{
 			padding: 0 10px;
 			font-size: 14pt;
@@ -52,7 +60,6 @@
 	height: auto;
 }
 .post-image{
-	width: 100%;
     p{margin: 0}
     img{
         width: 100%
@@ -60,7 +67,7 @@
 }
 .content {
     width: 100%;
-    margin: 12rem 0 0 4rem !important;
+    margin: 12rem 0 0 -2rem !important;
     article{
         margin: 4rem auto;
     }
@@ -83,7 +90,7 @@
 	text-transform: uppercase;
 	font-size: 24pt;
 	color: black;
-    margin: 17rem 2% 0 0;
+    margin: 13rem 2% 0 0;
     a.tagCloudTag {
         display: inline-block;
         padding: 1.5px;
@@ -115,18 +122,18 @@ $blue: #0036bf;
 header {
     position: fixed;
     background: white;
-    padding: 2% 0 0 0;
+    padding: 20px 3% 10px 1%;
     margin: 0px;
     z-index: 11;
     width: 100%;
+    max-width: 1500px;
+    box-sizing: border-box;
     opacity: 1;
     .wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-		width: 90%;
-		margin: 0 auto;
-		line-height: normal;
+        width: 100%;
         .nav-toggle{
             display: none;
         }

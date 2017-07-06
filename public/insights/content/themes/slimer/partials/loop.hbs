@@ -13,19 +13,19 @@
                 {{content words="0"}}                
             </section>
         </div>
-        <div class="custom-post-footer">        
+        <div class="custom-post-footer">    
+            <div class="custom-footer-meta">
+                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
+                {{!--{{author}}--}}
+                {{tags Zlimit="1" separator="|"}}
+                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
+            </div>    
             <div class="custom-post-header">           
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
             {{!--<section class="post-excerpt">
                 <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
             </section>--}}
-            <div class="custom-footer-meta">
-                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
-                {{!--{{author}}--}}
-                {{tags Zlimit="3" separator="|"}}
-                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
-            </div>
         </div>
     </article>
 {{else}}
@@ -36,20 +36,23 @@
                 {{content words="0"}}
             </section>
         </div>
-        <div class="custom-post-footer">        
+        <div class="custom-post-footer">  
+            <div class="custom-footer-meta">
+                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
+                {{!--{{author}}--}}
+                {{tags limit="1" separator="|"}}
+                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
+            </div>      
             <div class="custom-post-header">
                 <span id="test"> {{test}} </span>                
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
+            <div class="custom-post-excerpt">
+                {{excerpt characters="140"}}
+            </div>
             {{!--<section class="post-excerpt">
                 <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
             </section>--}}
-            <div class="custom-footer-meta">
-                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
-                {{!--{{author}}--}}
-                {{tags limit="3" separator="|"}}
-                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
-            </div>
         </div>
     </article>
 {{/has}}
