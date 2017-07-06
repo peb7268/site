@@ -32,8 +32,13 @@
     <article class="{{post_class}}">
         <div class="custom-post-content">
             <section class="post-image">
-                {{!--{{image}}--}}
-                {{content words="0"}}
+                {{#if image}}
+                    <img src="{{image}}" />
+                {{else}}
+                    <img src="http://www.adweek.com/files/2015_May/iStock-Unfinished-Business-6.jpg"/>
+                {{/if}}
+                {{!--<img src="{{image}}" alt="">--}}
+                {{!--{{content words="0"}}--}}
             </section>
         </div>
         <div class="custom-post-footer">  

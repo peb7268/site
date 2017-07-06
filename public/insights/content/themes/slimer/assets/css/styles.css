@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900");
+body {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
 .post-template .blog-title {
   padding: 5px; }
 
-.test {
-  color: red; }
+.active {
+  border-bottom: solid 1px;
+  border-color: #0036bf; }
 
 .flex-box-wrapper {
   display: flex;
@@ -16,6 +24,9 @@
   width: 40%; }
   .custom-post-content .hidden-post-tag-cloud {
     display: none; }
+
+.custom-post-footer div.custom-post-excerpt {
+  font-size: 15pt; }
 
 .custom-post-footer {
   justify-content: flex-start;
