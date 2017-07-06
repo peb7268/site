@@ -66,17 +66,27 @@ function bindCtaAnimations(sel){
         window.IdAnimations.screen_height = screen.height;
         let $current_cta      = $(IdAnimations.$ctas[IdAnimations.count]);
         
-        //If not at last cta and there are more ctas remaining
+        //Raw numbers
         let header_height     = $('header').height();
-        let screen_top        = window.pageYOffset;     //where the top of the screen is at.
-        let distance_from_top = $current_cta.offset().top;
-        let elem_current_position = (distance_from_top - header_height) - window.pageYOffset;   //current distance from top of viewable area
+        let activation_point  = $current_cta.offset().top;
+        let middle_threshold  = 150;
         
-        // console.log(`elem_current_position: ${elem_current_position}`);
+        //Calculations based on scroll direction of down
+        let elem_current_pos  = activation_point - window.pageYOffset;
+        debugger;
 
-        let elem_is_on_screen = screen.height > (distance_from_top - header_height); 
-        let elem_is_near_middle_of_screen = (elem_current_position - 100 >= (screen.height / 2) || elem_current_position + 100 >= (screen.height / 2));
-
+        /**
+         *  Elem is on the screen
+         *  - find the target elements' distance from top
+         *  - when pageYoffset >= activation_point ( then subtract a threshold so it doesnt change as soon as its on the page )
+         * 
+         * Ex. 
+         * activation point = 554;
+         * 
+         */
+        let elem_is_on_screen = (window.pageYOffset >= (activation_point));
+        let elem_is_near_middle_of_screen = ((elem_current_pos - middle_threshold) >= (screen.height / 2) || (elem_current_pos + middle_threshold) >= (screen.height / 2));
+        
         /**
          * 1 - if we're working with the first one, activate it on mousemove
          * 2 - if were working on the rest
@@ -84,12 +94,13 @@ function bindCtaAnimations(sel){
          *      - is the (element position - 100) or the (element position + 100) >= half of the screen height
          */
 
-        if(IdAnimations.count == 0 && screen_top > 20){
+        if(IdAnimations.count == 0 && window.pageYOffset > 20){
             console.log(`first elem element is on screen and mouse moved`);
             $current_cta.addClass('active');
             IdAnimations.count++;
         } else {
-            if(elem_is_on_screen && elem_is_near_middle_of_screen) {
+            // && elem_is_near_middle_of_screen
+            if(elem_is_on_screen) {
                 console.log(`element is on screen and near middle`);
                 $current_cta.addClass('active');
                 IdAnimations.count++;
