@@ -167,8 +167,9 @@ header {
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
         z-index: 50;
-		list-style: none;
-        justify-content: space-around;
+        justify-content: space-between;
+        min-width: 285px;
+        list-style: none;
 
         li {
             position: relative;
