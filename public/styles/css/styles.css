@@ -312,7 +312,7 @@ header {
   .band .wrapper {
     width: 100%;
     margin: 20px auto;
-    padding: 0;
+    padding: 0 10px;
     align-items: flex-start;
     display: flex;
     justify-content: space-between; }
@@ -356,6 +356,8 @@ header {
     margin-top: 2px;
     padding: 5px 0 5px 0px;
     text-align: center; }
+  .band.band3 .wrapper {
+    width: 70%; }
   .band.band3 .message h2 {
     font-size: 34pt; }
 
@@ -366,7 +368,8 @@ header {
   justify-content: space-between;
   margin: 0 0 20px; }
   .client-cases li {
-    display: flex; }
+    display: flex;
+    width: 32%; }
     .client-cases li .desc {
       font-weight: bold;
       font-size: 16pt; }
@@ -377,7 +380,7 @@ header {
       background: #333;
       border: 1px solid #111;
       outline: none;
-      width: 225px;
+      min-width: 225px;
       height: 175px;
       margin: 0 15px 0 0; }
 
