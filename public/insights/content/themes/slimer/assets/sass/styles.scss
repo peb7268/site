@@ -304,9 +304,11 @@ and (max-device-width : 415px){
         padding-bottom: 20px;
     }
     
-    .custom-post-footer{
+    .custom-post-footer {
         position: initial;
+        div p { line-height: 1.2; }
     }
+
     .custom-post-content{
         width: initial;
     }
@@ -338,8 +340,9 @@ and (max-device-width : 415px){
         padding: 0px;
         overflow-x: hidden; 
     }
+
     .site-wrapper{
-        margin-left: 0;
+        margin: 0 auto;
         width: 98%;
         flex-direction: column;
     }
@@ -348,8 +351,9 @@ and (max-device-width : 415px){
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 0 1%;
+        margin: 0;
     }
+
     .banner{
         margin-top: 71px;
         // max-width: 372px;
@@ -363,6 +367,7 @@ and (max-device-width : 415px){
         width: 90%;
         box-shadow: 0px 2px 1px rgba(51, 51, 51, .3);
     }
+
     header h1{
         font-size: 22pt;
         width: 155px;
@@ -370,35 +375,37 @@ and (max-device-width : 415px){
             font-size: 13pt;
         }
     }
+
     div.wrapper{
         width: 100%;
-    a.nav-toggle{
-        display: initial;
-        visibility: visible;
-        font-size: 17pt;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        color: #0036bf;
-    }
-    ul.insights-nav {
-        position: absolute;
-        width: 100%;
-        display: block;
-        visibility: hidden;
-        top: 80px;
-        left: -34px;
-        li {
-            margin: 0;
-            a {
-                display: block;
-                background: $blue;
-                color: #fff;
-                padding: 15px 20px;
-                box-sizing: border-box;
+        a.nav-toggle{
+            display: initial;
+            visibility: visible;
+            font-size: 17pt;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #0036bf;
+        }
+        
+        ul.insights-nav {
+            position: absolute;
+            width: 100%;
+            display: block;
+            visibility: hidden;
+            top: 80px;
+            left: -34px;
+            li {
+                margin: 0;
+                a {
+                    display: block;
+                    background: $blue;
+                    color: #fff;
+                    padding: 15px 20px;
+                    box-sizing: border-box;
+                }
             }
         }
-    }
     }
     
     #tag-cloud{
@@ -411,12 +418,18 @@ and (max-device-width : 415px){
     .custom-post-footer .custom-post-header{
         font-size: 12pt
     }
+
     .custom-post-footer .custom-footer-meta {
         font-size: 8pt;
     }
+
     .custom-post-footer div.custom-post-excerpt{
         font-size: 8pt;
         margin: 10px 0 0 0;
+    }
+
+    .extra-pagination .pagination {
+        justify-content: center;
     }
 }
 

@@ -1487,7 +1487,11 @@ body:not(.post-template) .post-title {
   box-shadow: #FFF 0 0 0 5px; }
 
 .extra-pagination .pagination {
-  width: auto; }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 30px; }
 
 /* On page2+ make all the headers smaller */
 .archive-template .main-header {
@@ -1495,7 +1499,9 @@ body:not(.post-template) .post-title {
 
 /* On page2+ show extra pagination controls at the top of post list */
 .archive-template .extra-pagination {
-  display: block; }
+  display: flex;
+  width: 100%;
+  margin: 0 0 20px; }
 
 /* ==========================================================================
    10. Footer - The bottom of every page

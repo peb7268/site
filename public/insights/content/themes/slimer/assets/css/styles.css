@@ -260,6 +260,8 @@ body > header {
     padding-bottom: 20px; }
   .custom-post-footer {
     position: initial; }
+    .custom-post-footer div p {
+      line-height: 1.2; }
   .custom-post-content {
     width: initial; }
   .logo {
@@ -284,14 +286,14 @@ body > header {
     padding: 0px;
     overflow-x: hidden; }
   .site-wrapper {
-    margin-left: 0;
+    margin: 0 auto;
     width: 98%;
     flex-direction: column; }
   #content {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 1%; }
+    margin: 0; }
   .banner {
     margin-top: 71px; }
     .banner img {
@@ -342,7 +344,9 @@ body > header {
     font-size: 8pt; }
   .custom-post-footer div.custom-post-excerpt {
     font-size: 8pt;
-    margin: 10px 0 0 0; } }
+    margin: 10px 0 0 0; }
+  .extra-pagination .pagination {
+    justify-content: center; } }
 
 @media only screen and (max-device-width: 321px) {
   header h1 {
