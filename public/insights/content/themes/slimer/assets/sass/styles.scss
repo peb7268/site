@@ -31,9 +31,6 @@ body{
 }
 
 .custom-post-content {
-	justify-content: space-between;
-	align-items: stretch; // set height of child elements to auto
-    display: inline-block;
     width: 40%;
     .hidden-post-tag-cloud{
         display: none;
@@ -42,13 +39,12 @@ body{
 
 .custom-post-footer div.custom-post-excerpt{
     font-size: 15pt;
+    font-weight: 100;
+    margin: 10px 0 0 0;
 }
 
 .custom-post-footer {
-	justify-content: flex-start;
-    display: inline-block;
-    position: absolute;
-    top: 0px;
+	width: 59%;
 
 	div {
         margin: 0;
@@ -64,9 +60,7 @@ body{
         margin: 0;
         .custom-post-title a { font-size: 13pt; }
     }
-    .custom-post-excerpt{
-        margin: 10px 15px;
-    }
+    
 	.custom-footer-meta{
 		text-transform: uppercase;
 		font-size: 14pt;
@@ -108,6 +102,8 @@ body{
         word-break: break-word;
         word-wrap: break-word;
         hyphens: auto;
+        display: flex;
+        justify-content: space-between;
     }
 
     .post:after{
@@ -118,7 +114,9 @@ body{
 .site-wrapper{
     display: flex;
     justify-content: space-between;
+    align-self: center;
     min-height: 60%;
+    width: 98%;
 }
 
 .blog-sidebar {
@@ -156,9 +154,8 @@ body{
 h1.post-title {
     width: 100%;
 }
-.content{
-    
-}
+.content{}
+
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
 body > header {
