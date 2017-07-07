@@ -61,71 +61,31 @@ remove flex on titles/meta
     </div>
 </header>
 <body class="{{body_class}} nav-closed">
-    {{navigation}}
-        <div class="banner">
-            <img src="../../../../img/ctas/home_banner_1.png" alt="">
-        </div>
-        <div class="site-wrapper">
-            {{!--<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-            
-                <nav class="main-nav overlay clearfix">
-                    {{#if @blog.navigation}}
-                        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-                    {{/if}}
-                </nav>
-
-                
-                <div class="site-head-content inner">
-                    <a href="http://imperativedesign.net">
-                        <h1 class="blog-title"><span>ID</span>{{@blog.title}}</h1>
-                        <h2 class="blog-description">{{@blog.description}} <span>By Paul Barrick</span></h2>
-                    </a>
-                </div>
-        
-                <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-            </header>--}}
-
+    <div class="banner">
+        <img src="../../../../img/banners/web_development_627045246.jpg" alt="">
+    </div>
+    
+    <div class="site-wrapper">
         {{! Everything else gets inserted here }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
         <script type="text/javascript" src="{{asset "js/tagcloud.js"}}"></script>
-        
-        {{!--<div id="custom-tag-meta">
-            <div class="main-header-content inner">
-                <h1 class="page-title">
-                    {{#if tag.name}} 
-                        { 
-                            {{tag.name}} 
-                        } >
-                        <span class="count">
-                            {{#if tag.description}}
-                                {{ tag.description }}
-                            {{else}}
-                                {{pagination.total}} posts
-                            {{/if}}
-                        </span>
-                    {{/if}}
-                </h1>
-            </div>
-        </div>--}}
 
         {{{body}}}
-        <ul id="tag-cloud"></ul>
-
-
+        <aside class="blog-sidebar">
+            <ul id="tag-cloud"></ul>
+        </aside>
     </div>
-<footer class="site-footer clearfix">
-    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-    <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-</footer>
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>--}}
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/ga.js"}}"></script>
-
 </body>
 </html>
