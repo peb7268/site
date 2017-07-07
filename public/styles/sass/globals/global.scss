@@ -68,6 +68,7 @@ strong { font-weight: 500; }
     margin: 115px auto 50px;
 
     .cta {
+        img { width: 100%; }
         .message {
             position: absolute;
             z-index: 10;

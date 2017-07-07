@@ -128,6 +128,8 @@ strong {
   position: relative;
   overflow: hidden;
   margin: 115px auto 50px; }
+  .ctas .cta img {
+    width: 100%; }
   .ctas .cta .message {
     position: absolute;
     z-index: 10;
@@ -464,8 +466,6 @@ ul.connect li.btn {
 .services-page .ctas {
   min-height: 200px;
   max-height: 300px; }
-  .services-page .ctas .cta img {
-    width: 100%; }
 
 .services-page .in-page-nav {
   width: 20%;
