@@ -259,11 +259,18 @@ body > header {
     border-bottom: 1px dotted #999;
     padding-bottom: 20px; }
   .custom-post-footer {
-    position: initial; }
+    position: initial;
+    width: 100%; }
     .custom-post-footer div p {
       line-height: 1.2; }
-  .custom-post-content {
-    width: initial; }
+    .custom-post-footer .custom-footer-meta {
+      font-size: 10pt; }
+    .custom-post-footer .custom-post-header .custom-post-title a {
+      font-size: 15pt; }
+    .custom-post-footer .custom-post-footer div.custom-post-excerpt {
+      font-size: 12pt; }
+    .custom-post-footer .custom-post-content {
+      width: initial; }
   .logo {
     display: block;
     text-align: left;
