@@ -27,13 +27,19 @@ body {
   .custom-post-content .hidden-post-tag-cloud {
     display: none; }
 
-.custom-post-footer div.custom-post-excerpt {
-  font-size: 15pt;
-  font-weight: 100;
-  margin: 10px 0 0 0; }
-
 .custom-post-footer {
   width: 59%; }
+  .custom-post-footer .read-more {
+    background: #4A4A4A;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: absolute;
+    font-size: 10pt;
+    bottom: 35px;
+    right: 20px;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif; }
   .custom-post-footer div {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -69,6 +75,10 @@ body {
     .custom-post-footer .custom-footer-meta time {
       padding: 0;
       font-size: 14pt; }
+  .custom-post-footer div.custom-post-excerpt {
+    font-size: 15pt;
+    font-weight: 100;
+    margin: 10px 0 0 0; }
 
 .post-image, .tag-cloud {
   height: auto; }
