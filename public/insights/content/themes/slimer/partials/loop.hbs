@@ -53,9 +53,11 @@
                 <span id="test"> {{test}} </span>                
                 <p class="custom-post-title"><a href="{{url}}">{{{title}}}</a></p>
             </div>
-            <div class="custom-post-excerpt">
-                {{excerpt characters="140"}}
-            </div>
+            {{#if excerpt}}
+                <div class="custom-post-excerpt">
+                    {{excerpt characters="140"}}...
+                </div>
+            {{/if}}
             {{!--<section class="post-excerpt">
                 <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
             </section>--}}
