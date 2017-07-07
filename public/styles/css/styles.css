@@ -622,12 +622,17 @@ a:hover {
         display: none; }
       .band.band2 .wrapper .message h2 p {
         font-size: 22pt; }
-  .band.band3 .wrapper .message {
-    margin-bottom: 20px; }
-    .band.band3 .wrapper .message h2 {
-      display: none; }
-  .band.band3 .wrapper .next-steps li {
-    margin: 0 0 7px; }
+  .band.band3 .wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .band.band3 .wrapper .message {
+      margin-bottom: 20px; }
+      .band.band3 .wrapper .message h2 {
+        display: none; }
+    .band.band3 .wrapper .next-steps li {
+      margin: 0 0 7px; }
   .services-page .ctas {
     margin-bottom: 25px; }
   .services-page .content {
@@ -645,7 +650,8 @@ a:hover {
     display: block;
     text-align: center;
     border-bottom: 1px dotted #333;
-    padding: 0 0 20px; }
+    padding: 0 0 20px;
+    max-width: none; }
   .page.wrapper h1 {
     font-size: 15pt; }
   .ctas .cta .message .highlight {

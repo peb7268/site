@@ -121,6 +121,10 @@ and (max-device-width : 415px){
         }
         
         &.band3 .wrapper {
+          width: 95%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           .message { 
             margin-bottom: 20px;
             h2 { display: none; }
@@ -152,6 +156,7 @@ and (max-device-width : 415px){
           text-align: center;
           border-bottom: 1px dotted #333;
           padding: 0 0 20px;
+          max-width: none;
         }
     }
 
