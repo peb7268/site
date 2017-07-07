@@ -495,7 +495,8 @@ ul.connect li.btn {
   padding: 0 0 0 30px; }
 
 .about-page .ctas {
-  height: 300px; }
+  min-height: 200px;
+  max-height: 300px; }
 
 .about-page .content {
   width: 80%;

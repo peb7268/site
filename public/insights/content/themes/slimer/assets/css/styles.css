@@ -56,6 +56,8 @@ body {
     right: 20px;
     line-height: 1;
     font-family: 'Open Sans', sans-serif; }
+    .custom-post-footer .read-more:hover {
+      background: #242424; }
   .custom-post-footer div {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
