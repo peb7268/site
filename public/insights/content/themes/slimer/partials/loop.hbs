@@ -8,13 +8,15 @@
 {{#has tag="Quick Tip"}}
     <article class="{{post_class}}">
         <div class="custom-post-content">
-            <section class="post-image">
-                {{#if image}}
+            {{#if image}}
+                <section class="post-image">
                     <img src="{{image}}" />
-                {{else}}
-                    <img src="http://www.adweek.com/files/2015_May/iStock-Unfinished-Business-6.jpg"/>
-                {{/if}}
-            </section>
+                </section>
+            {{/if}}
+
+             <div class="custom-post-excerpt">
+                {{content}}
+            </div>
         </div>
         <div class="custom-post-footer">    
             <div class="custom-footer-meta">
