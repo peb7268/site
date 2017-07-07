@@ -109,6 +109,7 @@ strong {
 .graphic.image {
   max-width: 40%;
   max-height: 250px;
+  margin: 0 5% 0 0;
   transition: all 500ms ease-in-out; }
   .graphic.image.active {
     filter: grayscale(0); }
@@ -375,6 +376,28 @@ header {
         border-bottom: 1px dotted;
         padding-bottom: 4px; }
 
+.home .ctas {
+  margin: 110px 0 0 0;
+  max-height: 500px; }
+  .home .ctas .ad1 img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    filter: grayscale(1);
+    transition: all 500ms ease-in-out; }
+  .home .ctas .ad1.active img {
+    filter: grayscale(0); }
+
+.wip {
+  width: 100%;
+  background: #93f0ff;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 5px auto;
+  text-align: center;
+  color: #375e64;
+  font-size: 20pt; }
+
 .client-cases {
   display: flex;
   width: 100%;
@@ -421,18 +444,6 @@ header {
       height: 100%;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
       background: radial-gradient(ellipse at center, transparent 0%, black 85%); }
-
-.home .ctas {
-  margin: 110px 0 0 0;
-  max-height: 500px; }
-  .home .ctas .ad1 img {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    filter: grayscale(1);
-    transition: all 500ms ease-in-out; }
-  .home .ctas .ad1.active img {
-    filter: grayscale(0); }
 
 .next-steps li a {
   color: #fff;

@@ -48,6 +48,7 @@ strong { font-weight: 500; }
 .graphic.image {
     max-width: 40%;
     max-height: 250px;
+    margin: 0 5% 0 0;
     //filter: grayscale(1);
     transition: all 500ms ease-in-out;
     &.active {
