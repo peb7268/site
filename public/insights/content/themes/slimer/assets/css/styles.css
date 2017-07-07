@@ -11,8 +11,24 @@ body {
   min-height: 200px;
   max-height: 300px; }
 
+.post-template .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  width: 70%; }
+
 .post-template .blog-title {
   padding: 5px; }
+
+.post-template .post {
+  flex-direction: column; }
+  .post-template .post .post-header {
+    margin: 20px 0 20px 0;
+    line-height: 1; }
+  .post-template .post .post-title {
+    margin: 0 0 7px;
+    line-height: 1;
+    text-transform: capitalize; }
 
 .active {
   border-bottom: solid 1px;
@@ -261,13 +277,16 @@ body > header {
     padding: 0; } }
 
 @media only screen and (max-device-width: 415px) {
-  .content .post {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 0 25px;
-    border-bottom: 1px dotted #999;
-    padding-bottom: 20px; }
+  .post-template .content {
+    width: 98%;
+    margin: 0 auto; }
+    .post-template .content .post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 0 25px;
+      border-bottom: 1px dotted #999;
+      padding-bottom: 20px; }
   .custom-post-footer {
     position: initial;
     width: 100%; }
@@ -316,8 +335,7 @@ body > header {
     .banner img {
       width: 100%;
       margin: 80px 0 0 0; }
-  header {
-    width: 90%;
+  body > header {
     box-shadow: 0px 2px 1px rgba(51, 51, 51, 0.3); }
   header h1 {
     font-size: 22pt;
