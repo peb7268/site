@@ -329,10 +329,13 @@ body > header {
       width: 100%;
       display: block;
       visibility: hidden;
-      top: 80px;
+      top: 150px;
       left: -34px; }
       div.wrapper ul.insights-nav li {
-        margin: 0; }
+        margin: 0;
+        border-bottom: 1px solid #fff; }
+        div.wrapper ul.insights-nav li:last-child {
+          border-bottom: none; }
         div.wrapper ul.insights-nav li a {
           display: block;
           background: #0036bf;

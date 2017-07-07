@@ -12,12 +12,6 @@ body{
     max-height: 300px; 
 }
 
-//     * {
-//   background: #000 !important;
-//   color: #0f0 !important;
-//   outline: solid #f00 1px !important;
-// }
-
 .post-template .blog-title {
 	padding: 5px;
 }
@@ -394,10 +388,12 @@ and (max-device-width : 415px){
             width: 100%;
             display: block;
             visibility: hidden;
-            top: 80px;
+            top: 150px;
             left: -34px;
             li {
                 margin: 0;
+                border-bottom: 1px solid #fff;
+                &:last-child { border-bottom: none; }
                 a {
                     display: block;
                     background: $blue;
