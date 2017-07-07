@@ -42,7 +42,8 @@ body {
     height: auto;
     line-height: 1.2; }
     .custom-post-footer div p {
-      margin: 0; }
+      margin: 0;
+      line-height: 0.8; }
     .custom-post-footer div a {
       text-decoration: none;
       text-transform: capitalize; }
@@ -92,7 +93,6 @@ body {
     position: relative;
     word-break: break-word;
     word-wrap: break-word;
-    hyphens: auto;
     display: flex;
     justify-content: space-between; }
   .content .post:after {
