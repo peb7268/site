@@ -558,6 +558,21 @@ a:hover {
             color: #fff;
             padding: 15px 20px;
             box-sizing: border-box; }
+  .home .client-cases {
+    flex-direction: column;
+    justify-content: space-between; }
+    .home .client-cases li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      .home .client-cases li .client-img {
+        width: 100%;
+        margin: 0; }
+      .home .client-cases li .desc {
+        font-size: 14pt;
+        margin: 5px 0 15px;
+        max-width: 275px; }
   .home .ctas {
     margin-top: 150px;
     height: auto; }
@@ -566,8 +581,9 @@ a:hover {
     background-size: 100%; }
   .ctas .cta .message {
     font-size: 15pt;
-    bottom: 1%;
-    right: -220%; }
+    bottom: 10px;
+    right: -220%;
+    width: 98%; }
   .band .wrapper {
     width: 98%;
     display: block;
@@ -584,14 +600,22 @@ a:hover {
     .band .wrapper .message h2 p {
       font-size: 23pt;
       margin-top: 4px; }
-  .band.band2 .wrapper .message h2 {
-    font-size: 27pt; }
-  .band.band2 .wrapper .message h2 p {
-    font-size: 22pt; }
+  .band.band2 .wrapper {
+    padding: 0; }
+    .band.band2 .wrapper .graphic {
+      max-width: 100%; }
+    .band.band2 .wrapper .message h2 {
+      font-size: 27pt; }
+      .band.band2 .wrapper .message h2 span {
+        display: none; }
+      .band.band2 .wrapper .message h2 p {
+        font-size: 22pt; }
   .band.band3 .wrapper .message {
     margin-bottom: 20px; }
-  .band.band3 .wrapper .message h2 {
-    font-size: 25pt; }
+    .band.band3 .wrapper .message h2 {
+      display: none; }
+  .band.band3 .wrapper .next-steps li {
+    margin: 0 0 7px; }
   .services-page .ctas {
     margin-bottom: 25px; }
   .services-page .content {
