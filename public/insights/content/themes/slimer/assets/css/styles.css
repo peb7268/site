@@ -6,6 +6,10 @@ body {
   display: flex;
   flex-direction: column; }
 
+a:hover {
+  transform: scale(1.1);
+  color: #fff; }
+
 .banner {
   margin-top: 110px; }
 
@@ -30,6 +34,11 @@ body {
 
 .custom-post-footer div.custom-post-excerpt {
   font-size: 15pt; }
+
+article.post.tag-quick-tip {
+  flex-direction: column-reverse; }
+  article.post.tag-quick-tip .custom-post-content {
+    width: 100%; }
 
 .custom-post-footer {
   justify-content: flex-start;
@@ -149,7 +158,7 @@ body > header {
     font-size: 42pt;
     text-transform: uppercase;
     width: 345px;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     line-height: 0.9;
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
