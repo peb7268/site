@@ -7,8 +7,7 @@ body {
   flex-direction: column; }
 
 a:hover {
-  transform: scale(1.1);
-  color: #fff; }
+  transform: scale(1.1); }
 
 .banner {
   margin-top: 110px;
@@ -201,7 +200,7 @@ body > header {
     font-family: 'Fjalla One', sans-serif;
     font-size: 42pt;
     text-transform: uppercase;
-    width: 345px;
+    width: 385px;
     letter-spacing: -2px;
     line-height: 0.9;
     -webkit-font-smoothing: antialiased;
