@@ -51,12 +51,6 @@ body {
 a {
   background: transparent; }
 
-a:focus {
-  outline: thin dotted; }
-
-a:active, a:hover {
-  outline: 0; }
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -296,9 +290,6 @@ h6 {
 a {
   color: #4A4A4A;
   transition: color 0.3s ease; }
-
-a:hover {
-  color: #111; }
 
 p, ul, ol, dl {
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
