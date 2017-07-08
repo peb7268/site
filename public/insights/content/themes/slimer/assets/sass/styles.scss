@@ -10,30 +10,47 @@ a:hover { transform: scale(1.1); color: #fff; }
 
 .banner{
     margin-top: 110px;
+    min-height: 200px;
+    max-height: 300px; 
 }
 
-//     * {
-//   background: #000 !important;
-//   color: #0f0 !important;
-//   outline: solid #f00 1px !important;
-// }
+.post-template {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        width: 70%;
+    }
 
-.post-template .blog-title {
-	padding: 5px;
+    .blog-title {
+	    padding: 5px;
+    }
+
+    .post { 
+        flex-direction: column;
+        .post-header { 
+            margin: 20px 0 20px 0;
+            line-height: 1;
+        }
+        .post-title { 
+            margin: 0 0 7px;
+            line-height: 1;
+            text-transform: capitalize; 
+        }
+    }
 }
-.active{
+
+.active {
     border-bottom: solid 1px;
     border-color: #0036bf;
 }
+
 .flex-box-wrapper{
 	display: flex;
 	flex-direction: row;
 }
 
 .custom-post-content {
-	justify-content: space-between;
-	align-items: stretch; // set height of child elements to auto
-    display: inline-block;
     width: 40%;
     .hidden-post-tag-cloud{
         display: none;
@@ -52,108 +69,143 @@ article.post.tag-quick-tip{
 }
 
 .custom-post-footer {
-	justify-content: flex-start;
-    display: inline-block;
-    position: absolute;
-    top: 0px;
+	width: 59%;
+    .read-more {
+        background: #4A4A4A;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        position: absolute;
+        font-size: 10pt;
+        bottom: 35px;
+        right: 20px;
+        line-height: 1;
+        font-family: 'Open Sans', sans-serif;
+        &:hover { background: darken(#4A4A4A, 15%); }
+    } 
+
 	div {
-        margin: -5px 5px;
+        margin: 0;
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         font-size: 22pt;
         height: auto;
-		p{
-			margin: 0 10px;
-		}
-		a {
-			text-decoration: none;
-            text-transform: capitalize;
-		}
+        line-height: 1.2;
+		p { margin: 0; line-height: 0.8; }
+		a { text-decoration: none; text-transform: capitalize; }
 	}
+
     .custom-post-header{
-        margin: 0px 5px
+        margin: 0;
+        .custom-post-title a { font-size: 13pt; }
     }
-    .custom-post-excerpt{
-        margin: 10px 15px;
-    }
+    
 	.custom-footer-meta{
 		text-transform: uppercase;
 		font-size: 14pt;
 		color: #0036bf;
         flex-grow: 1;
         font-weight: 600;
-        a:only-child{padding: 0 10px !important}
-		a:first-child{padding: 0px 0px 0 10px;}
-		a:last-child{padding: 0px 10px 0 0px;}
-		a{color: #0036bf;}
-		time{
-			padding: 0 10px;
-			font-size: 14pt;
-		}
+        line-height: 1.2;
+
+        a:only-child { padding: 0; }
+		a:first-child { padding: 0;}
+		a:last-child{ padding: 0; }
+		a { color: #0036bf; }
+		time { padding: 0; font-size: 14pt; }
 	}
+
+    div.custom-post-excerpt{
+        font-size: 15pt;
+        font-weight: 100;
+        margin: 10px 0 0 0;
+    }
 }
+
 .post-image, .tag-cloud{
 	height: auto;
 }
+
 .post-image{
     p{margin: 0}
     img{
         width: 100%
     }
 }
+
 .content {
     width: 100%;
-    margin: 2rem 0 0 -2rem !important;
-    article{
-        margin: 4rem auto;
-    }
-    .post{
+    margin: 20px 0 0 0;
+
+    article { margin: 4rem auto; }
+
+    .post {
         border: none;
-        margin: 0 auto;
+        margin: 0 0 25px;
+        width: 100%;
+        border-bottom: 1px dotted #999;
+        padding-bottom: 25px;
+        position: relative;
+        word-break: break-word;
+        word-wrap: break-word;
+        // hyphens: auto;
+        display: flex;
+        justify-content: space-between;
     }
+
     .post:after{
         display: none;
     }
 
 }
+
 .site-wrapper{
     display: flex;
     justify-content: space-between;
+    align-self: center;
     min-height: 60%;
+    width: 98%;
 }
-#tag-cloud{
-	width: 25%;
-	font-family: 'Fjalla One';
-	text-transform: uppercase;
-	font-size: 24pt;
-	color: black;
-    margin: 2rem 2% 0 0;
-    a.tagCloudTag {
-        display: inline-block;
-        padding: 1.5px;
-        text-decoration: none;
+
+.blog-sidebar {
+    width: 27%;
+    display: flex;
+
+    #tag-cloud{
+        width: 100%;
+        font-family: 'Fjalla One';
+        text-transform: uppercase;
+        font-size: 24pt;
         color: black;
-        line-height: 1;
-        transition: all 250ms;
-        margin: 0 2px;
+        margin: 20px 0 0 0;
+        a.tagCloudTag {
+            display: inline-block;
+            padding: 1.5px;
+            text-decoration: none;
+            color: black;
+            line-height: 1;
+            transition: all 250ms;
+            margin: 0 2px;
+        }
+        a:hover { 
+            transform: scale(1.1); 
+            border-color: #0036bf;
+        }
+        a.active{
+            color: #0036bf;
+        }
     }
-    a:hover { 
-        transform: scale(1.1); 
-        border-color: #0036bf;
-    }
-    a.active{
-        color: #0036bf;
+    #custom-tag-meta{
+        background: black;
     }
 }
-#custom-tag-meta{
-    background: black;
-}
+
 h1.post-title {
     width: 100%;
 }
-.content{
-    
-}
+
+.content{}
+
 $blue: #0036bf; 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker|Roboto:100,300,400,900');
 body > header {
@@ -293,19 +345,32 @@ and (max-device-width: 1025px){
 
 @media only screen 
 and (max-device-width : 415px){
-    .content .post{
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
+    .post-template{
+        .content {
+            width: 98%;
+            margin: 0 auto;
+
+            .post {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 0 25px;
+                border-bottom: 1px dotted #999;
+                padding-bottom: 20px;
+            }
+        }
     }
-    .custom-post-footer{
+    
+    .custom-post-footer {
         position: initial;
+        width: 100%;
+        div p { line-height: 1.2; }
+        .custom-footer-meta { font-size: 10pt; }
+        .custom-post-header .custom-post-title a { font-size: 15pt; }
+        div.custom-post-excerpt { font-size: 12pt; }
+        .custom-post-content { width: initial; }
     }
-    .custom-post-content{
-        width: initial;
-    }
+
     .logo{
         display: block;
         text-align: left;
@@ -317,6 +382,7 @@ and (max-device-width : 415px){
             font-size: 20pt;
         }
     }
+
     .container header .nav-toggle {
         visibility: visible;
         font-size: 17pt;
@@ -324,29 +390,31 @@ and (max-device-width : 415px){
         top: 15px;
         right: 20px;
     }
-    footer{
-        // display: none;
-        width: 80%;
+
+    footer{ width: 80%; }
+
+    html,body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
     }
-    html,body
-{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-    body{
-        // width: 372px;
-    }
+
     .site-wrapper{
-        // width: 372px;
+        margin: 0 auto;
+        width: 98%;
+        flex-direction: column;
     }
+
     #content {
         width: 100%;
-        margin: 2rem 0 0 0rem !important;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
     }
+
     .banner{
-        margin-top: 20%;
+        margin-top: 71px;
         // max-width: 372px;
         img{
             width: 100%;
@@ -354,9 +422,10 @@ and (max-device-width : 415px){
         }
     }
     
-    header{
-        width: 90%;
+    body > header {
+        box-shadow: 0px 2px 1px rgba(51, 51, 51, .3);
     }
+
     header h1{
         font-size: 22pt;
         width: 155px;
@@ -364,53 +433,58 @@ and (max-device-width : 415px){
             font-size: 13pt;
         }
     }
+
     div.wrapper{
         width: 100%;
-    a.nav-toggle{
-        display: initial;
-        visibility: visible;
-        font-size: 17pt;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        color: #0036bf;
-    }
-    ul.insights-nav {
-        position: absolute;
-        width: 100%;
-        display: block;
-        visibility: hidden;
-        top: 80px;
-        left: -34px;
-        li {
-            margin: 0;
-            a {
-                display: block;
-                background: $blue;
-                color: #fff;
-                padding: 15px 20px;
-                box-sizing: border-box;
+        a.nav-toggle{
+            display: initial;
+            visibility: visible;
+            font-size: 17pt;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #0036bf;
+        }
+        
+        ul.insights-nav {
+            position: absolute;
+            width: 100%;
+            display: block;
+            visibility: hidden;
+            top: 150px;
+            left: -34px;
+            li {
+                margin: 0;
+                border-bottom: 1px solid #fff;
+                &:last-child { border-bottom: none; }
+                a {
+                    display: block;
+                    background: $blue;
+                    color: #fff;
+                    padding: 15px 20px;
+                    box-sizing: border-box;
+                }
             }
         }
     }
-    }
+    
     #tag-cloud{
         display: none;
-        margin: 2rem 2% 0 0;
-        padding: 0;        
-        .tagCloudTag{
-            font-size: 12pt !important;
-        }
+        margin: 20px 0 0 0;
+        padding: 0;
+        .tagCloudTag{ font-size: 12pt !important; }
     }
+    
     .custom-post-footer .custom-post-header{
         font-size: 12pt
     }
+
     .custom-post-footer .custom-footer-meta {
         font-size: 8pt;
     }
-    .custom-post-footer div.custom-post-excerpt{
-        font-size: 8pt;
-        margin: 0px 15px;
+    
+    .extra-pagination .pagination {
+        justify-content: center;
     }
 }
 

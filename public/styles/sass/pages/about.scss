@@ -1,6 +1,10 @@
 
 .about-page {
-    .ctas { height: 300px; }
+    .ctas { 
+        min-height: 200px; 
+        max-height: 300px; 
+    }
+    
     .content {
         width: 80%;
         border-left: 1px dotted #333;

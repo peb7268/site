@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://imperative2017.herokuapp.com/insights',
+        url: 'http://imperativedesign.net/insights',
         fileStorage: false,
         mail: {
           transport: 'SMTP',

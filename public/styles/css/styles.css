@@ -109,6 +109,7 @@ strong {
 .graphic.image {
   max-width: 40%;
   max-height: 250px;
+  margin: 0 5% 0 0;
   transition: all 500ms ease-in-out; }
   .graphic.image.active {
     filter: grayscale(0); }
@@ -128,6 +129,8 @@ strong {
   position: relative;
   overflow: hidden;
   margin: 115px auto 50px; }
+  .ctas .cta img {
+    width: 100%; }
   .ctas .cta .message {
     position: absolute;
     z-index: 10;
@@ -373,6 +376,28 @@ header {
         border-bottom: 1px dotted;
         padding-bottom: 4px; }
 
+.home .ctas {
+  margin: 110px 0 0 0;
+  max-height: 500px; }
+  .home .ctas .ad1 img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    filter: grayscale(1);
+    transition: all 500ms ease-in-out; }
+  .home .ctas .ad1.active img {
+    filter: grayscale(0); }
+
+.wip {
+  width: 100%;
+  background: #93f0ff;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 5px auto;
+  text-align: center;
+  color: #375e64;
+  font-size: 20pt; }
+
 .client-cases {
   display: flex;
   width: 100%;
@@ -420,18 +445,6 @@ header {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
       background: radial-gradient(ellipse at center, transparent 0%, black 85%); }
 
-.home .ctas {
-  margin: 110px 0 0 0;
-  max-height: 500px; }
-  .home .ctas .ad1 img {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    filter: grayscale(1);
-    transition: all 500ms ease-in-out; }
-  .home .ctas .ad1.active img {
-    filter: grayscale(0); }
-
 .next-steps li a {
   color: #fff;
   font-size: 15pt;
@@ -464,8 +477,6 @@ ul.connect li.btn {
 .services-page .ctas {
   min-height: 200px;
   max-height: 300px; }
-  .services-page .ctas .cta img {
-    width: 100%; }
 
 .services-page .in-page-nav {
   width: 20%;
@@ -484,7 +495,8 @@ ul.connect li.btn {
   padding: 0 0 0 30px; }
 
 .about-page .ctas {
-  height: 300px; }
+  min-height: 200px;
+  max-height: 300px; }
 
 .about-page .content {
   width: 80%;
@@ -551,13 +563,29 @@ a:hover {
         top: 100%;
         left: 0; }
         .container header ul.nav li {
-          margin: 0; }
+          margin: 0;
+          border-bottom: 1px solid #fff; }
           .container header ul.nav li a {
             display: block;
             background: #0036bf;
             color: #fff;
             padding: 15px 20px;
             box-sizing: border-box; }
+  .home .client-cases {
+    flex-direction: column;
+    justify-content: space-between; }
+    .home .client-cases li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      .home .client-cases li .client-img {
+        width: 100%;
+        margin: 0; }
+      .home .client-cases li .desc {
+        font-size: 14pt;
+        margin: 5px 0 15px;
+        max-width: 275px; }
   .home .ctas {
     margin-top: 150px;
     height: auto; }
@@ -566,8 +594,9 @@ a:hover {
     background-size: 100%; }
   .ctas .cta .message {
     font-size: 15pt;
-    bottom: 1%;
-    right: -220%; }
+    bottom: 10px;
+    right: -220%;
+    width: 98%; }
   .band .wrapper {
     width: 98%;
     display: block;
@@ -584,14 +613,27 @@ a:hover {
     .band .wrapper .message h2 p {
       font-size: 23pt;
       margin-top: 4px; }
-  .band.band2 .wrapper .message h2 {
-    font-size: 27pt; }
-  .band.band2 .wrapper .message h2 p {
-    font-size: 22pt; }
-  .band.band3 .wrapper .message {
-    margin-bottom: 20px; }
-  .band.band3 .wrapper .message h2 {
-    font-size: 25pt; }
+  .band.band2 .wrapper {
+    padding: 0; }
+    .band.band2 .wrapper .graphic {
+      max-width: 100%; }
+    .band.band2 .wrapper .message h2 {
+      font-size: 27pt; }
+      .band.band2 .wrapper .message h2 span {
+        display: none; }
+      .band.band2 .wrapper .message h2 p {
+        font-size: 22pt; }
+  .band.band3 .wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .band.band3 .wrapper .message {
+      margin-bottom: 20px; }
+      .band.band3 .wrapper .message h2 {
+        display: none; }
+    .band.band3 .wrapper .next-steps li {
+      margin: 0 0 7px; }
   .services-page .ctas {
     margin-bottom: 25px; }
   .services-page .content {
@@ -609,7 +651,8 @@ a:hover {
     display: block;
     text-align: center;
     border-bottom: 1px dotted #333;
-    padding: 0 0 20px; }
+    padding: 0 0 20px;
+    max-width: none; }
   .page.wrapper h1 {
     font-size: 15pt; }
   .ctas .cta .message .highlight {
