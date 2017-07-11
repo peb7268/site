@@ -56,7 +56,9 @@ app.get('/services/website-rennovation', (req, res) => res.render('web-rennovati
 app.get('/services/mentoring', (req, res) => res.render('mentoring', {active_page: 'services-page', sub_page: 'mentoring' }));
 
 app.post('/contact', (req, res)=>{
-	console.log(req.body);
+	let formData = req.body;
+	console.log('formData', formData);
+
 	let MANDRILL_CONFIGS = {
 		protocall: 'https',
 		base_endpoint: 'mandrillapp.com/api/1.0/SOME-METHOD.OUTPUT_FORMAT',
@@ -75,17 +77,17 @@ app.post('/contact', (req, res)=>{
 
 	var message = {
 		"html": "<p>Example HTML content</p>",
-		"text": "Example text content",
-		"subject": "example subject",
-		"from_email": "message.from_email@example.com",
-		"from_name": "Example Name",
+		"text": formData['Reason for writing'],
+		"subject": "site contact",
+		"from_email": formData['email'],
+		"from_name": formData['first name'] + formData['last name'],
 		"to": [{
 				"email": "dev@imperativedesign.net",
-				"name": "Recipient Name",
+				"name": "Imperative Design",
 				"type": "to"
 			}],
 		"headers": {
-			"Reply-To": "message.reply@example.com"
+			"Reply-To": formData['email']
 		},
 		"important": false,
 		"track_opens": null,
@@ -96,51 +98,12 @@ app.post('/contact', (req, res)=>{
 		"url_strip_qs": null,
 		"preserve_recipients": null,
 		"view_content_link": null,
-		"bcc_address": "message.bcc_address@example.com",
-		"tracking_domain": null,
-		"signing_domain": null,
-		"return_path_domain": null,
-		"merge": true,
-		"merge_language": "mailchimp",
-    	"global_merge_vars": [{
-            "name": "merge1",
-            "content": "merge1 content"
-        }],
-    	"merge_vars": [{
-            "rcpt": "recipient.email@example.com",
-            "vars": [{
-                    "name": "merge2",
-                    "content": "merge2 content"
-                }]
-        }],
-		"tags": [
-			"password-resets"
-		],
-		"subaccount": "customer-123",
-		"google_analytics_domains": [
-			"example.com"
-		],
-		"google_analytics_campaign": "message.from_email@example.com",
-		"metadata": {
-			"website": "www.example.com"
-		},
-    	"recipient_metadata": [{
-            "rcpt": "recipient.email@example.com",
-            "values": {
-                "user_id": 123456
-            }
-        }],
-    	"attachments": [{
-            "type": "text/plain",
-            "name": "myfile.txt",
-            "content": "ZXhhbXBsZSBmaWxl"
-        }],
-    	"images": [{
-            "type": "image/png",
-            "name": "IMAGECID",
-            "content": "ZXhhbXBsZSBmaWxl"
-        }]
+		"tracking_domain": 'imperativedesign.net',
+		"signing_domain": 'imperativedesign.net',
+		"return_path_domain": 'imperativedesign.net'
 	};
+
+	console.log(`message: `, message);
 	
 	var async = false;
 	var ip_pool = "Main Pool";
