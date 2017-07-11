@@ -22,7 +22,7 @@ a:hover {
 .post-template .content {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
+  margin: 0 0 0 2%;
   width: 70%; }
 
 .post-template .blog-title {
