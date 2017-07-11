@@ -5,6 +5,26 @@ function bindEvents(){
     $('.quick-contact .close').on('click', retractQuickContact);
 
     if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
+    
+    let form = document.querySelector('form.quick-contact');
+    Rx.Observable.fromEvent(form, 'submit').subscribe(evt => {
+        evt.preventDefault();
+        
+        //https://stackoverflow.com/questions/2600343/why-does-document-queryselectorall-return-a-staticnodelist-rather-than-a-real-ar
+        //querySelectorAll returns a nodelist instead of an array, use the spread operator to convert it to an arry
+        let formData = JSON.stringify([...evt.target.querySelectorAll('input, textarea')]
+            .reduce((formData, current_field) => {
+                let name = current_field.getAttribute('placeholder');
+                if(name === null) return formData;
+                formData[name] = current_field.value.trim();
+                return formData;
+        }, {}));
+        
+        console.log(`formData: ${formData}`);
+
+        Rx.Observable.ajax.post('/contact', formData)
+        .subscribe( resp => console.log(resp));
+    });
 }
 
 function toggleQuickContact(evt){
