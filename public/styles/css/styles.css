@@ -359,6 +359,15 @@ header {
     margin-top: 2px;
     padding: 5px 0 5px 0px;
     text-align: center; }
+  .band.band2 .wrapper > .read-more {
+    max-width: 40%;
+    max-height: 250px;
+    margin: 0 5% 0 0; }
+    .band.band2 .wrapper > .read-more img {
+      width: 100%;
+      margin: none;
+      max-width: none;
+      max-height: none; }
   .band.band3 {
     margin: 0 0 50px; }
     .band.band3 .wrapper {
@@ -366,7 +375,7 @@ header {
       justify-content: space-around; }
     .band.band3 .message {
       margin-right: 0;
-      width: 45%; }
+      width: 75%; }
       .band.band3 .message h2 {
         font-size: 33pt;
         margin: 0 0 15px 0; }
@@ -375,7 +384,7 @@ header {
         font-weight: bold;
         border-bottom: 1px dotted;
         padding-bottom: 4px; }
-  .band .read-more {
+  .band .read-more.btn {
     background: #4A4A4A;
     color: #fff;
     text-decoration: none;
@@ -456,18 +465,13 @@ header {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
       background: radial-gradient(ellipse at center, transparent 0%, black 85%); }
 
-.next-steps li a {
-  color: #fff;
-  font-size: 15pt;
-  display: block; }
-
-ul.connect li.btn {
+.band .wrapper .next-steps li.btn {
   margin: 0 0 15px; }
-  ul.connect li.btn h2, ul.connect li.btn a {
+  .band .wrapper .next-steps li.btn h2, .band .wrapper .next-steps li.btn a {
     font-family: 'Permanent Marker', cursive;
     background: #fff;
     color: #0036bf; }
-  ul.connect li.btn a {
+  .band .wrapper .next-steps li.btn a {
     display: block;
     font-size: 22pt;
     text-align: center;
@@ -624,8 +628,13 @@ a:hover {
     .band .wrapper .message h2 p {
       font-size: 23pt;
       margin-top: 4px; }
+    .band .wrapper .next-steps li.btn a {
+      padding: 5px 0; }
+      .band .wrapper .next-steps li.btn a h2 {
+        margin: 0; }
   .band.band2 .wrapper {
-    padding: 0; }
+    padding: 0;
+    margin: 0 auto 55px; }
     .band.band2 .wrapper .graphic {
       max-width: 100%; }
     .band.band2 .wrapper .message h2 {
@@ -641,10 +650,12 @@ a:hover {
     align-items: center; }
     .band.band3 .wrapper .message {
       margin-bottom: 20px; }
-      .band.band3 .wrapper .message h2 {
+      .band.band3 .wrapper .message > h2 {
         display: none; }
     .band.band3 .wrapper .next-steps li {
       margin: 0 0 7px; }
+  .band .read-more.btn {
+    display: none; }
   .services-page .ctas {
     margin-bottom: 25px; }
   .services-page .content {

@@ -60,7 +60,19 @@
         }
     }
 
-    &.band2 {}
+    &.band2 {
+        .wrapper > .read-more {
+            max-width: 40%;
+            max-height: 250px;
+            margin: 0 5% 0 0;
+            img { 
+                width: 100%;
+                margin: none;
+                max-width: none;
+                max-height: none;
+            }
+        }
+    }
 
     &.band3 {
         margin: 0 0 50px;
@@ -70,7 +82,7 @@
         }
         .message {
             margin-right: 0;
-            width: 45%;
+            width: 75%;
             h2 {
                 font-size: 33pt;
                 margin: 0 0 15px 0;
@@ -85,7 +97,7 @@
         }
     }
 
-    .read-more {
+    .read-more.btn {
         background: #4A4A4A;
         color: #fff;
         text-decoration: none;
@@ -180,12 +192,8 @@
     }
 }
 
-.next-steps {
-    li a { color: #fff; font-size: 15pt; display: block; }
-}
-
-ul.connect {
-    li.btn {
+.band .wrapper .next-steps {
+     li.btn {
         margin: 0 0 15px;
         h2, a {
             font-family: 'Permanent Marker', cursive; 
@@ -200,5 +208,5 @@ ul.connect {
             padding: 15px 20px;
         }
     }
-
+    //li a { color: #fff; font-size: 15pt; display: block; }
 }

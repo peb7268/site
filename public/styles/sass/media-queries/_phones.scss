@@ -108,10 +108,15 @@ and (max-device-width : 415px){
             .graphic { margin: 10px auto; }
             .message h2 { text-align: center; font-size: 26pt; }
             .message h2 p { font-size: 23pt; margin-top: 4px; }
+            .next-steps li.btn a { 
+              padding: 5px 0;
+              h2 { margin: 0; }
+            }
         }
         
         &.band2 .wrapper {
           padding: 0;
+          margin: 0 auto 55px;
           .graphic { max-width: 100%; }
           .message h2 { 
             font-size: 27pt;
@@ -127,13 +132,14 @@ and (max-device-width : 415px){
           align-items: center;
           .message { 
             margin-bottom: 20px;
-            h2 { display: none; }
+            & > h2 { display: none; }
           }
           .next-steps {
             li { margin: 0 0 7px; }
           }
         }
-        
+
+        .read-more.btn { display: none; }
     }
 
     .services-page {
