@@ -316,10 +316,10 @@ header {
     width: 100%;
     margin: 20px auto;
     padding: 0 10px;
-    align-items: flex-start;
     display: flex;
     justify-content: space-between; }
     .band .wrapper .message {
+      position: relative;
       width: 60%;
       font-size: 18pt;
       margin-right: 10%; }
@@ -375,6 +375,17 @@ header {
         font-weight: bold;
         border-bottom: 1px dotted;
         padding-bottom: 4px; }
+  .band .read-more {
+    background: #4A4A4A;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: absolute;
+    font-size: 10pt;
+    bottom: 15px;
+    right: 15px;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif; }
 
 .home .ctas {
   margin: 110px 0 0 0;
@@ -418,7 +429,7 @@ header {
         font-size: 14pt; }
     .client-cases li .client-img {
       position: relative;
-      width: 50%;
+      width: 95%;
       margin: 0 15px 0 0;
       max-width: 275px; }
       .client-cases li .client-img img {

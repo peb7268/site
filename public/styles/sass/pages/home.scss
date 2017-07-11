@@ -5,11 +5,11 @@
         width: 100%;
         margin: 20px auto;
         padding: 0 10px;
-        align-items: flex-start;
         display: flex;
         justify-content: space-between;
 
-        .message { 
+        .message {
+            position: relative; 
             width: 60%;
             font-size: 18pt;
             margin-right: 10%;
@@ -84,6 +84,19 @@
             }
         }
     }
+
+    .read-more {
+        background: #4A4A4A;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        position: absolute;
+        font-size: 10pt;
+        bottom: 15px;
+        right: 15px;
+        line-height: 1;
+        font-family: 'Open Sans', sans-serif;
+    }
 } 
 
 .home .ctas { 
@@ -131,7 +144,7 @@
 
         .client-img {
             position: relative;
-            width: 50%;
+            width: 95%;
             margin: 0 15px 0 0;
             max-width: 275px;
             img {
