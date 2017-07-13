@@ -269,6 +269,16 @@ body > header {
         body > header ul.insights-nav li a:hover {
           color: #000;
           border-color: #0036bf; }
+      body > header ul.insights-nav li.get_in_touch a {
+        font-size: 12pt;
+        display: inline-block;
+        background: #0036bf;
+        color: #fff;
+        padding: 0 20px;
+        margin: 0; }
+        body > header ul.insights-nav li.get_in_touch a:hover {
+          transform: none;
+          border: none; }
       body > header ul.insights-nav li.insights-dropdown ul {
         position: absolute;
         padding: 0;

@@ -303,6 +303,16 @@ header {
             font-weight: 400; }
       header ul.nav li.dropdown:hover ul {
         display: block; }
+      header ul.nav li.get_in_touch a {
+        font-size: 12pt;
+        display: inline-block;
+        background: #0036bf;
+        color: #fff;
+        padding: 0 20px;
+        margin: 0; }
+        header ul.nav li.get_in_touch a:hover {
+          transform: none;
+          border: none; }
 
 .services-page .nav li.services > a,
 .about-page .nav li.about > a,

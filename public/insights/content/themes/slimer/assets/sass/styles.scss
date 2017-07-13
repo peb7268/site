@@ -304,7 +304,15 @@ body > header {
                 &:last-child { margin-right: 0; }
                 &:hover { color: #000; border-color: $blue; }
             }
-            
+            &.get_in_touch a {
+                font-size: 12pt;
+                display: inline-block;
+                background: #0036bf;
+                color: #fff;
+                padding: 0 20px;
+                margin: 0;
+                &:hover { transform: none; border: none; }
+            }
             &.insights-dropdown ul {
                 position: absolute;
 				padding: 0;
