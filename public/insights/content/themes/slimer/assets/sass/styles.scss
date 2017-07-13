@@ -36,9 +36,9 @@ a:hover { transform: scale(1.1);}
 
         .post-title { 
             margin: 0 0 7px;
-            line-height: 1;
+            line-height: 1.2;
             text-transform: capitalize;
-            font-size: 22pt;
+            font-size: 24pt;
         }
 
         .links {
@@ -48,7 +48,7 @@ a:hover { transform: scale(1.1);}
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             margin: 0 0 15px 0;
-            
+
             a { display: inline-block; margin: 5px 5px 5px 0; text-transform: capitalize; }
             a.status { border-radius: 1px; }
             a.status.development { 
