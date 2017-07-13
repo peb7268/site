@@ -36,7 +36,25 @@ a:hover {
   .post-template .post .post-title {
     margin: 0 0 7px;
     line-height: 1;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-size: 22pt; }
+  .post-template .post .links {
+    display: flex;
+    border-top: 1px dotted #777;
+    border-bottom: 1px dotted #777;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0 0 15px 0; }
+    .post-template .post .links a {
+      display: inline-block;
+      margin: 5px 5px 5px 0;
+      text-transform: capitalize; }
+    .post-template .post .links a.status {
+      border-radius: 1px; }
+    .post-template .post .links a.status.development {
+      color: #fff;
+      padding: 0 10px;
+      background: #1dab49; }
 
 .active {
   border-bottom: solid 1px;

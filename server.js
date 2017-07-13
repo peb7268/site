@@ -79,7 +79,7 @@ app.post('/contact', (req, res)=>{
 		"html": "<p>Example HTML content</p>",
 		"text": formData['Reason for writing'],
 		"subject": "site contact",
-		"from_email": formData['email'],
+		"from_email": 'dev@imperativedesign.net',
 		"from_name": formData['first name'] + formData['last name'],
 		"to": [{
 				"email": "dev@imperativedesign.net",
@@ -97,14 +97,9 @@ app.post('/contact', (req, res)=>{
 		"inline_css": null,
 		"url_strip_qs": null,
 		"preserve_recipients": null,
-		"view_content_link": null,
-		"tracking_domain": 'imperativedesign.net',
-		"signing_domain": 'imperativedesign.net',
-		"return_path_domain": 'imperativedesign.net'
+		"view_content_link": null
 	};
 
-	console.log(`message: `, message);
-	
 	var async = false;
 	var ip_pool = "Main Pool";
 	
