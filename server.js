@@ -59,6 +59,14 @@ app.post('/contact', (req, res)=>{
 	let formData = req.body;
 	console.log('formData', formData);
 
+	let msg_html = `
+		<p>Name: ${formData['first name']} ${formData['last name']}</p>
+		<p>Email: ${formData['email']}</p>
+		<p>Phone: ${formData['phone']}</p>
+		<p>Reason for inquiry: ${formData['Reason for writing']}</p>
+	`;
+	msg_html = msg_html.trim();
+
 	let MANDRILL_CONFIGS = {
 		protocall: 'https',
 		base_endpoint: 'mandrillapp.com/api/1.0/SOME-METHOD.OUTPUT_FORMAT',
@@ -76,7 +84,7 @@ app.post('/contact', (req, res)=>{
 	var mandrill_client = new mandrill.Mandrill(MANDRILL_CONFIGS.options.auth.pass);
 
 	var message = {
-		"html": "<p>Example HTML content</p>",
+		"html": msg_html,
 		"text": formData['Reason for writing'],
 		"subject": "site contact",
 		"from_email": 'dev@imperativedesign.net',
