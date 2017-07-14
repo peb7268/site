@@ -2,9 +2,36 @@
 function bindEvents(){
     $('a.nav-toggle').on('click', toggleNav);
     $('.show-contact').on('click', toggleQuickContact);
-    $('.quick-contact .close').on('click', retractQuickContact);
+    //$('.quick-contact .close').on('click', retractQuickContact);
 
     if(typeof Rx !== 'undefined') bindCtaAnimations('.cta, .graphic.image');
+
+    let form = document.querySelector('.quick-contact form');
+    Rx.Observable.fromEvent(form, 'submit').subscribe(evt => {
+        evt.preventDefault();
+        
+        //https://stackoverflow.com/questions/2600343/why-does-document-queryselectorall-return-a-staticnodelist-rather-than-a-real-ar
+        //querySelectorAll returns a nodelist instead of an array, use the spread operator to convert it to an arry
+        let formData = [...evt.target.querySelectorAll('input, textarea')]
+            .reduce((formData, current_field) => {
+                let name = current_field.getAttribute('placeholder');
+                if(name === null) return formData;
+                formData[name] = current_field.value.trim();
+                return formData;
+        }, {});
+        
+        Rx.Observable.ajax.post('/contact', formData)
+        .subscribe( resp => {
+            console.log(resp);
+            if(resp.status === 200 && resp.response[0].status == 'sent') toggleSuccessMsg('.quick-contact form', '.quick-contact .success-msg');
+        });
+    });
+}
+
+function toggleSuccessMsg(formSelector, successMsgSelector){
+    $(formSelector).fadeOut(200, function(){
+        $(successMsgSelector).fadeIn(200);
+    });
 }
 
 function toggleQuickContact(evt){

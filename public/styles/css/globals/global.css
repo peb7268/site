@@ -46,9 +46,9 @@ strong {
   min-height: 250px; }
 
 .graphic.image {
-  width: 40%;
+  max-width: 40%;
   max-height: 250px;
-  filter: grayscale(1);
+  margin: 0 5% 0 0;
   transition: all 500ms ease-in-out; }
   .graphic.image.active {
     filter: grayscale(0); }
@@ -68,12 +68,14 @@ strong {
   position: relative;
   overflow: hidden;
   margin: 115px auto 50px; }
+  .ctas .cta img {
+    width: 100%; }
   .ctas .cta .message {
     position: absolute;
     z-index: 10;
     right: -110%;
     bottom: 30%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
@@ -100,29 +102,33 @@ strong {
     z-index: 5; }
 
 #footer {
-  background: #787878;
-  height: 150px; }
-
-form.quick-contact {
-  position: fixed;
-  left: 40%;
-  top: 30%;
-  background: #fff;
-  width: 30%;
-  box-shadow: 0px 0px 2px #333;
-  border-radius: 2px;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 110; }
-  form.quick-contact input {
-    width: 100%;
-    margin: 0 0 7px; }
+  background: #333;
+  height: 35px; }
 
 .shade {
   position: fixed;
-  top: 0;
+  top: -110%;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  transition: top 500ms ease-in-out; }
+  .shade.active {
+    top: 0; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }

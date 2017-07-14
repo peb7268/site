@@ -19,7 +19,7 @@ a:hover { transform: scale(1.1);}
     .content {
         display: flex;
         flex-direction: column;
-        margin-top: 0;
+        margin: 0 0 0 2%;
         width: 70%;
     }
 
@@ -33,10 +33,29 @@ a:hover { transform: scale(1.1);}
             margin: 20px 0 20px 0;
             line-height: 1;
         }
+
         .post-title { 
             margin: 0 0 7px;
-            line-height: 1;
-            text-transform: capitalize; 
+            line-height: 1.2;
+            text-transform: capitalize;
+            font-size: 24pt;
+        }
+
+        .links {
+            display: flex;
+            border-top: 1px dotted #777;
+            border-bottom: 1px dotted #777;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            margin: 0 0 15px 0;
+
+            a { display: inline-block; margin: 5px 5px 5px 0; text-transform: capitalize; }
+            a.status { border-radius: 1px; }
+            a.status.development { 
+                color: #fff;
+                padding: 0 10px;
+                background: #1dab49;
+            }
         }
     }
 }
@@ -285,7 +304,15 @@ body > header {
                 &:last-child { margin-right: 0; }
                 &:hover { color: #000; border-color: $blue; }
             }
-            
+            &.get_in_touch a {
+                font-size: 12pt;
+                display: inline-block;
+                background: #0036bf;
+                color: #fff;
+                padding: 0 20px;
+                margin: 0;
+                &:hover { transform: none; border: none; }
+            }
             &.insights-dropdown ul {
                 position: absolute;
 				padding: 0;

@@ -88,6 +88,16 @@ header {
                 }
             }
             &.dropdown:hover ul { display: block; }
+            
+            &.get_in_touch a {
+                font-size: 12pt;
+                display: inline-block;
+                background: #0036bf;
+                color: #fff;
+                padding: 0 20px;
+                margin: 0;
+                &:hover { transform: none; border: none; }
+            }
         }
     }
 }

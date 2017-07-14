@@ -60,18 +60,38 @@
         }
     }
 
-    &.band2 {}
+    &.band2 {
+        .wrapper > .read-more {
+            max-width: 40%;
+            max-height: 250px;
+            margin: 0 5% 0 0;
+            img { 
+                width: 100%;
+                margin: none;
+                max-width: none;
+                max-height: none;
+            }
+        }
+    }
 
     &.band3 {
+        display: flex;
         margin: 0 0 50px;
+        width: 100%;
+
         .wrapper { 
-            width: 70%;
+            width: 100%;
             justify-content: space-around;
         }
         .message {
             margin-right: 0;
-            width: 45%;
-            h2 {
+            width: 100%;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+
+            h4 {
+                font-family: 'Permanent Marker', cursive; 
                 font-size: 33pt;
                 margin: 0 0 15px 0;
             }
@@ -85,7 +105,7 @@
         }
     }
 
-    .read-more {
+    .read-more.btn {
         background: #4A4A4A;
         color: #fff;
         text-decoration: none;
@@ -96,6 +116,33 @@
         right: 15px;
         line-height: 1;
         font-family: 'Open Sans', sans-serif;
+    }
+
+    .quick-contact {
+        width: 40%;
+        form {
+            .close { font-size: 14pt; color: red; position: absolute; right: 20px; top: 5px; z-index: 115; &:hover { cursor: pointer; } }
+
+            input, textarea {
+                background: desaturate(darken($blue, 5%), 5%);
+                width: 100%;
+                margin: 0 0 7px;
+                font-size: 12pt;
+                padding: 10px;
+                color: #fff;
+                border: none;
+
+                &:focus { outline: 2px solid $blue; }
+                &[type='submit']{
+                    background: #fff;
+                    color: $blue;
+                    border: none;
+                    padding: 7px 0;
+                    &:hover { cursor: pointer; }
+                }
+            }
+        }
+        .success-msg { display: none; }
     }
 } 
 
@@ -182,12 +229,8 @@
     }
 }
 
-.next-steps {
-    li a { color: #fff; font-size: 15pt; display: block; }
-}
-
-ul.connect {
-    li.btn {
+.band .wrapper .next-steps {
+     li.btn {
         margin: 0 0 15px;
         h2, a {
             font-family: 'Permanent Marker', cursive; 
@@ -202,5 +245,5 @@ ul.connect {
             padding: 15px 20px;
         }
     }
-
+    //li a { color: #fff; font-size: 15pt; display: block; }
 }
