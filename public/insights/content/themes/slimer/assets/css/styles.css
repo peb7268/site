@@ -55,6 +55,11 @@ a:hover {
       color: #fff;
       padding: 0 10px;
       background: #1dab49; }
+  .post-template .post .post-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #5ba4e5; }
 
 .active {
   border-bottom: solid 1px;
