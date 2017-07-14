@@ -117,44 +117,6 @@ strong { font-weight: 500; }
     height: 35px;
 }
 
-form.quick-contact {
-    position: fixed;
-    left: 30%;
-    bottom: -120%;
-    width: 40%;
-    background: #fff;
-    box-shadow: 0px 0px 2px #333;
-    border-radius: 2px;
-    padding: 40px 20px 20px 20px;
-    box-sizing: border-box;
-    z-index: 110;
-    transition: bottom 500ms ease-in-out;
-    &.active { bottom: 40%; }
-    .close { font-size: 14pt; color: red; position: absolute; right: 20px; top: 5px; z-index: 115; &:hover { cursor: pointer; } }
-
-    input, textarea {
-        width: 100%;
-        margin: 0 0 7px;
-        font-size: 12pt;
-        padding: 7px;
-        border: 1px solid #ddd;
-        border-radius: 2px; 
-        &:focus {
-            outline: 2px solid $blue;
-        }
-        &[type='submit']{
-            background: $blue;
-            color: #fff;
-            border: none;
-            padding: 7px 0;
-            &:hover { 
-                cursor: pointer;
-                background: lighten($blue, 10%);
-            }
-        }
-    }
-}
-
 .shade {
     position: fixed;
     top: -110%;
@@ -165,4 +127,17 @@ form.quick-contact {
     z-index: 100;
     transition: top 500ms ease-in-out;
     &.active { top: 0; }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #fff;
 }

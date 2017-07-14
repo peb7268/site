@@ -75,15 +75,23 @@
     }
 
     &.band3 {
+        display: flex;
         margin: 0 0 50px;
+        width: 100%;
+
         .wrapper { 
-            width: 70%;
+            width: 100%;
             justify-content: space-around;
         }
         .message {
             margin-right: 0;
-            width: 75%;
-            h2 {
+            width: 100%;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+
+            h4 {
+                font-family: 'Permanent Marker', cursive; 
                 font-size: 33pt;
                 margin: 0 0 15px 0;
             }
@@ -108,6 +116,33 @@
         right: 15px;
         line-height: 1;
         font-family: 'Open Sans', sans-serif;
+    }
+
+    .quick-contact {
+        width: 40%;
+        form {
+            .close { font-size: 14pt; color: red; position: absolute; right: 20px; top: 5px; z-index: 115; &:hover { cursor: pointer; } }
+
+            input, textarea {
+                background: desaturate(darken($blue, 5%), 5%);
+                width: 100%;
+                margin: 0 0 7px;
+                font-size: 12pt;
+                padding: 10px;
+                color: #fff;
+                border: none;
+
+                &:focus { outline: 2px solid $blue; }
+                &[type='submit']{
+                    background: #fff;
+                    color: $blue;
+                    border: none;
+                    padding: 7px 0;
+                    &:hover { cursor: pointer; }
+                }
+            }
+        }
+        .success-msg { display: none; }
     }
 } 
 

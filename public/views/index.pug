@@ -67,9 +67,20 @@ block content
         section#contact.band.blue.band3
             div.wrapper
                 div.message
-                    h2 You had me at hello
-                    p Now what's next?
-                    ul.next-steps
-                        li.btn: a(href="/insights/getting-started/"): h2 Get Started
-                        li.btn: a.show-contact(href="/request-a-quote"): h2 Request A Quote
-                        li.social-icons
+                    .next-step-ctas
+                        h4 You had me at hello
+                        p Now what's next?
+                        ul.next-steps
+                            li.btn: a(href="/insights/getting-started/"): h2 Get Started
+                            li.btn.contact: a(href="tel:4703583559"): h2 give us a call
+                            li.social-icons
+                    .quick-contact
+                        h4 drop us a line
+                        p.success-msg Thanks for for dropping us a line! We'll be in touch soon.
+                        form
+                            input(type="text", placeholder="first name", required)
+                            input(type="text", placeholder="last name")
+                            input(type="email", placeholder="email", required)
+                            input(type="phone", placeholder="phone", required)
+                            textarea(placeholder="Reason for writing", rows="7", required)
+                            input(type="submit")

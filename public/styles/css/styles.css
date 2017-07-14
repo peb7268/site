@@ -166,47 +166,6 @@ strong {
   background: #333;
   height: 35px; }
 
-form.quick-contact {
-  position: fixed;
-  left: 30%;
-  bottom: -120%;
-  width: 40%;
-  background: #fff;
-  box-shadow: 0px 0px 2px #333;
-  border-radius: 2px;
-  padding: 40px 20px 20px 20px;
-  box-sizing: border-box;
-  z-index: 110;
-  transition: bottom 500ms ease-in-out; }
-  form.quick-contact.active {
-    bottom: 40%; }
-  form.quick-contact .close {
-    font-size: 14pt;
-    color: red;
-    position: absolute;
-    right: 20px;
-    top: 5px;
-    z-index: 115; }
-    form.quick-contact .close:hover {
-      cursor: pointer; }
-  form.quick-contact input, form.quick-contact textarea {
-    width: 100%;
-    margin: 0 0 7px;
-    font-size: 12pt;
-    padding: 7px;
-    border: 1px solid #ddd;
-    border-radius: 2px; }
-    form.quick-contact input:focus, form.quick-contact textarea:focus {
-      outline: 2px solid #0036bf; }
-    form.quick-contact input[type='submit'], form.quick-contact textarea[type='submit'] {
-      background: #0036bf;
-      color: #fff;
-      border: none;
-      padding: 7px 0; }
-      form.quick-contact input[type='submit']:hover, form.quick-contact textarea[type='submit']:hover {
-        cursor: pointer;
-        background: #0044f2; }
-
 .shade {
   position: fixed;
   top: -110%;
@@ -218,6 +177,22 @@ form.quick-contact {
   transition: top 500ms ease-in-out; }
   .shade.active {
     top: 0; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
 
 header {
   position: fixed;
@@ -379,14 +354,20 @@ header {
       max-width: none;
       max-height: none; }
   .band.band3 {
-    margin: 0 0 50px; }
+    display: flex;
+    margin: 0 0 50px;
+    width: 100%; }
     .band.band3 .wrapper {
-      width: 70%;
+      width: 100%;
       justify-content: space-around; }
     .band.band3 .message {
       margin-right: 0;
-      width: 75%; }
-      .band.band3 .message h2 {
+      width: 100%;
+      display: flex;
+      align-content: space-around;
+      justify-content: space-around; }
+      .band.band3 .message h4 {
+        font-family: 'Permanent Marker', cursive;
         font-size: 33pt;
         margin: 0 0 15px 0; }
       .band.band3 .message p {
@@ -405,6 +386,36 @@ header {
     right: 15px;
     line-height: 1;
     font-family: 'Open Sans', sans-serif; }
+  .band .quick-contact {
+    width: 40%; }
+    .band .quick-contact form .close {
+      font-size: 14pt;
+      color: red;
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      z-index: 115; }
+      .band .quick-contact form .close:hover {
+        cursor: pointer; }
+    .band .quick-contact form input, .band .quick-contact form textarea {
+      background: #0431a1;
+      width: 100%;
+      margin: 0 0 7px;
+      font-size: 12pt;
+      padding: 10px;
+      color: #fff;
+      border: none; }
+      .band .quick-contact form input:focus, .band .quick-contact form textarea:focus {
+        outline: 2px solid #0036bf; }
+      .band .quick-contact form input[type='submit'], .band .quick-contact form textarea[type='submit'] {
+        background: #fff;
+        color: #0036bf;
+        border: none;
+        padding: 7px 0; }
+        .band .quick-contact form input[type='submit']:hover, .band .quick-contact form textarea[type='submit']:hover {
+          cursor: pointer; }
+    .band .quick-contact .success-msg {
+      display: none; }
 
 .home .ctas {
   margin: 110px 0 0 0;
