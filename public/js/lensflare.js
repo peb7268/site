@@ -126,6 +126,7 @@ function onWindowResize( event ) {
 }
 
 function animate() {
+    debugger;
     requestAnimationFrame( animate );
     render();
     //stats.update();
