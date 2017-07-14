@@ -475,7 +475,7 @@ header {
         .client-cases li .client-img:hover img {
           filter: none; }
         .client-cases li .client-img:hover .vignette {
-          background: radial-gradient(ellipse at center, transparent 100%, black 85%); }
+          opacity: 0.1; }
     .client-cases li .vignette {
       position: absolute;
       z-index: 10;
@@ -484,7 +484,8 @@ header {
       width: 101%;
       height: 100%;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+68&0+0,1+67 */
-      background: radial-gradient(ellipse at center, transparent 0%, black 85%); }
+      background: radial-gradient(ellipse at center, transparent 0%, black 85%);
+      transition: opacity 0.5s ease-out; }
 
 .band .wrapper .next-steps li.btn {
   margin: 0 0 15px; }
