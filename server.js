@@ -75,8 +75,8 @@ app.post('/contact', (req, res)=>{
 		options: {
 			service: 'Mandrill',
 			auth: {
-				user: 'imperativedesign.net',
-				pass: 'huNbvvhPVGg6n3IXgAsqYg'
+				user: process.env['MANDRILL_USERNAME'],
+				pass: process.env['MANDRILL_APIKEY']
 			}
 		}
 	}
