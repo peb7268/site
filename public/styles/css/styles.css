@@ -625,10 +625,13 @@ a:hover {
         max-width: 275px; }
   .home .ctas {
     margin-top: 150px;
-    height: auto; }
+    height: auto;
+    min-height: 200px; }
   .home .ctas .ad1 {
     background-position: 0 top;
     background-size: 100%; }
+    .home .ctas .ad1 img {
+      width: 175%; }
   .ctas .cta .message {
     font-size: 15pt;
     bottom: 10px;
@@ -701,10 +704,11 @@ a:hover {
     font-size: 15pt; }
   .ctas .cta .message .highlight {
     padding: 2px 6px; }
-  form.quick-contact {
+  .band .quick-contact {
+    margin: 50px auto 0;
     width: 98%;
     left: 1%; }
-    form.quick-contact.active {
+    .band .quick-contact.active {
       bottom: 30%; }
   .about-page .ctas, .services-page .ctas {
     height: 200px;

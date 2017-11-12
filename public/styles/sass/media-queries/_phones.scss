@@ -1,8 +1,8 @@
 
 //Larger Phones
 @media only screen 
-and (max-device-width : 415px){
-    .container{
+and (max-device-width : 415px){  
+  .container{
       overflow: hidden;
       header {
           display: flex;
@@ -85,11 +85,15 @@ and (max-device-width : 415px){
     .home .ctas { 
         margin-top: 150px; 
         height: auto;
+        min-height: 200px;
     }
 
     .home .ctas .ad1 { 
         background-position: 0 top;
         background-size: 100%;
+        img {
+          width: 175%;
+        }
     }
 
     .ctas .cta .message { 
@@ -171,7 +175,8 @@ and (max-device-width : 415px){
         padding: 2px 6px;
     }
 
-    form.quick-contact {
+    .band .quick-contact {
+      margin: 50px auto 0;
       width: 98%;
       left: 1%;
       &.active { bottom: 30%; }
@@ -185,8 +190,8 @@ and (max-device-width : 415px){
       }
     }
 }
+
 @media only screen and (max-device-width: 321px) {
-  
   header {
     position: fixed;
     width: 100%;
