@@ -86,6 +86,7 @@ function bindCtaAnimations(sel){
     //Rx Pipeline
     var windowMovement$ = Rx.Observable.fromEvent(document, 'scroll');
     windowMovement$
+    .take(3)
     .takeWhile((evt, i) => i % 100 == 0).repeat()   //sample the event stream less frequently ( every 100 events )
     .map(doc => window.pageYOffset)
     .subscribe(scroll_pos => {
@@ -95,6 +96,9 @@ function bindCtaAnimations(sel){
         
         //Raw numbers
         let header_height     = $('header').height();
+        console.log(IdAnimations);
+        console.log(IdAnimations.count);
+        debugger;
         let activation_point  = $current_cta.offset().top;
         let middle_threshold  = 150;
         
@@ -122,14 +126,23 @@ function bindCtaAnimations(sel){
 
         if(IdAnimations.count == 0 && window.pageYOffset > 20){
             console.log(`first elem element is on screen and mouse moved`);
+            // count cant pass 2 or it breaks               
+            
             $current_cta.addClass('active');
-            IdAnimations.count++;
+            if(IdAnimations.count < 2) {
+                IdAnimations.count++;
+                IdAnimations.remaining--;
+            }
         } else {
             // && elem_is_near_middle_of_screen
             if(elem_is_on_screen) {
                 console.log(`element is on screen and near middle`);
+                // count cant pass 2 or it breaks               
                 $current_cta.addClass('active');
-                IdAnimations.count++;
+                if(IdAnimations.count < 2) {
+                    IdAnimations.count++;
+                    IdAnimations.remaining--;
+                }      
             }
         }
     });
