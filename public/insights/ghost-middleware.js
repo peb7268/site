@@ -1,5 +1,5 @@
 
-var ghost = require( 'ghost' );
+var ghost = require( 'ghost-ignition' );
 
 function processBuffer( buffer, app ){
 	while( buffer.length ){
