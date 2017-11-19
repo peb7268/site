@@ -8,9 +8,9 @@
 {{#has tag="Quick Tip"}}
     <article class="{{post_class}}">
         <div class="custom-post-content">
-            {{#if image}}
+            {{#if feature_image}}
                 <section class="post-image">
-                    <img src="{{image}}" />
+                    <img src="{{image_url feature_image}}" />
                 </section>
             {{/if}}
 
@@ -21,7 +21,7 @@
         
         <div class="custom-post-footer">    
             <div class="custom-footer-meta">
-                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
+                {{!--{{#if author.profile_image}}<img class="author-thumb" src="{{author.profile_image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
                 {{!--{{author}}--}}
                 <i class="fa fa-terminal" aria-hidden="true"></i> {{tags Zlimit="1" separator="|"}}
                 {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
@@ -38,8 +38,8 @@
     <article class="{{post_class}}">
         <div class="custom-post-content">
             <section class="post-image">
-                {{#if image}}
-                    <img src="{{image}}" />
+                {{#if feature_image}}
+                    <img src="{{image_url feature_image}}" />
                 {{else}}
                     <img src="http://www.adweek.com/files/2015_May/iStock-Unfinished-Business-6.jpg"/>
                 {{/if}}
@@ -47,10 +47,7 @@
         </div>
         <div class="custom-post-footer">  
             <div class="custom-footer-meta">
-                {{!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}--}}
-                {{!--{{author}}--}}
                 {{tags limit="1" separator="|"}}
-                {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
             </div>      
             <div class="custom-post-header">
                 <span id="test"> {{test}} </span>                
