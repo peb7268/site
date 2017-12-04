@@ -11,18 +11,18 @@ module.exports = {
             database: 'ghost'
         }
     },
-    migrationPath: process.cwd() + '/core/server/data/migrations',
+    migrationPath: process.cwd() + '/content/data',
     currentVersion: 'your-current-database/project-version',
-    subfolder: 'upgrades'  [default: versions]
+    subfolder: 'upgrades'
 }
 
 module.exports = {
     database: {
         client: 'sqlite3',
         connection: {
-            filename: 'path/to/your.db'
+            filename: './content/data/ghost-test.db'
         }
     },
-    migrationPath: process.cwd() + '/core/server/data/migrations',
+    migrationPath: process.cwd() + '/content/data',
     currentVersion: 'your-current-database-version'
 }
