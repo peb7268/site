@@ -3,11 +3,12 @@
 // Documentation can be found at http://support.ghost.org/config/
 //serving ghost via express as middleware : https://rogerstringer.com/2015/09/07/ghost-express-middleware/
 
+
 var path = require('path');
 var config;
 
 config = {
-    // ### Production
+    // ### Production hello
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
