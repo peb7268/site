@@ -6,12 +6,13 @@
  * - make sure to copy the ghost content and config over from the node_modules folder.
  * - set the content directory path in the config or it wont be able to find your theme or login.
  */
-
+var ghost 			= require('ghost');
+var path 			= require('path');
+var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
 var bodyParser 		= require('body-parser');
 var path        	= require('path');
 var app         	= express();
-var ghost 			= require(__dirname + '/public/insights/ghost-middleware');
 var mandrill 		= require('mandrill-api/mandrill');
 
 //Middleware Configs
@@ -22,19 +23,25 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Ghost configs
-var config_path = path.join(__dirname, '/public/insights/config.js');
+// var config_path = path.join(__dirname, '/public/insights/config.js');
 
-// console.log('===========================');
-// console.log('Ghost diagnostics: ');
-// console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-// console.log(`port: ${process.env.PORT}`);
-// console.log(`config_path: ${config_path}`);
-// console.log('===========================');
+// // console.log('===========================');
+// // console.log('Ghost diagnostics: ');
+// // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+// // console.log(`port: ${process.env.PORT}`);
+// // console.log(`config_path: ${config_path}`);
+// // console.log('===========================');
 
 
-app.use( '/insights', ghost({
-	config: config_path
-}) );
+// app.use( '/insights', ghost({
+// 	config: config_path
+// }) );
+
+//Init Ghost in a subdirectory
+ghost().then(function (ghostServer) {
+    app.use(utils.url.getSubdir(), ghostServer.rootApp);
+    ghostServer.start(parentApp);
+});
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
