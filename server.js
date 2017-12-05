@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Ghost configs
 // var config_path = path.join(__dirname, '/public/insights/config.js');
 
-// // console.log('===========================');
+
 // // console.log('Ghost diagnostics: ');
 // // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 // // console.log(`port: ${process.env.PORT}`);
@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Init Ghost in a subdirectory
 ghost().then(function (ghostServer) {
     app.use(utils.url.getSubdir(), ghostServer.rootApp);
-    ghostServer.start(parentApp);
+    ghostServer.start(app);
 });
 
 //If you want to use view engines
@@ -135,4 +135,4 @@ app.post('/contact', (req, res)=>{
 
 //Port Configs
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port')));
+app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port'), 'Ghost mounted on', utils.url.getSubdir(), '<- here'));
