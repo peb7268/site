@@ -1,4 +1,4 @@
-
+// var ghost = require( 'ghost-ignition' );
 var ghost = require( 'ghost' );
 
 function processBuffer( buffer, app ){
