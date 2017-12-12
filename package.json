@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "clear; NODE_ENV=development node server",
+    "start": "clear; NODE_ENV=production node server",
     "startdevserver": "clear; NODE_ENV=development nodemon server",
     "blogdev": "node-sass -w public/insights/content/themes/slimer/assets/sass -o public/insights/content/themes/slimer/assets/css/",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
@@ -19,8 +19,10 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.2",
-    "ghost": "^0.11.7",
-    "knex": "^0.12.9",
+    "ghost": "^1.18.0",
+    "ghost-cli": "^1.3.0",
+    "knex": "^0.14.1",
+    "knex-migrator": "^3.0.7",
     "mandrill-api": "^1.0.45",
     "node-sass": "^4.5.2",
     "pug": "^2.0.0-beta11",
