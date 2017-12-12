@@ -39,7 +39,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Init Ghost in a subdirectory
 ghost().then(function (ghostServer) {
-    app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+
+	if(process.env.NODE_ENV === 'production'){
+		let blog_url = `http://imperativedesign.net/insights`;
+		ghostServer.config.set('url', blog_url);
+
+		let db = {};
+		db.client = "mysql";
+		db.connection = process.env.CLEARDB_DATABASE_URL;
+		ghostServer.config.set('databse', db);
+	}
+
+	
+	
+	console.log('===== database config is =====');
+	console.log(ghostServer.config.get('databse'));
+	console.log('=== url config is ======');
+	console.log(ghostServer.config.get('url'));
+	
     ghostServer.start(app);
 });
 

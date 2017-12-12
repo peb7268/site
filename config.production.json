@@ -5,9 +5,12 @@
       "host": "127.0.0.1"
     },
     "database": {
-      "client": "sqlite3",
+      "client": "mysql",
       "connection": {
-        "filename": "/Users/mariustalpos/Desktop/dev/site/insights/content/data/ghost-local.db"
+        "host": "us-cdbr-iron-east-05.cleardb.net",
+        "user": "b5d1e148a9ba84",
+        "password": "48a7d98b",
+        "database": "heroku_d6140dbbff83350"
       }
     },
     "mail": {
