@@ -7,7 +7,7 @@
     "database": {
       "client": "sqlite3",
       "connection": {
-        "filename": "/Users/peb7268/Desktop/dev/nodedev/imperativedesign.net/site/insights/content/data/ghost-local.db"
+        "filename": "/Users/mariustalpos/Desktop/dev/site/insights/content/data/ghost-local.db"
       }
     },
     "mail": {
@@ -21,7 +21,7 @@
     },
     "process": "local",
     "paths": {
-      "contentPath": "/Users/peb7268/Desktop/dev/nodedev/imperativedesign.net/site/insights/content"
+      "contentPath": "/Users/mariustalpos/Desktop/dev/site/insights/content/"
     }
   }
   
