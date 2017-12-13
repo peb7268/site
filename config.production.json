@@ -1,5 +1,5 @@
 {
-    "url": "http://localhost:5000/insights",
+    "url": "https://imperative2017.herokuapp.com/insights/",
     "server": {
       "port": 2368,
       "host": "127.0.0.1"
