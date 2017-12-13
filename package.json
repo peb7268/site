@@ -13,7 +13,7 @@
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",
     "deploy": "clear; git add . && git commit -m 'heroku deploy' && git push && git push heroku",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "knex-migrator init --mgpath /app/MigratorConfig.js "
+    "postinstall": "knex-migrator init --mgpath / "
   },
   "author": "",
   "license": "ISC",
