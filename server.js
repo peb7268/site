@@ -49,14 +49,10 @@ ghost().then(function (ghostServer) {
 		db.client = "mysql";
 		db.connection = process.env.CLEARDB_DATABASE_URL;
 		ghostServer.config.set('databse', db);
-		
-		console.log('=== paths config is ======');
-		console.log(__dirname);	
-		console.log(ghostServer.config.get('paths'));
 
-		let paths = ghostServer.config.get('paths');
-		paths.contentPath = __dirname + "/insights/content"
-		ghostServer.config.set('paths', paths);
+		// let paths = ghostServer.config.get('paths');
+		// paths.contentPath = __dirname + "/insights/content"
+		// ghostServer.config.set('paths', paths);
 	}	
 	
 	console.log('===== database config is =====');
