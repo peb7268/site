@@ -50,9 +50,9 @@ ghost().then(function (ghostServer) {
 		db.connection = process.env.CLEARDB_DATABASE_URL;
 		ghostServer.config.set('databse', db);
 
-		// let paths = ghostServer.config.get('paths');
-		// paths.contentPath = __dirname + "/insights/content"
-		// ghostServer.config.set('paths', paths);
+		let paths = ghostServer.config.get('paths');
+		paths.contentPath = "/app/insights/content"
+		ghostServer.config.set('paths', paths);
 	}	
 	
 	console.log('===== database config is =====');
