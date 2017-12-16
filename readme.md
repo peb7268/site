@@ -7,3 +7,9 @@ To start site developmen:
 To start blog development:
 1) Run command 1 from above
 2) Then run `npm blogdev`
+
+####Production
+Deployment:
+If "DB is not ok" shows up:
+1) Heroku run bash
+2) knex-migrator init --mgpath node_modules/ghost
