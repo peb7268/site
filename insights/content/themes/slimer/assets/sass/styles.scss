@@ -8,6 +8,11 @@ body{
 a { transition: all 250ms; }
 a:hover { transform: scale(1.1);}
 
+body > header ul.insights-nav li.active a:hover {
+    color: #000;
+    border-color: transparent;
+}
+
 
 .banner{
     margin-top: 110px;
