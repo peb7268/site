@@ -26,15 +26,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // var config_path = path.join(__dirname, '/public/insights/config.js');
 
 
-console.log('Ghost diagnostics: ');
+console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 console.log('===========================');
 
-
-// app.use( '/insights', ghost({
-// 	config: config_path
-// }) );
 
 //Init Ghost in a subdirectory
 ghost().then(function (ghostServer) {
