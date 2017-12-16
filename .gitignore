@@ -2,4 +2,5 @@ node_modules
 .DS_Store
 public/insights/content/data/
 npm-debug.log
-config.production.json
+config.development.json
+bfg-1.12.16.jar
