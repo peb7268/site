@@ -3,4 +3,5 @@ node_modules
 public/insights/content/data/
 npm-debug.log
 config.development.json
+config.production.json
 bfg-1.12.16.jar
