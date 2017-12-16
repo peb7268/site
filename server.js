@@ -26,11 +26,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // var config_path = path.join(__dirname, '/public/insights/config.js');
 
 
-// // console.log('Ghost diagnostics: ');
-// // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-// // console.log(`port: ${process.env.PORT}`);
-// // console.log(`config_path: ${config_path}`);
-// // console.log('===========================');
+console.log('Ghost diagnostics: ');
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`port: ${process.env.PORT}`);
+console.log('===========================');
 
 
 // app.use( '/insights', ghost({
@@ -39,6 +38,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Init Ghost in a subdirectory
 ghost().then(function (ghostServer) {
+	console.log("==== In ghost bootup =====");
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
 	if(process.env.NODE_ENV === 'production'){
