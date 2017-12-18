@@ -6,12 +6,6 @@
     },
     "database": {
       "client": "mysql",
-      "connection": {
-        "host": "",
-        "user": "",
-        "password": "",
-        "database": ""
-      },
       "pool": {
           "min": 2,
           "max": 20
