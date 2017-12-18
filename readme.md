@@ -13,3 +13,8 @@ Deployment:
 If "DB is not ok" shows up:
 1) Heroku run bash
 2) knex-migrator init --mgpath node_modules/ghost
+
+Notes:
+
+Probably need to take this out of the postinstall
+    "postinstall": "knex-migrator init /app/node_modules/ghost"
