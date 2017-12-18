@@ -12,5 +12,5 @@ module.exports = {
     },
     migrationPath: process.cwd() + '/current/core/server/data/migrations',
     currentVersion: 'your-current-database/project-version',
-    subfolder: 'upgrades'
+    subfolder: 'upgrades',
 }
