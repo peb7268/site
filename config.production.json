@@ -10,7 +10,7 @@
         "host": "",
         "user": "",
         "password": "",
-        "database": "",
+        "database": ""
       },
       "pool": {
           "min": 2,
