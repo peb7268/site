@@ -58,8 +58,10 @@ let env_config = {
 	}
 };
 
+
 console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
 console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
+
 
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
@@ -69,7 +71,7 @@ ghost(env_config).then((ghostServer) => {
 	
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 	
-	ghostServer.config.set('database', env_config.database);
+	ghostServer.config.use('config:env:database', env_config.database);
 	//ghostServer.config.set('database:connection:user', env_config.database.connection.user);
 	//ghostServer.config.set('database:connection:password', env_config.database.connection.password);
 	
