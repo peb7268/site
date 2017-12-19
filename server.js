@@ -38,10 +38,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
  
-console.log('Debug Info: ');
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-console.log(`port: ${process.env.PORT}`);
-
 let env_config = {
 	"server":{
 		"host": "http://imperativedesign.net",
@@ -63,11 +59,15 @@ let env_config = {
 	}
 };
 
+console.log('Debug Info: ');
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`port: ${process.env.PORT}`);
+
 console.log(`===== prod db config is a ${typeof env_config.database} =======`);
 console.log(env_config.database);
 
 // //Init Ghost in a subdirectory
-ghost(config).then((ghostServer) => {
+ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
 	ghostServer.config.set('database', env_config.database);
 
