@@ -30,7 +30,16 @@ console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 console.log('===========================');
-console.log(process.env.CLEARDB_DATABASE_URL);
+console.log(process.env.CUSTOM_MYSQL_HOST);
+console.log('===========================');
+console.log('===========================');
+console.log(process.env.CUSTOM_MYSQL_USER);
+console.log('===========================');
+console.log('===========================');
+console.log(process.env.CUSTOM_MYSQL_PASSWORD);
+console.log('===========================');
+console.log('===========================');
+console.log(process.env.CUSTOM_MYSQL_DB);
 console.log('===========================');
 
 
@@ -45,7 +54,11 @@ ghost().then(function (ghostServer) {
 
 		let db = {};
 		db.client = "mysql";
-		db.connection = process.env.CLEARDB_DATABASE_URL;
+		db.connection.host process.env.CUSTOM_MYSQL_HOST;
+		db.connection.user process.env.CUSTOM_MYSQL_USER;
+		db.connection.password process.env.CUSTOM_MYSQL_PASSWORD;
+		db.connection.database process.env.CUSTOM_MYSQL_DB;
+		// db.connection = process.env.CLEARDB_DATABASE_URL;
 		ghostServer.config.set('databse', db);
 
 		let paths = ghostServer.config.get('paths');
