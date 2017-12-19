@@ -32,6 +32,10 @@ console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 
 let config = {
+	server: {
+		host: 'http://imperativedesign.net',
+		port: process.env.PORT
+	},
 	url: `http://imperativedesign.net/insights`,
 	database: {
 		connection: process.env.CLEARDB_DATABASE_URL
