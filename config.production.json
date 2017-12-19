@@ -27,7 +27,6 @@
     "paths": {
       "contentPath": "/app/insights/content",
       "appRoot": "/app"
-    },
-    "debug": true
+    }
   }
   
