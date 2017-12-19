@@ -6,7 +6,6 @@
  * - set the content directory path in the config or it wont be able to find your theme or login.
  */
 var process 		= require('process');
-var ghost 			= require('ghost');
 var path 			= require('path');
 var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
@@ -29,6 +28,8 @@ app.set('database', {
 		"max": 20
 	}
 });
+
+var ghost = require('ghost');
 
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
