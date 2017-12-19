@@ -13,7 +13,8 @@
         "host": "us-cdbr-iron-east-05.cleardb.net",
         "user": "",
         "password": "",
-        "database": ""
+        "database": "",
+        "debug": true
       }
     },
     "logging": {
@@ -24,7 +25,9 @@
     },
     "process": "local",
     "paths": {
-      "contentPath": "/app/insights/content"
-    }
+      "contentPath": "/app/insights/content",
+      "appRoot": "/app"
+    },
+    "debug": true
   }
   
