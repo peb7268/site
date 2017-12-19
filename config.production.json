@@ -6,7 +6,9 @@
     },
     "database": {
       "client": "mysql",
-      
+      "connection": {
+        "host": "us-cdbr-iron-east-05.cleardb.net"
+      },
       "pool": {
           "min": 2,
           "max": 20
