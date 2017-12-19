@@ -31,24 +31,23 @@ console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 
-console.log('ghost: ');
-console.log(ghost);
+let config = {
+	url: `http://imperativedesign.net/insights`,
+	database: {
+		connection: process.env.CLEARDB_DATABASE_URL
+	}
+};
 
 //Init Ghost in a subdirectory
-ghost().then(function (ghostServer) {
+ghost(config).then(function (ghostServer) {
 	console.log("==== In ghost bootup =====");
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
 	if(process.env.NODE_ENV === 'production'){
-		let blog_url = `http://imperativedesign.net/insights`;
+		
 		ghostServer.config.set('url', blog_url);
 
-		let db = {};
-		db.client = "mysql";
-		db.connection.host = process.env.CUSTOM_MYSQL_HOST;
-		db.connection.user = process.env.CUSTOM_MYSQL_USER;
-		db.connection.password = process.env.CUSTOM_MYSQL_PASSWORD;
-		db.connection.database = process.env.CUSTOM_MYSQL_DB;
+		
 		// db.connection = process.env.CLEARDB_DATABASE_URL;
 		ghostServer.config.set('databse', db);
 
