@@ -41,6 +41,7 @@ console.log('===========================');
 console.log('===========================');
 console.log(process.env.CUSTOM_MYSQL_DB);
 console.log('===========================');
+console.log(ghostServer.config.get('database'));
 
 
 //Init Ghost in a subdirectory
@@ -75,7 +76,13 @@ ghost().then(function (ghostServer) {
 	console.log(ghostServer.config.get('paths'));
 	
     ghostServer.start(app);
+
+	console.log('===========================');
+	console.log(ghostServer.config.get('database'));
 });
+
+console.log('===========================');
+console.log(ghostServer.config.get('database'));
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
