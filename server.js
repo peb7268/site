@@ -48,8 +48,8 @@ config     = Object.assign(config, {
 	}
 });
 
-console.log('New Config: ');
-console.log(config);
+// console.log('New Config: ');
+// console.log(config);
 
 //Init Ghost in a subdirectory
 ghost(config).then(function (ghostServer) {
