@@ -80,9 +80,6 @@ ghost().then(function (ghostServer) {
 	console.log(ghostServer.config.get('database'));
 });
 
-console.log('===========================');
-console.log(ghostServer.config.get('database'));
-
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
 app.set('view engine', 'pug');
