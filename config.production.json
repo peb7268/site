@@ -10,7 +10,10 @@
     "database": {
       "client": "mysql",
       "connection": {
-        "host": "us-cdbr-iron-east-05.cleardb.net"
+        "host": "us-cdbr-iron-east-05.cleardb.net",
+        "user": "",
+        "password": "",
+        "database": ""
       }
     },
     "logging": {
