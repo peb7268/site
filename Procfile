@@ -1,1 +1,1 @@
-web: DEBUG=ghost:*, ghost-config node server.js
+web: DEBUG=ghost:*, node server.js
