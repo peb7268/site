@@ -68,12 +68,6 @@ let env_config = {
 ghost(env_config).then((ghostServer) => {
 	app.use('/insights', ghostServer.rootApp);
 	
-<<<<<<< HEAD
-=======
-	console.log('===== ghost server config =====');
-	console.log(ghostServer.config);
-
->>>>>>> c7485b7c0eb15bfb70116901b46631e05352e14e
 	let paths = ghostServer.config.get('paths');
 	paths.contentPath = "/app/insights/content"
 	ghostServer.config.set('paths', paths);
