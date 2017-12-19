@@ -80,7 +80,7 @@ ghost(env_config).then((ghostServer) => {
 	paths.contentPath = "/app/insights/content"
 	ghostServer.config.set('paths', paths);
 
-    //ghostServer.start(app);
+    ghostServer.start(app);
 });
 
 //If you want to use view engines
