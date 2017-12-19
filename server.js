@@ -68,7 +68,6 @@ console.log(`===== prod db config is a ${typeof env_config.database} with a host
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
 	console.log('utils subdir: ');
-	console.log(utils.url.getSubdir());
 	
 	app.use('/insights', ghostServer.rootApp);
 	
