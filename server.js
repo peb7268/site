@@ -31,16 +31,25 @@ console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 
-let config = {
+let config = require('./config.production.json');
+config     = Object.assign(config, {
 	server: {
 		host: 'http://imperativedesign.net',
 		port: process.env.PORT
 	},
 	url: `http://imperativedesign.net/insights`,
 	database: {
-		connection: process.env.CLEARDB_DATABASE_URL
+		"client": "mysql",
+		connection: process.env.CLEARDB_DATABASE_URL,
+		"pool": {
+			"min": 2,
+			"max": 20
+		}
 	}
-};
+});
+
+console.log('New Config: ');
+console.log(config);
 
 //Init Ghost in a subdirectory
 ghost(config).then(function (ghostServer) {

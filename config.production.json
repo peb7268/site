@@ -1,5 +1,5 @@
 {
-    "url": "https://imperative2017.herokuapp.com/insights/",
+    "url": "https://imperativedesign.net/insights/",
     "server": {
       "port": 2368,
       "host": "127.0.0.1"
