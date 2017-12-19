@@ -41,7 +41,6 @@ console.log('===========================');
 console.log('===========================');
 console.log(process.env.CUSTOM_MYSQL_DB);
 console.log('===========================');
-console.log(ghostServer.config.get('database'));
 
 
 //Init Ghost in a subdirectory
