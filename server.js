@@ -6,6 +6,7 @@
  * - set the content directory path in the config or it wont be able to find your theme or login.
  */
 var process 		= require('process');
+var ghost 			= require('ghost');
 var path 			= require('path');
 var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
@@ -28,8 +29,6 @@ app.set('database', {
 		"max": 20
 	}
 });
-
-var ghost = require('ghost');
 
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
@@ -62,22 +61,24 @@ let env_config = {
 console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
-
-console.log(`===== prod db config is a ${typeof env_config.database} =======`);
-console.log(env_config.database);
+console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${typeof env_config.database.connection.host} =======`);
+console.log(`subdir to mount ghost on: ${utils.url.getSubdir()}`);
+console.log("");
 
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
+	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	
 	ghostServer.config.set('database:connection', env_config.database.connection);
 	ghostServer.config.set('database:connection:user', env_config.database.connection.user);
 	ghostServer.config.set('database.connection.password', env_config.database.connection.password);
 
-	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	
 
-	let paths = ghostServer.config.get('paths');
-	paths.contentPath = "/app/insights/content"
-	ghostServer.config.set('paths', paths);
+	// let paths = ghostServer.config.get('paths');
+	// paths.contentPath = "/app/insights/content"
+	// ghostServer.config.set('paths', paths);
 
     ghostServer.start(app);
 });
