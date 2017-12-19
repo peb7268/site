@@ -1,6 +1,4 @@
 
-console.log('===== 1 ======');
-
 /**
  * Integrating ghost into express.
  * used this guide on ghost 0.11.7 https://rogerstringer.com/2015/09/07/ghost-express-middleware/
@@ -14,8 +12,6 @@ var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
 var bodyParser 		= require('body-parser');
 var path        	= require('path');
-
-console.log('===== 2 ======');
 
 var app         	= express();
 var mandrill 		= require('mandrill-api/mandrill');
@@ -34,8 +30,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
-console.log('===========================');
 
+console.log('ghost: ');
+console.log(ghost);
 
 //Init Ghost in a subdirectory
 ghost().then(function (ghostServer) {
