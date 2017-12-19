@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "clear; DEBUG=ghost:*, NODE_ENV=production, ghost-config node server",
+    "start": "clear; DEBUG=ghost:* NODE_ENV=production node server",
     "startdevserver": "clear; NODE_ENV=development nodemon server",
     "blogdev": "node-sass -w public/insights/content/themes/slimer/assets/sass -o public/insights/content/themes/slimer/assets/css/",
     "dev": "node-sass -w public/styles/sass -o public/styles/css/ & browser-sync start -p 'localhost:5000' --files 'public/styles/css'",

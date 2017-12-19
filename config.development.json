@@ -8,10 +8,7 @@
       "transport": "Direct"
     },
     "database": {
-      "client": "mysql",
-      "connection": {
-        "host": "us-cdbr-iron-east-05.cleardb.net"
-      }
+      "client": "mysql"
     },
     "logging": {
       "transports": [
@@ -21,7 +18,7 @@
     },
     "process": "local",
     "paths": {
-      "contentPath": "/app/insights/content"
+      "contentPath": "/Users/peb7268/Desktop/dev/nodedev/imperativedesign.net/site/insights/content"
     }
   }
   

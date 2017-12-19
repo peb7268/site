@@ -1,6 +1,3 @@
-
-
-
 /**
  * Integrating ghost into express.
  * used this guide on ghost 0.11.7 https://rogerstringer.com/2015/09/07/ghost-express-middleware/
@@ -19,29 +16,38 @@ var path        	= require('path');
 var app         	= express();
 var mandrill 		= require('mandrill-api/mandrill');
 
+app.set('database', {
+	"client": "mysql",
+	"connection": {
+		"user": process.env.MYSQL_USER,
+		"password": process.env.MYSQL_PASSWORD,
+		"host": process.env.MYSQL_HOST,
+		"database": process.env.MYSQL_DB,
+	},
+	"pool": {
+		"min": 2,
+		"max": 20
+	}
+});
+
 //Middleware Configs
 app.use(express.static(__dirname + '/public'));
 app.use('/scripts', express.static(__dirname + '/node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-//Ghost configs
-// var config_path = path.join(__dirname, '/public/insights/config.js');
-
  
 console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 
-let config = require('./config.production.json');
-config     = Object.assign(config, {
-	server: {
-		host: 'http://imperativedesign.net',
-		port: process.env.PORT
+let env_config = {
+	"server":{
+		"host": "http://imperativedesign.net",
+		"port": process.env.PORT
 	},
-	url: `http://imperativedesign.net/insights`,
-	database: {
+	"url": "http://imperativedesign.net/insights",
+	"database": {
 		"client": "mysql",
 		"connection": {
 			"user": process.env.MYSQL_USER,
@@ -54,10 +60,18 @@ config     = Object.assign(config, {
 			"max": 20
 		}
 	}
-});
+};
 
-// console.log('New Config: ');
-// console.log(config);
+env_config = JSON.parse(env_config);
+
+console.log(`env_config is: ${typeof env_config}`);
+
+
+let config = require('./config.production.json');
+config     = Object.assign(config, env_config);
+
+console.log('New Config: ');
+console.log(config);
 
 //Init Ghost in a subdirectory
 ghost(config).then(function (ghostServer) {
