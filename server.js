@@ -62,13 +62,12 @@ console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${typeof env_config.database.connection.host} =======`);
-console.log(`subdir to mount ghost on: ${utils.url.getSubdir()}`);
 console.log("");
 
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
-	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	// app.use(utils.url.getSubdir(), ghostServer.rootApp);
 	
 	ghostServer.config.set('database:connection', env_config.database.connection);
 	ghostServer.config.set('database:connection:user', env_config.database.connection.user);
