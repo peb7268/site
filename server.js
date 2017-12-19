@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Ghost configs
 // var config_path = path.join(__dirname, '/public/insights/config.js');
 
-
+ 
 console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
