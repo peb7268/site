@@ -71,7 +71,7 @@ ghost(env_config).then((ghostServer) => {
 	
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 	
-	ghostServer.config.use('config:env:database', env_config.database);
+	ghostServer.config.use('config:database', env_config.database);
 	//ghostServer.config.set('database:connection:user', env_config.database.connection.user);
 	//ghostServer.config.set('database:connection:password', env_config.database.connection.password);
 	
