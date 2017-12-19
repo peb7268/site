@@ -7,16 +7,7 @@
     "mail": {
       "transport": "Direct"
     },
-    "database": {
-      "client": "mysql",
-      "connection": {
-        "host": "us-cdbr-iron-east-05.cleardb.net",
-        "user": "",
-        "password": "",
-        "database": "",
-        "debug": true
-      }
-    },
+    "database": {},
     "logging": {
       "transports": [
         "file",
