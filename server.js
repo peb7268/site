@@ -70,6 +70,8 @@ console.log(env_config.database);
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
 	ghostServer.config.set('database:connection', env_config.database.connection);
+	ghostServer.config.set('database:connection:user', env_config.database.connection.user);
+	ghostServer.config.set('database.connection.password', env_config.database.connection.password);
 
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
