@@ -67,19 +67,20 @@ console.log("");
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
-	// app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 	
 	ghostServer.config.set('ghost:config:database:connection', env_config.database.connection);
 	ghostServer.config.set('config:database:connection:user', env_config.database.connection.user);
 	ghostServer.config.set('database.connection.password', env_config.database.connection.password);
-
 	
+	console.log('===== ghost server config =====');
+	console.log(ghostServer.config);
 
 	// let paths = ghostServer.config.get('paths');
 	// paths.contentPath = "/app/insights/content"
 	// ghostServer.config.set('paths', paths);
 
-    ghostServer.start(app);
+    //ghostServer.start(app);
 });
 
 //If you want to use view engines
