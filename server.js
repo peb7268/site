@@ -43,10 +43,6 @@ ghost().then(function (ghostServer) {
 		let blog_url = `http://imperativedesign.net/insights`;
 		ghostServer.config.set('url', blog_url);
 
-		let server = ghostServer.config.get('server');
-		server.port = db.port = process.env.port;
-		ghostServer.config.set('server', server);
-
 		let db = {};
 		db.client = "mysql";
 		db.connection = process.env.CLEARDB_DATABASE_URL;
