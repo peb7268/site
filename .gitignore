@@ -3,4 +3,4 @@ node_modules
 public/insights/content/data/
 npm-debug.log
 bfg-1.12.16.jar
-MigratorConfig.js
+config.development.json
