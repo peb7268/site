@@ -69,7 +69,7 @@ console.log(env_config.database);
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
 	console.log("==== In ghost bootup =====");
-	ghostServer.config.set('database', env_config.database);
+	ghostServer.config.set('database:connection', env_config.database.connection);
 
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
