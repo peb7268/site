@@ -2,7 +2,7 @@
     "url": "https://imperative2017.herokuapp.com/insights/",
     "server": {
       "port": 2368,
-      "host": "us-cdbr-iron-east-05.cleardb.net"
+      "host": "0.0.0.0"
     },
     "database": {
       "client": "mysql",
