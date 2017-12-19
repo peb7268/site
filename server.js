@@ -63,22 +63,22 @@ let env_config = {
 	}
 };
 
-console.log('===== prod db config is a ${typeof env_config.database} =======');
+console.log(`===== prod db config is a ${typeof env_config.database} =======`);
 console.log(env_config.database);
 
 // //Init Ghost in a subdirectory
-// ghost(config).then((ghostServer) => {
-// 	console.log("==== In ghost bootup =====");
-// 	ghostServer.config.set('database', env_config.database);
+ghost(config).then((ghostServer) => {
+	console.log("==== In ghost bootup =====");
+	ghostServer.config.set('database', env_config.database);
 
-// 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
-// 	let paths = ghostServer.config.get('paths');
-// 	paths.contentPath = "/app/insights/content"
-// 	ghostServer.config.set('paths', paths);
+	let paths = ghostServer.config.get('paths');
+	paths.contentPath = "/app/insights/content"
+	ghostServer.config.set('paths', paths);
 
-//     ghostServer.start(app);
-// });
+    ghostServer.start(app);
+});
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
