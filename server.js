@@ -61,31 +61,11 @@ ghost(config).then(function (ghostServer) {
 	console.log("==== In ghost bootup =====");
 	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
-	if(process.env.NODE_ENV === 'production'){
-		
-		ghostServer.config.set('url', blog_url);
+	let paths = ghostServer.config.get('paths');
+	paths.contentPath = "/app/insights/content"
+	ghostServer.config.set('paths', paths);
 
-		
-		// db.connection = process.env.CLEARDB_DATABASE_URL;
-		ghostServer.config.set('databse', db);
-
-		let paths = ghostServer.config.get('paths');
-		paths.contentPath = "/app/insights/content"
-		ghostServer.config.set('paths', paths);
-	}
-	
-	console.log('===== database config is =====');
-	console.log(ghostServer.config.get('databse'));
-	console.log('=== url config is ======');
-	console.log(ghostServer.config.get('url'));
-	console.log('=== paths config is ======');
-	console.log(__dirname);	
-	console.log(ghostServer.config.get('paths'));
-	
     ghostServer.start(app);
-
-	console.log('===========================');
-	console.log(ghostServer.config.get('database'));
 });
 
 //If you want to use view engines
