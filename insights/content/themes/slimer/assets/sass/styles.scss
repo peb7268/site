@@ -67,11 +67,8 @@ a:hover { transform: scale(1.1);}
     }
 }
 
-.page-template {
-
-    article.post.page {
-        display: initial;
-    }
+.page-template article.post.page {
+    display: initial;
 }
 
 .active {
