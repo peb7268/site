@@ -67,7 +67,7 @@ ghost(config).then(function (ghostServer) {
 		let paths = ghostServer.config.get('paths');
 		paths.contentPath = "/app/insights/content"
 		ghostServer.config.set('paths', paths);
-	}	
+	}
 	
 	console.log('===== database config is =====');
 	console.log(ghostServer.config.get('databse'));
