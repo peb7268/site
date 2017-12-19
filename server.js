@@ -70,7 +70,7 @@ ghost(env_config).then((ghostServer) => {
 	console.log('utils subdir: ');
 	console.log(utils.url.getSubdir());
 	
-	app.use(utils.url.getSubdir(), ghostServer.rootApp);
+	app.use('/insights', ghostServer.rootApp);
 	
 	ghostServer.config.use('config:database', env_config.database);
 	//ghostServer.config.set('database:connection:user', env_config.database.connection.user);
