@@ -73,17 +73,7 @@ config     = Object.assign(config, env_config);
 console.log('New Config: ');
 console.log(config);
 
-//Init Ghost in a subdirectory
-ghost(config).then(function (ghostServer) {
-	console.log("==== In ghost bootup =====");
-	app.use(utils.url.getSubdir(), ghostServer.rootApp);
 
-	let paths = ghostServer.config.get('paths');
-	paths.contentPath = "/app/insights/content"
-	ghostServer.config.set('paths', paths);
-
-    ghostServer.start(app);
-});
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
