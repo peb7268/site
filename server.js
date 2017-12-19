@@ -30,6 +30,8 @@ console.log('Debug Info: ');
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log(`port: ${process.env.PORT}`);
 console.log('===========================');
+console.log(process.env.CLEARDB_DATABASE_URL);
+console.log('===========================');
 
 
 //Init Ghost in a subdirectory
