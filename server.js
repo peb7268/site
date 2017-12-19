@@ -175,4 +175,4 @@ app.post('/contact', (req, res)=>{
 
 //Port Configs
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port'), 'Ghost mounted on', utils.url.getSubdir(), '<- here'));
+app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port'));
