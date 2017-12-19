@@ -40,7 +40,12 @@ config     = Object.assign(config, {
 	url: `http://imperativedesign.net/insights`,
 	database: {
 		"client": "mysql",
-		connection: "b5d1e148a9ba84:48a7d98b@us-cdbr-iron-east-05.cleardb.net/heroku_d6140dbbff83350?reconnect=true",
+		"connection": {
+			"user": process.env.MYSQL_USER,
+			"password": process.env.MYSQL_PASSWORD,
+			"host": process.env.MYSQL_HOST,
+			"database": process.env.MYSQL_DB,
+		},
 		"pool": {
 			"min": 2,
 			"max": 20
