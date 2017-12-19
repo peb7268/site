@@ -60,17 +60,20 @@ let env_config = {
 
 
 
-console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
-console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
+//console.log(`Debug Info: App is running in  ${process.env.NODE_ENV} mode on port ${process.env.PORT}`);
+//console.log(`===== prod db config is a ${typeof env_config.database} with a host of ${env_config.database.connection.host} =======`);
 
 
 // //Init Ghost in a subdirectory
 ghost(env_config).then((ghostServer) => {
-	console.log("==== In ghost bootup =====");
-	console.log('utils subdir: ');
-	
 	app.use('/insights', ghostServer.rootApp);
 	
+<<<<<<< HEAD
+=======
+	console.log('===== ghost server config =====');
+	console.log(ghostServer.config);
+
+>>>>>>> c7485b7c0eb15bfb70116901b46631e05352e14e
 	let paths = ghostServer.config.get('paths');
 	paths.contentPath = "/app/insights/content"
 	ghostServer.config.set('paths', paths);
