@@ -54,10 +54,10 @@ ghost().then(function (ghostServer) {
 
 		let db = {};
 		db.client = "mysql";
-		db.connection.host process.env.CUSTOM_MYSQL_HOST;
-		db.connection.user process.env.CUSTOM_MYSQL_USER;
-		db.connection.password process.env.CUSTOM_MYSQL_PASSWORD;
-		db.connection.database process.env.CUSTOM_MYSQL_DB;
+		db.connection.host = process.env.CUSTOM_MYSQL_HOST;
+		db.connection.user = process.env.CUSTOM_MYSQL_USER;
+		db.connection.password = process.env.CUSTOM_MYSQL_PASSWORD;
+		db.connection.database = process.env.CUSTOM_MYSQL_DB;
 		// db.connection = process.env.CLEARDB_DATABASE_URL;
 		ghostServer.config.set('databse', db);
 
