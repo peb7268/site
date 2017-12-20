@@ -59,6 +59,9 @@ a:hover {
     text-decoration: underline;
     color: #5ba4e5; }
 
+.page-template article.post.page {
+  display: initial; }
+
 .active {
   border-bottom: solid 1px;
   border-color: #0036bf; }
