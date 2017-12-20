@@ -3,9 +3,5 @@ node_modules
 public/insights/content/data/
 npm-debug.log
 bfg-1.12.16.jar
-<<<<<<< HEAD
 config.development.json
 readme.md
-=======
-config.development.json
->>>>>>> 7f5da9c1236491b0167c0fb3f86c4b66457cf66f
