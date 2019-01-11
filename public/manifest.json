@@ -5,6 +5,7 @@
         "48": "icon.png",
         "96": "icon.png"
     },
+    "theme_color": "#2196F3",
     "theme": {
         "colors": {
             "accentcolor": "#0036bf",
