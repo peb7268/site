@@ -8,7 +8,7 @@
 var process 		= require('process');
 var ghost 			= require('ghost');
 var path 			= require('path');
-// var utils 			= require('./node_modules/ghost/core/server/utils');
+var utils 			= require('./node_modules/ghost/core/server/utils');
 var express     	= require('express');
 var bodyParser 		= require('body-parser');
 var path        	= require('path');
@@ -65,15 +65,15 @@ let env_config = {
 
 
 // //Init Ghost in a subdirectory
-// ghost(env_config).then((ghostServer) => {
-// 	app.use('/insights', ghostServer.rootApp);
+ghost(env_config).then((ghostServer) => {
+	app.use('/insights', ghostServer.rootApp);
 	
-// 	let paths = ghostServer.config.get('paths');
-// 	paths.contentPath = "/app/insights/content"
-// 	ghostServer.config.set('paths', paths);
+	let paths = ghostServer.config.get('paths');
+	paths.contentPath = "/app/insights/content"
+	ghostServer.config.set('paths', paths);
 
-//     ghostServer.start(app);
-// });
+    ghostServer.start(app);
+});
 
 //If you want to use view engines
 app.set('views', __dirname + '/public/views');
